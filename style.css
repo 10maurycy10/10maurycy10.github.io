@@ -1,0 +1,11 @@
+body {background-color: black;font-family: "Lucida Console";}
+fieldset.box { border: 2px solid green; margin: 1ex 1% 2ex 1%; background-color: #101010;}
+legend {background-color: #101010;border: 1px solid green;padding: 0.8ex 2ex 0.8ex 2ex;font-style: italic;}
+legend.b {background-color: #101010;border: 1px solid Blue;padding: 0.8ex 2ex 0.8ex 2ex;font-style: italic;}
+fieldset.b {border: 2px solid Blue;margin: 1ex 1% 2ex 1%;background-color: #101010;}
+p {font-family: "Lucida Console";padding-left: 1em;padding-right: 1em;background-color: black;}
+li {font-family: "Lucida Console";padding-left: 1em;padding-right: 1em;background-color: black;}
+h2 {font-family: "Lucida Console";padding-left: 1em;padding-right: 1em;background-color: black;}
+* {color: lightgray;}
+a {color: lightblue;}
+a:visited {color: turquoise;}
