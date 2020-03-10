@@ -1,0 +1,45 @@
+* {
+    user-select: none;
+}
+body {
+    background-color: dimgray;
+}   
+div {
+    position: absolute
+    width: 80vw;
+    margin-left: 10vw;
+}
+#10vh {
+    height: 10vh;
+}
+
+#outputTag {
+    margin-top: 10vh;
+    text-align: left;
+    width: 80vw;
+    height: 60vh;
+    overflow: scroll;
+    background-color: black;
+}
+#input {
+    margin-top: 10vh;
+    text-align: left; 
+    width: 80vw;
+    height: 5vh;
+    color: white;
+}
+.green {
+    color: springgreen;
+}
+.blue {
+    color: blue;
+}
+.gray {
+     color: gray;
+}
+.white {
+    color: white;
+}
+.center {
+	text-align: center;
+}
