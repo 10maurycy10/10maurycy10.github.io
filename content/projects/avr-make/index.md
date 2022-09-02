@@ -7,7 +7,7 @@ draft: true
 
 # Generic makefile
 
-I wanted to have a maintanable way to build all my AVR projects.
+I wanted to have a maintainable way to build all my AVR projects.
 
 I ended up writing a Makefile that can be ``include``ed from each program.
 
@@ -19,11 +19,11 @@ OBJ=blink.c.o
 include ../genericMakefile
 ```
 
-# Fetures
+# Features
 
-- Target microcontroler configurable from command line or enviroment. ``make flash TARGET=atmega103``
+- Target microcontroler configurable from command line or environment. ``make flash TARGET=atmega103``
 
-- Programer configurable in the same way with ``PROGRAMER`` varable.
+- Programmer configurable in the same way with ``PROGRAMER`` variable.
 
 - Define ``F_CPU``, and allow setting from command line or project level makefile
 
@@ -59,7 +59,7 @@ LIBS=lib.so
 include ../genericMakefile
 ```
 
-Compile asmebly and link alongside c
+Compile assembly and link alongside c
 
 ```make
 OBJ=testasm.asm.o test.c.o
@@ -73,19 +73,19 @@ F_CPU?=test.c.o
 include ../genericMakefile
 ```
 
-# Prerequisits
+# Prerequisites
 
 - GNU make
 - avr-gcc (avr-libc)
 - avrdude
 
-## Instalation on arch linux
+## Installation on arch linux
 
 ```
 pacman -S make avr-gcc avr-libc avrdude
 ```
 
-## Instalation on debian based systems
+## Installation on Debian based systems
 
 ```
 apt install make avr-gcc avr-libc avrdude
