@@ -2,7 +2,7 @@
 title: "Super simple AVR AM transmitter"
 date: 2022-09-01T09:48:35-07:00
 tags: ["wireless", "avr", "programming"]
-draft: true
+draft: false
 ---
 
 # AVR clock output pin
