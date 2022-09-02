@@ -1,0 +1,67 @@
+body {
+	--bodywidth: 40em;
+	--sidebarwidth: 40em;
+	--widewidth: (--bodywidth + --sidebarwidth * 2);
+}
+
+fieldset {
+	border-width: 1px;
+	border-color: #0f0;
+}
+
+legend {
+	border-width 1px;
+	border-color #0f0;
+}
+
+/* Content should be a centered column*/
+#content {
+	margin: auto;
+	max-width: 40em;
+}
+
+#sidebar {
+}
+
+#tile {
+	color: #eee;
+	margin:auto;
+
+}
+
+/* dark background */
+body {
+	background: #111;
+	color: #eee;
+}
+
+/* Link styling */
+a:visited {
+	color: #3cc
+}
+a {
+	color: #5ff
+}
+
+/* keep images centered in column */
+img {
+	margin: auto;
+	max-width: 40em;
+}
+
+/* Narrow screen layout */
+@media (max-width: 100em) {
+	#sidebar {
+		margin: auto;
+		max-width: --body-width;
+	}
+}
+
+/* Wide screen layout with sidebar on side and content centered */
+@media (min-width: 100em) {
+	#sidebar {
+		position: fixed;
+		max-width: --sidebar-width;
+	}
+}
+
