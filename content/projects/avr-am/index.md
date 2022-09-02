@@ -17,7 +17,7 @@ I added ``-U lfuse:w:0x22:m`` to avrdude's flags to enable the pin.
 
 AM is the simplest scheme to send sound over a radio wave, by varying the signal strength according to the instantaneous voltage of the audio signal.
 
-![AM modulation. green: cariear, blue: signal](am.png)
+![AM modulation. green: carrier, blue: signal](am.png)
 
 If a transmitter if turned on and off at 1KHz, the result is a 1KHz (square wave) AM tone!
 
@@ -27,7 +27,7 @@ To send an AM transmission, the signal coming from CLKO (Clock output pin), must
 
 This can be done with a NPN transistor which can be obtained for less then .10$ per unit (If you buy in bulk).
 
-A resister between 100Ω and 1KΩ to ground on the antenna seems to improve results.
+A resister between 100Ω and 1KΩ to ground on the antenna seems to improve results when used with a dipole antenna (long wire). 
 
 ![Schematic diagram](schematic.png)
 
