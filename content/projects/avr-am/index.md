@@ -49,7 +49,7 @@ It is very unlikely that you exceed the limit with just the AVR's output and cru
 
 If you do, you *will* be noticed as the square wave produces has a lot of harmonics, which will interfere with a lot of other channels.
 
-<!--![Finished result on perfboard](result.png)-->
+![Finished result on bread board](finished.jpg)
 
 # Code
 
