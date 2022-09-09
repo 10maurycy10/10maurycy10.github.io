@@ -1,3 +1,10 @@
+---
+title: Why RSS
+date: 2022-09-09
+draft: false
+---
+
+
 # What is RSS
 
 RSS is a simple way for a server to provide a feed.
