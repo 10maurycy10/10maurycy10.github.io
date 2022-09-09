@@ -1,5 +1,6 @@
 ---
 title: "Open directory search"
+summary: "Find open directories (unconfigured web servers with files) to explore with a search engine."
 date: 2022-09-08T15:22:35-07:00
 tags: ["programming", "tool"]
 draft: false

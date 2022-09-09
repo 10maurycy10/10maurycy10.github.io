@@ -1,5 +1,6 @@
 ---
 title: "AVR build system"
+summary: "A generic makefile for building avr programs."
 date: 2022-08-21T09:30:21-07:00
 tags: ["avr", "programming"]
 draft: false

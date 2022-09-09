@@ -1,5 +1,6 @@
 ---
 title: Raw html with Hugo
+summary: Imbeding raw html into markdown files using a custom shortcode.
 date: 2022-09-08T16:01:58-07:00
 tags: ["hugo"]
 ---

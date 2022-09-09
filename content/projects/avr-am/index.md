@@ -2,6 +2,7 @@
 title: "Super simple AVR AM transmitter"
 date: 2022-09-01T09:48:35-07:00
 tags: ["wireless", "avr", "programming"]
+summary: "Building a crappy AM trasmiter with an avr microcontroler and one trasistor."
 draft: false
 ---
 

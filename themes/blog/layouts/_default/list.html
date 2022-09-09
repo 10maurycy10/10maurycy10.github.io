@@ -1,24 +1,3 @@
-<!--
-{{ define "main" }}
-<h1>{{ .Title }}</h1>
-
-{{ range .Pages.ByPublishDate.Reverse }}
-<p>
-<h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-{{ partial "metadata.html" . }}
-</a>
-
-<p>{{ .Summary }}</p>
-</a>
-
-</p>
-{{ end }}
-
-{{ end }}
---!>
-
-<!--<title>{{ .Site.Title }} | {{ .Title }}</title>-->
-
 <!DOCTYPE html>
 <html>
 {{- partial "head.html" . -}}
@@ -31,7 +10,7 @@
 
 {{ range .Pages.ByPublishDate.Reverse }}
 
-<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3> {{ .Summary }}
 
 {{ partial "metadata.html" . }}
 
