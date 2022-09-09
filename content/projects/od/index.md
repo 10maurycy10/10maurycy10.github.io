@@ -44,8 +44,8 @@ Lots of interesting, hard to find, or just weird stuff can be found on these ser
 	function search() {
 		var form = document.forms["od"];
 		// Basic Open directory search term
-		var base = 'intitle:"index of /" -inurl:asp -inurl:html -inurl:php '
-		var baseddg = '"index of /" '
+		var base = 'intitle:"index.of./" -inurl:(asp|jsp|php|aspx|index_of) '
+		var baseddg = '"index.of./" '
 		// Validate and proccess search term
 		if (form.term.value === '') {
 			alert("Please provide a search term")
