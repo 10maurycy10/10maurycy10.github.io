@@ -1,21 +1,13 @@
----
-title: New virus (Windows PSA/Copypasta)
-tags: ["rant", "linux", "windows"]
-date: 2022-09-14
----
-
-![Windows 10 logo](./windows10.svg)
-
-Have you heard of the new Computer virus? The virus is called Windows, and 
+   Have you heard of the new Computer virus? The virus is called Windows, and 
 while not itself new, A new strain is even more dangerous than the last.
 
-It installs bloat on your PC that slows down your CPU and uses almost half of 
+   It installs bloat on your PC that slows down your CPU and uses almost half of 
 your ram, and installs spyware that tracks your every keystroke. But the worst 
 part is that you have to pay 100 to change your desktop background and another 
 100 to use office programs, and remove ads on startup. Most people assume there
 old computers have gotten slow, when a worsening Windows infection is to blame.
 
-There are many versions of the Windows virus, but the most common one is 
+   There are many versions of the Windows virus, but the most common one is 
 "Windows 10" with "Windows 11" quickly catching up. Windows is very dangerous 
 as many normal people don't know that it is a virus, and it backdoors your 
 system allowing *thousands* of other viruses in. (The only way to stop this is 
@@ -23,10 +15,9 @@ by installing *paid* software like Avast.)
 
 # Prevalence
 
-What is worse is that the virus is very common, infecting oven 74% of desktops 
-and 28% of all devices, making the most prevalent virus.
-
-In fact, lots of computers come with the virus from the factory!
+   What is worse is that the virus is very common, infecting oven 74% of desktops 
+and 28% of all devices, making the most prevalent virus. In fact, lots of 
+computers come with the virus from the factory!
 
 # Testing
 
@@ -80,13 +71,13 @@ not, use the internet to find the key.)
 6. Go thru the menu looking for these options (Names can very) (Don't worry, 
 you cant break anything):
 	
-	- Secure boot: Should be *disabled* to prevent windows from protecting itself
-	
-	- EFI over USB/USB Boot: Should be enabled
+- Secure boot: Should be *disabled* to prevent windows from protecting itself
 
-	- OS Optimized defaults: Disabled or set to other
+- EFI over USB/USB Boot: Should be enabled
 
-	- Boot order: Move "USB HDD" or the name of your drive to the top, enabling if needed. (This may require a second reboot)
+- OS Optimized defaults: Disabled or set to other
+
+- Boot order: Move "USB HDD" or the name of your drive to the top, enabling if needed. (This may require a second reboot)
 
 7. Select "Exit, saving settings" or similar option and you should be greeted 
 with the linux mint logo (stylized 'm'). If you are not make sure the options 
@@ -110,7 +101,3 @@ Congratulations, you now have a Windows free system. If this was an older comput
 you will likely be amazed by how fast it is without windows.
 
 Use FOSS and be safe.
-
---- Feel free to share this copypasta, atribuition not required.
-
-[Copy/Download this](./windows.txt)
