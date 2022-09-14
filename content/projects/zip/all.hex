@@ -1,0 +1,17 @@
+- Local file header
+04 03 4b 50 - magic number
+00 00 - Version number
+00 00 - Bit flag
+00 00 - Compression
+00 00 - Last modifyed time
+00 00 - Last modifyed data
+00 00 00 00 - CRC 32
+00 00 00 00 - Compressed size
+00 00 00 00 - Uncompressed size
+00 03 - File name length
+00 00 - Extra length
+
+62 69 67 - filename 'big'
+
+- COMPRESSED DATA HERE
+
