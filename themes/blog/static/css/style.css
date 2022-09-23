@@ -84,3 +84,18 @@ img {
 	}
 }
 
+.highlight pre {
+	/* Avoid pushing up the copy buttons */
+	margin-top: 0;
+	border-radius: 3px;
+	padding: 10px;
+	overflow: auto;
+	font-size: 0.9em;
+}
+
+.highlight pre code {
+	/* Otherwise, overflow text hits the edge of the block */
+	margin-right: 8px;
+	display: inline-block;
+}
+
