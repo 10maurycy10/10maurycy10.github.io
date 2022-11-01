@@ -1,0 +1,167 @@
+v 20201216 2
+C 40000 40000 0 0 0 title-B.sym
+C 45000 45400 1 90 0 inductor-1.sym
+{
+T 44500 45600 5 10 0 0 90 0 1
+device=INDUCTOR
+T 44600 45400 5 10 1 1 90 0 1
+refdes=Resonator
+T 44300 45600 5 10 0 0 90 0 1
+symversion=0.1
+}
+C 45000 47800 1 90 0 inductor-1.sym
+{
+T 44500 48000 5 10 0 0 90 0 1
+device=INDUCTOR
+T 44600 47700 5 10 1 1 90 0 1
+refdes=Regeneration
+T 44300 48000 5 10 0 0 90 0 1
+symversion=0.1
+}
+C 43600 46200 1 0 0 capacitor-1.sym
+{
+T 43800 46900 5 10 0 0 0 0 1
+device=CAPACITOR
+T 43800 46700 5 10 1 1 0 0 1
+refdes=15pF
+T 43800 47100 5 10 0 0 0 0 1
+symversion=0.1
+}
+C 45900 45300 1 90 0 capacitor-variable-1.sym
+{
+T 45200 45500 5 10 0 0 90 0 1
+device=VARIABLE_CAPACITOR
+T 45400 45500 5 10 1 1 90 0 1
+refdes=200pF
+T 45000 45500 5 10 0 0 90 0 1
+symversion=0.1
+}
+C 44700 44800 1 0 0 ground.sym
+N 44900 45100 44900 45400 4
+N 43600 45100 51400 45100 4
+N 45700 46400 45700 46200 4
+C 45900 46200 1 0 0 capacitor-1.sym
+{
+T 46100 46900 5 10 0 0 0 0 1
+device=CAPACITOR
+T 46100 46700 5 10 1 1 0 0 1
+refdes=100pF
+T 46100 47100 5 10 0 0 0 0 1
+symversion=0.1
+}
+C 45900 46900 1 0 0 resistor-1.sym
+{
+T 46200 47300 5 10 0 0 0 0 1
+device=RESISTOR
+T 46200 47200 5 10 1 1 0 0 1
+refdes=1M
+}
+N 45900 46400 45900 47000 4
+N 46800 47000 46800 46400 4
+C 47100 46000 1 0 0 2S2K3-1.sym
+{
+T 47000 46600 5 10 0 1 0 0 1
+device=2S2K3
+T 47800 46400 5 10 1 1 0 0 1
+refdes=n JFET
+}
+N 47100 46400 46800 46400 4
+C 48400 45100 1 90 0 resistor-1.sym
+{
+T 48000 45400 5 10 0 0 90 0 1
+device=RESISTOR
+T 48600 45300 5 10 1 1 90 0 1
+refdes=2.7K
+}
+N 48300 46000 47700 46000 4
+C 47900 45100 1 90 0 capacitor-1.sym
+{
+T 47200 45300 5 10 0 0 90 0 1
+device=CAPACITOR
+T 47400 45300 5 10 1 1 90 0 1
+refdes=10uF
+T 47000 45300 5 10 0 0 90 0 1
+symversion=0.1
+}
+N 45700 45300 45700 45100 4
+N 44900 47800 47700 47800 4
+N 47700 47800 47700 46800 4
+N 44900 48800 44900 48700 4
+C 50500 47900 1 90 0 capacitor-1.sym
+{
+T 49800 48100 5 10 0 0 90 0 1
+device=CAPACITOR
+T 50800 48200 5 10 1 1 90 0 1
+refdes=1uF
+T 49600 48100 5 10 0 0 90 0 1
+symversion=0.1
+}
+N 50300 47900 50300 45100 4
+C 51600 46500 1 90 0 battery-3.sym
+{
+T 50900 46800 5 10 0 0 90 0 1
+device=BATTERY
+T 51100 46800 5 10 1 1 90 0 1
+refdes=16V
+T 50650 46800 5 10 0 0 90 0 1
+symversion=0.1
+}
+N 51400 46500 51400 45100 4
+T 50000 40700 9 12 1 0 0 0 1
+Regenerative Recever with varcap regeneration control
+C 49400 48700 1 0 0 inductor-1.sym
+{
+T 49600 49200 5 10 0 0 0 0 1
+device=INDUCTOR
+T 49600 49000 5 10 1 1 0 0 1
+refdes=2.5mH
+T 49600 49400 5 10 0 0 0 0 1
+symversion=0.1
+}
+N 50300 48800 51400 48800 4
+C 49600 47900 1 90 0 capacitor-variable-1.sym
+{
+T 48900 48100 5 10 0 0 90 0 1
+device=VARIABLE_CAPACITOR
+T 49100 48200 5 10 1 1 90 0 1
+refdes=60pF
+T 48700 48100 5 10 0 0 90 0 1
+symversion=0.1
+}
+N 49400 47900 49400 45100 4
+N 44900 48800 49400 48800 4
+C 43000 46300 1 0 0 in-1.sym
+{
+T 43000 46600 5 10 0 0 0 0 1
+device=INPUT
+T 43000 46600 5 10 1 1 0 0 1
+refdes=RF in
+}
+C 43000 45000 1 0 0 in-1.sym
+{
+T 43000 45300 5 10 0 0 0 0 1
+device=INPUT
+T 43000 45300 5 10 1 1 0 0 1
+refdes=RF gnd
+}
+T 40300 43500 9 12 1 0 0 0 4
+Coils should have a diameter of 4.31 cm (toilet paper roll)
+60 to 80 windings for the resonator coil
+10 to 20 windings for the regeneration cloil
+If in doubt, add more turns, fine tuning can be done by removing windings.
+T 40300 42700 9 12 1 0 0 0 2
+Regeneration and Resonator coils should be wound on the same (air) core to provide coupling
+
+N 44500 46400 45900 46400 4
+T 53800 40400 9 12 1 0 0 0 1
+2
+N 44900 46300 44900 46400 4
+L 44700 48800 44700 45500 5 0 1 2 100 100
+L 44800 48800 44800 45500 5 0 1 2 100 100
+C 51400 46900 1 0 0 speaker-1.sym
+{
+T 53400 49400 5 10 0 0 0 0 1
+device=SPEAKER
+T 52000 48900 5 10 1 1 0 0 1
+refdes=SPK1
+}
