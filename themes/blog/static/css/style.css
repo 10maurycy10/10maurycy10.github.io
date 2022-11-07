@@ -23,46 +23,61 @@ legend {
 	/*margin: -0.5em;*/
 }
 
-/* Content should be a centered column*/
-#content {
-	margin: auto;
-	max-width: 40em;
+/* ## DARK THEME COLORING ## */
+@media screen {
+	#content {
+		margin: auto;
+		max-width: 40em;
+	}
+	
+	.wide  {
+		margin: auto;
+		max-width: 80em;
+	}
+
+	footer {
+		margin: auto;
+		max-width: 40em;
+	}
+
+	#sidebar {
+	}
+
+	#tile {
+		color: #eee;
+		margin:auto;
+	}
+
+	/* dark background */
+	body,input {
+		background: #111;
+		color: #eee;
+	}
+
+	/* Link styling */
+	a:visited {
+		color: #3cc
+	}
+	a {
+		color: #5ff
+	}
 }
 
-.wide  {
-	margin: auto;
-	max-width: 80em;
+/* Hide naviagtion on printouts */
+
+@media print {
+	#sidebar {
+		display: none
+	}
+	a:after {
+		color: #000;
+		text-decoration: none;
+		content: '[' attr(href) ']';
+		visibility: visible;
+	}
 }
 
-footer {
-	margin: auto;
-	max-width: 40em;
-}
-
-#sidebar {
-}
-
-#tile {
-	color: #eee;
-	margin:auto;
-
-}
-
-/* dark background */
-body,input {
-	background: #111;
-	color: #eee;
-}
-
-/* Link styling */
-a:visited {
-	color: #3cc
-}
-a {
-	color: #5ff
-}
-
-/* keep images centered in column */
+/*keep images centered in column */
 img {
 	margin: auto;
 	max-width: 40em;
