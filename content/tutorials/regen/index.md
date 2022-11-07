@@ -28,7 +28,7 @@ Lots of vacuum tube based designs exist, but tubes are hard to buy and very powe
 - High impedance speaker (800 Ohm to 2000 Ohm)
 - N type JFET transistor. (such as the J310)
 - Source of 16 to 20 volt power (two 9volt batters work well)
-- Toggle switch (optional, add between speeker and battery)
+- Toggle switch (optional, add between speaker and battery)
 
 (Exact values are not critical, but a large deviation will require fine tuning.)
 
@@ -40,6 +40,8 @@ Lots of vacuum tube based designs exist, but tubes are hard to buy and very powe
 In most variable capacitors, the shaft is connected to one of the terminals, ensure that this is the terminal connected to ground.
 
 Failing to do this will lead to massive hand-capacitance issues.
+
+I recommend adding a empty 2 pin component socket in parallel to the 30 pF variable capacitor, this allows increasing the capacitance (by adding a capacitor) if you have issues getting the set to regenerate.
 
 # The coil
 
@@ -78,5 +80,6 @@ Now *slowly* sweep through the range of the tuning capacitor (200 pF), while con
 
 # Issues with this circuit
 
-- It is not very loud, even when the regen is set high enough that the audio is distorted, the volume is rather quiet. This could be solved by adding an additional audio amplifyer
+- It is not very loud, even when the regen is set high enough that the audio is distorted, the volume is rather quiet. This could be solved by adding an additional audio amplifier. (I will publish an improved set at some point)
 - Due to the lack of isolation between the tank circuit and the antenna, this radio does radiate a bit.
+- Antenna size and placement effects tuning and regeneration, it is sometimes necessary to add an additional capacitor to get the set to regenerate.
