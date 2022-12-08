@@ -15,11 +15,11 @@ It can even write short programs based on a description of the desired function:
 ![ChatGPT implement bubble sort](sort.png)
 
 This has lead to speculation that similarly AI's might replace human programmers and writers. 
-However, ChatGPT knowledge is replaced by vivid confabulation when it is faced with a question that has not been discussed on the internet:
+However, ChatGPT's knowledge is replaced by vivid confabulation when it is faced with a question that has not been discussed on the internet:
 
 ![ChatGPT's confabulation after being asked "Does tinfoil block violet light"](foil.png)
 
-Where as a human would be able to derive or experimentally determine the answer easily (checking if foil is transparent), ChatGPT confidently provides an incorrect answer.
+Where a human would be able to derive or experimentally determine the answer easily (checking if foil is transparent), ChatGPT will confidently provide an incorrect answer.
 
 This also apply to writing programs. The AI works fine when asked to do a common programming task (sort an array, Fizz Buzz, make a web request...), but as soon as at is confronted with a novel task, it completely fails.
 
@@ -34,7 +34,7 @@ The format consists of ASCII art of stacked crates, each labeled with letters.
  1   2   3 
 ```
 
-A human programmer could do this in 20minuets, but the AI struggled to get anywhere, even after 20 attempts of tweaking the prompt. (I have manually reformatted this as the AI messed up the formatting):
+A human programmer could do this in 20 min, but the AI struggled to get anywhere, even after 20 attempts of tweaking the prompt. (I have manually reformatted this as the AI messed up the formatting):
 
 ```python
 #input: string representing the the crates
@@ -96,17 +96,16 @@ def parse(input):
             label = raw[row][col]
             if label != ' ':
                 colbuf.append(raw[row][col])
+        colbuf.reverse()
         arr.append(colbuf)
     return arr
 
 drawing = '    [D]    \n[N] [C]    \n[Z] [M] [P]\n 1   2   3 \n'
-print(parse(drawing)) # This *does* print [['N', 'Z'], ['D', 'C', 'M'], ['P']]
+print(parse(drawing)) # This *does* print [['Z', 'N'], ['M', 'C', 'D'], ['P']]
 ```
 
-Every line of code by the AI makes since on it's own but together they don't accomplish the goal.
+Every line of code by the AI makes sense on it's own but together they don't accomplish the goal.
 It's almost like the AI is pattern matching on GitHub and Stack Overflow, witch yields solutions only if the problem has already be solved.
-
-
 
 In the current state, these programs wont (or should not) replace writers and programmers, but keep in mind that almost every claim that "Computers will never be able to do X" has been proven false:
 [Play chess](https://stockfishchess.org/), Compose Music, Identify objects in images, [Play Go](https://en.wikipedia.org/wiki/AlphaGo), Write Paragraphs, Write poems, [Paint](https://github.com/CompVis/stable-diffusion)...
