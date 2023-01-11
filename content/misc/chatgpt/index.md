@@ -1,7 +1,7 @@
 ---
 title: "ChatGPT and the future of programming."
 date: 2022-12-06T12:21:53-08:00
-tags: []
+tags: ["ai"]
 draft: false
 ---
 
