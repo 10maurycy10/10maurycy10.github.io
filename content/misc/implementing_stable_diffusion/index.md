@@ -1,7 +1,7 @@
 ---
-title: "Stable diffusion, in code."
+title: "Stable diffusion, in code. [SD part 2]"
 date: 2023-01-11T11:43:26-08:00
-tags: ["ai"]
+tags: ["ai", "stable-diffusion"]
 draft: false
 ---
 
@@ -127,7 +127,7 @@ with torch.no_grad():
 
 Because we want to run unet on both prompt, concatenate the embedding to take full advantage of parallelism
 
-```
+```py
 text_embeddings = torch.cat([uncond_embeddings, text_embeddings])
 ```
 
@@ -135,7 +135,7 @@ text_embeddings = torch.cat([uncond_embeddings, text_embeddings])
 
 One image is needed for every prompt and they should be 8 times smaller to generate the desired size when decoded back to pixel space by vae.
 
-```
+```py
 latents = torch.randn(
   (batch_size, unet.in_channels, height // 8, width // 8),
   generator=rng,
@@ -188,13 +188,13 @@ for (i, sigma) in tqdm.tqdm(enumerate(scheduler.timesteps)):
 
 The latents used for training unet were scaled by a factor of ``0.18215``.
 
-```
+```py
 latents = 1/0.18215 * latents
 ```
 
 Now use vae to covert the latent image into a full sized generated image
 
-```
+```py
 # Run vae to decode image
 with torch.no_grad():
   image = vae.decode(latents).sample
@@ -202,7 +202,7 @@ with torch.no_grad():
 
 Scale the image to be from 0 to 255 instead of -1 to 1.
 
-```
+```py
 image = (image / 2 + 0.5).clamp(0, 1)
 image = image.detach().cpu().permute(0, 2, 3, 1).numpy()
 images = (image * 255).round().astype("uint8")
@@ -210,7 +210,7 @@ images = (image * 255).round().astype("uint8")
 
 Finally use PIL to save the image
 
-```
+```py
 pil_images = [Image.fromarray(image) for image in images]
 pil_images[0].save("out.png")
 ```
