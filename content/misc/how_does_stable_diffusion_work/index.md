@@ -71,11 +71,20 @@ CLIP further limits stable diffusion, as it does not understand object compositi
 
 ![Instead of a red cube on top of a blue sphere, the generation shows an intersecting red cube and blue sphere](cube.png)
 
+# Classifier Free Guidance
+
+Simply passing the text embedding into unet doesn't tend to generate satisfactory results as the images are not strongly related to the prompt.
+To increase the relation of the generated image to the prompt a proccess called classifier free guidance is used.
+To do this text embedding are generated for both the prompt (conditioned embedding), and an empty string (unconditioned embedding).
+Then unet is invoked with both imbeddings, producing 2 separate noise predictions. By finding the difference in the two predictions, you can isolate the effect of the prompt.
+The difference can then be scaled by the ``guidance_scale`` parameter (usually around 6 to 8) and added into the unconditioned noise prediction (the one with the empty prompt).
+This emphasizes the differences between a generic image and the prompt.
+
 # The txt2img algorithm
 
 ![Diagram of latent diffusion (also applicable to stable diffusion), stolen from https://github.com/CompVis/latent-diffusion/](modelfigure.png)
 
-1. The first step is the use the CLIP TextEncoder and TextTokenizer to convert the prompt into 59136 element vector, the ``text_imbeddings``. An empty prompt is also processed to provide ``uncond_imbeddings``.
+1. The first step is the use the CLIP TextEncoder and TextTokenizer to convert the prompt into 59136 element vector, the ``text_embeddings``. An empty prompt is also processed to provide ``uncond_embeddings``.
 
 2. Now the initial latent space image will have to be created, this is simply a fully random image 8 times smaller on each axis than desired generated image's size.
 
@@ -85,7 +94,7 @@ CLIP further limits stable diffusion, as it does not understand object compositi
 
     5. If the K-LMS scheduler was used, the latents must be scaled before passing into unet, do that here.
 
-    6. Feed the latent space image into unet to generate the noise predictions, one passing the text_imbeddings to create the guided "``text_noise_pred``" and  one with the ``uncond_imbeddings`` to create ``uncond_noise_pred`` .
+    6. Feed the latent space image into unet to generate the noise predictions, one passing the text_embeddings to create the guided "``text_noise_pred``" and  one with the ``uncond_embeddings`` to create ``uncond_noise_pred`` .
     
     7. Combine the noise predictions using the guidance scale to get an overall noise prediction: ``noise_pred = uncond_noise_pred + guidance_scale * (text_noise_pred - uncond_noise_pred)``
 
@@ -153,3 +162,5 @@ Step 10:
 ![step 10 latents](latent_10.png)
 
 Note how the latent image is still very noisy, this hints that more steps (less aggressive sigma falloff) might give a better result, but some of the noise requires an impractical amount of steps to remove.
+
+UPDATE 2023-01-12: add classifier free guidance section
