@@ -7,7 +7,7 @@ draft: false
 
 [If you have not read the last post, I would highly recommend you read it first.](../how_does_stable_diffusion_work/)
 
-Full disclose, I will be using pre-trained models from the internet for unet, CLIP TextEncoder, and vae.
+Full disclosure, I will be using pre-trained models from the internet for unet, CLIP TextEncoder, and vae.
 
 # Environment
 
@@ -163,16 +163,16 @@ Now time for the diffusion loop!
 
 ```py
 # For each denoising step...
-for (i, sigma) in tqdm.tqdm(enumerate(scheduler.timesteps)):
+for (i, timestep) in tqdm.tqdm(enumerate(scheduler.timesteps)):
     # Expand the latents so that each latent image gets run both with the prompt and the uncond_embeddings
     latent_model_input = torch.cat([latents] * 2)
 
     # The latents are scalled, make sure to undo this before feeding into unet.
-    latent_model_input = scheduler.scale_model_input(latent_model_input, sigma)
+    latent_model_input = scheduler.scale_model_input(latent_model_input, timestep)
 
     # Use unet to generate the noise prediction
     with torch.no_grad():
-        noise_pred = unet(latent_model_input, sigma, encoder_hidden_states=text_embeddings).sample
+        noise_pred = unet(latent_model_input, timestep, encoder_hidden_states=text_embeddings).sample
 
     # Seperate the conditioned and unconditioned predictions
     noise_pred_uncond, noise_pred_text = noise_pred.chunk(2)
@@ -181,7 +181,7 @@ for (i, sigma) in tqdm.tqdm(enumerate(scheduler.timesteps)):
     noise_pred = noise_pred_uncond + guidance_scale * (noise_pred_text - noise_pred_uncond)
 
     # Finaly, use the schedualer to merge the prediction into the latent space
-    latents = scheduler.step(noise_pred, sigma, latents).prev_sample
+    latents = scheduler.step(noise_pred, timestep, latents).prev_sample
 ```
 
 # Decoding an image
