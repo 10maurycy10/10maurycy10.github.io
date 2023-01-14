@@ -249,9 +249,9 @@ print(f"Generated {frame_counter} images!")
 
 ![](out_10.png)
 
-After interpolation with FILM:
+![](out_11.png)
 
-![](interpolated.mp4)
+[After interpolation with FILM](interpolated.mp4)
 
 
 # Going further
