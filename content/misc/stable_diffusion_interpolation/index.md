@@ -249,6 +249,11 @@ print(f"Generated {frame_counter} images!")
 
 ![](out_10.png)
 
+After interpolation with FILM:
+
+![](interpolated.mp4)
+
+
 # Going further
 
 If you want more similarity between images in the generations, simply run some denoising steps half way between the two prompts, then use those as the starting latents when doing interpolation.
