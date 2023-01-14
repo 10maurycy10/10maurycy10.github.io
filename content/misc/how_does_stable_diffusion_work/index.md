@@ -1,7 +1,7 @@
 ---
 title: "Just how does stable diffusion actually work? [SD part 1]"
 date: 2023-01-10T13:10:48-08:00
-tags: ["ai"]
+tags: ["ai", "stable-diffusion"]
 draft: false
 ---
 
