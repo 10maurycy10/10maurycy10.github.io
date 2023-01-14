@@ -2,7 +2,7 @@
 title: "Smooth prompt interpolation with stable diffusion. [SD part 3]"
 date: 2023-01-13T09:38:13-08:00
 tags: ["ai", "stable-diffusion"]
-draft: true
+draft: false
 ---
 
 
