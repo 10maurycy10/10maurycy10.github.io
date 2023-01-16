@@ -227,6 +227,8 @@ for prompt in range(len(prompts) - 1):
 print(f"Generated {frame_counter} images!")
 ```
 
+These would be a lot smother if I had not dropped ``interpolated_images`` to 3. I did this to avoid waiting a long time gor generation.
+
 ![](out_0.png)
 
 ![](out_1.png)
@@ -248,6 +250,10 @@ print(f"Generated {frame_counter} images!")
 ![](out_9.png)
 
 ![](out_10.png)
+
+![](out_11.png)
+
+[After interpolation with FILM](interpolated.mp4)
 
 # Seed interpolation [UPDATE 2023-01-16]
 
