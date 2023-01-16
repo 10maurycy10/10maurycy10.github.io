@@ -251,10 +251,10 @@ print(f"Generated {frame_counter} images!")
 
 # Seed interpolation [UPDATE 2023-01-16]
 
-The current code works, but if you try to generate more complex animations, you will enconter a problem; The fixed seed value preventing you from fine tuning results.
-You might think it is possible to simplly do linear interpolation between inital latent space images, but this results in the generation of completly gray images (sometimes you even get a gradeant).
-This is becuase the interpolation changes the statistical properties of the noise, in such a way that diffusion fails.
-The solution is to use a more complecated, [spherical linear interpolation](https://en.wikipedia.org/wiki/Slerp).
+The current code works, but if you try to generate more complex animations, you will encounter a problem; The fixed seed value preventing you from fine tuning results.
+You might think it is possible to simply do linear interpolation between initial latent space images, but this results in the generation of completely gray images (sometimes you even get a gradient).
+This is because the interpolation changes the statistical properties of the noise, in such a way that diffusion fails.
+The solution is to use a more complected, [spherical linear interpolation](https://en.wikipedia.org/wiki/Slerp).
 This function is complicated enough that it deserves it's own function.
 
 ```py
@@ -290,7 +290,7 @@ def slerp(t, v0, v1, DOT_THRESHOLD=0.9995):
 # Added code end
 ```
 
-The generate finction will have to take multiple seeds values.
+The generate function will have to take multiple seeds values.
 
 ```py
 text_encoder.to(torch_device)
@@ -307,7 +307,7 @@ def generate(startprompts, endprompts, interp=0, seed1=time.time(), seed2=time.t
 # Modifyed code end
 ```
 
-It then has to generate and interpolate the inital noise.
+It then has to generate and interpolate the initial noise.
 
 ```py
     # Setup scheduler
@@ -351,7 +351,7 @@ prompts =  [
 
 # Going further
 
-Try interolating the latent space insted of the noise predictions to increase speed.
+Try interpolating the latent space instead of the noise predictions to increase speed.
 
 If you want more similarity between images in the generations, simply run some denoising steps half way between the two prompts, then use those as the starting latents when doing interpolation.
 
