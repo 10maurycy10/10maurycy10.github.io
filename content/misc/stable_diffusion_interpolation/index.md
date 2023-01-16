@@ -249,7 +249,109 @@ print(f"Generated {frame_counter} images!")
 
 ![](out_10.png)
 
+# Seed interpolation [UPDATE 2023-01-16]
+
+The current code works, but if you try to generate more complex animations, you will enconter a problem; The fixed seed value preventing you from fine tuning results.
+You might think it is possible to simplly do linear interpolation between inital latent space images, but this results in the generation of completly gray images (sometimes you even get a gradeant).
+This is becuase the interpolation changes the statistical properties of the noise, in such a way that diffusion fails.
+The solution is to use a more complecated, [spherical linear interpolation](https://en.wikipedia.org/wiki/Slerp).
+This function is complicated enough that it deserves it's own function.
+
+```py
+import tqdm
+from PIL import Image
+
+# Added code start
+def slerp(t, v0, v1, DOT_THRESHOLD=0.9995):
+    """helper function to spherically interpolate two arrays v1 v2"""
+
+    if not isinstance(v0, np.ndarray):
+        inputs_are_torch = True
+        input_device = v0.device
+        v0 = v0.cpu().numpy()
+        v1 = v1.cpu().numpy()
+
+    dot = np.sum(v0 * v1 / (np.linalg.norm(v0) * np.linalg.norm(v1)))
+    if np.abs(dot) > DOT_THRESHOLD:
+        v2 = (1 - t) * v0 + t * v1
+    else:
+        theta_0 = np.arccos(dot)
+        sin_theta_0 = np.sin(theta_0)
+        theta_t = theta_0 * t
+        sin_theta_t = np.sin(theta_t)
+        s0 = np.sin(theta_0 - theta_t) / sin_theta_0
+        s1 = sin_theta_t / sin_theta_0
+        v2 = s0 * v0 + s1 * v1
+
+    if inputs_are_torch:
+        v2 = torch.from_numpy(v2).to(input_device)
+
+    return v2
+# Added code end
+```
+
+The generate finction will have to take multiple seeds values.
+
+```py
+text_encoder.to(torch_device)
+unet.to(torch_device)
+
+
+# Modifyed code start
+def generate(startprompts, endprompts, interp=0, seed1=time.time(), seed2=time.time(), steps=20, width=512, height=512, guidance_scale=7.5):
+    batch_size = len(startprompts)
+
+    # RNG for inital state of diffuser
+    generator1 = torch.manual_seed(seed1)
+    generator2 = torch.manual_seed(seed2)
+# Modifyed code end
+```
+
+It then has to generate and interpolate the inital noise.
+
+```py
+    # Setup scheduler
+    scheduler.set_timesteps(steps)
+    timesteps = list(scheduler.timesteps)
+
+    # Modifyed code start
+    # Generate inital latent space
+    latents1 = torch.randn(
+        (batch_size, unet.in_channels, height // 8, width // 8),
+        generator=generator1,
+    )
+
+    latents2 = torch.randn(
+        (batch_size, unet.in_channels, height // 8, width // 8),
+        generator=generator2,
+    )
+    latents = slerp(interp, latents1, latents2)
+
+    # Modifyed Code end
+
+    latents = latents.to(torch_device)
+```
+
+```py
+# Modifyed code start
+prompts =  [
+    (1,"A fantasy landscape"),
+    (1,"A fantasy landscape with a small town"),
+    (2,"A fantasy landscape with a small town and castle"),
+    (2,"A fantasy landscape with a modern city"),
+    (3,"A sprawling cityscape")
+]
+# Modifyed code end
+...
+        # Modifyed code start
+        interp = i/interpolated_images
+        generate([start[1]], [end[1]], seed1=start[0], seed2=end[0], interp=interp, steps=steps)[0].save(f"out_{frame_counter}.png")
+        # Modifyed code end
+```
+
 # Going further
+
+Try interolating the latent space insted of the noise predictions to increase speed.
 
 If you want more similarity between images in the generations, simply run some denoising steps half way between the two prompts, then use those as the starting latents when doing interpolation.
 
