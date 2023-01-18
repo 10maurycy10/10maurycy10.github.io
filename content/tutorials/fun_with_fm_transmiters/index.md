@@ -10,14 +10,13 @@ It is surprisingly easy to make a working FM transmitter with just one transisto
 ![Schematic diagram of a simple FM transmitter](base.png)
 
 This circuit runs from a single 9 volt battery.
-The coil is 6 turns of insulated solid core hook up wire wrapped around a 3mm form, and the antenna is 30-60cm of wire.
+The coil is 6 turns of insulated solid core hook up wire wrapped around a 3mm form, and the antenna is 30-60cm of wire. 
 With a audio signal from a headphone output is connected between ground and the 100nF capacitor, the audio can be head on a nearby FM radio.
 Another 100nF capacitor can be connected across the power supply/battery to improve performance.
+The frequency should be adjusted to an empty channel by spreading out/compressing the coil.
 
 When it comes to construction, almost any method will work, but make sure to keep leads as short as possible, and everything packed as densely as possible.
 Strip-boards and solder-less breadboards are not recommended due to the capacitance between strips, but might work.
-
-The frequency should be adjusted to an empty channel by spreading out/compressing the coil.
 
 # A simple bug
 
@@ -39,18 +38,20 @@ The flashing LED can be replaced with a wire, this results in a constant tone.
 
 ![A schematic of a radio beacon](beacon.png)
 
-Mine, with a second rf stage, runs down to 2 volts without the flashing LED.
-This should make it possible to power it from 2 AA batteries, or a single 3v coin cell, instead of a 9v battery, as long as the LED is ommited.
+You might notice that the capacitor values on the oscillator transistor base are different, this recuses coupling because the signal from the oscillator is much stronger than from a microphone.
 
-# Improving frequency stability
+Mine, with a second RF stage, runs down to 2 volts without the flashing LED.
+This should make it possible to power it from 2 AA batteries, or a single 3v coin cell, instead of a 9v battery, as long as the LED is omitted at the expense of range.
+
+# Improving frequency stability with a class-c amplifier stage
 
 These circuits work but the frequency changes a lot from something as small as moving your hand next to the antenna, and sometimes the oscillation breaks down entirely.
 The solution is another RF stage (this has the added benefit of reducing radiated harmonics):
 
-![A transmitter with with an RF stage for isolation and trf filter](trf.png)
+![A transmitter with with an class C RF stage for isolation](trf.png)
 
 Keep everything outside of the green box the same as whatever circuit you want to modify.
-This circut can produce quite a bit of output power, which may be illegal if a long antenna is connected.
+This circuit improves output power (still just a handful of milliwatts), which allows shorter antennas or better range.
 
 # Antenna
 
@@ -58,9 +59,20 @@ Ideally the antenna would be two identical wires, one one the output, and one on
 In practice, it still performs well when one side is much sorter than the other. (even just the size of the circuit itself)
 If the circuit is mounted in a metal box, take advantage of it by connecting it to the negative side of the battery.
 
+# Maximizing range
+
+Despite having an output of just a few milliwatts, these circuits can achieve an impressive range (>100m) if used on an empty channel with a good receiver. 
+[You can use radio-locator](https://radio-locator.com/cgi-bin/vacant) to find the best channel.
+
+Another big factor of range is antenna placement and transmitter location. 
+VHF propagation mostly line-of-site, so minimizing obstacles between the transmitter and receiver is important. 
+Most obstacles are low down, so placing the transmitter high up will make a huge difference, so will raising the receiver, oftentimes just holding it above your head improves things considerably.
+Check local topography, even a small hill in the way can kill your signal, but if both the transmitter and receiver on on hill/mountain-tops, the range will be terrific.
+
 # Legality
 
 This section only applies to the US.
 From my understanding of part 15 of the FCC rules, low power transmitters are allowed in the FM broadcast band (and quite a few other places) from 88 to 108 MHz.
+One restriction is that you are not allowed to interfere with licensed transmitters (FM is fairly resistant to interference), so tune it away from local stations, this will massively improve range.
 As long as you don't go outside of that range (you can check with an oscilloscope or FM radio), or transmit with higher power than these circuits with the recommended antenna, you are not breaking the law.
 The actual limit for signals with less than 200kHz bandwidth on the FM band is 250 µV/m @ 3 m
