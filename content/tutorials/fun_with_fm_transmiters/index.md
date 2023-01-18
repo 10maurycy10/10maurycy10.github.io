@@ -10,7 +10,7 @@ It is surprisingly easy to make a working FM transmitter with just one transisto
 ![Schematic diagram of a simple FM transmitter](base.png)
 
 This circuit runs from a single 9 volt battery.
-The coil is 6 turns of insulated solid core hook up wire wrapped around a 3mm form, and the antenna is 30-90cm of wire.
+The coil is 6 turns of insulated solid core hook up wire wrapped around a 3mm form, and the antenna is 30-60cm of wire.
 With a audio signal from a headphone output is connected between ground and the 100nF capacitor, the audio can be head on a nearby FM radio.
 Another 100nF capacitor can be connected across the power supply/battery to improve performance.
 
@@ -39,6 +39,9 @@ The flashing LED can be replaced with a wire, this results in a constant tone.
 
 ![A schematic of a radio beacon](beacon.png)
 
+Mine, with a second rf stage, runs down to 2 volts without the flashing LED.
+This should make it possible to power it from 2 AA batteries, or a single 3v coin cell, instead of a 9v battery, as long as the LED is ommited.
+
 # Improving frequency stability
 
 These circuits work but the frequency changes a lot from something as small as moving your hand next to the antenna, and sometimes the oscillation breaks down entirely.
@@ -47,6 +50,7 @@ The solution is another RF stage (this has the added benefit of reducing radiate
 ![A transmitter with with an RF stage for isolation and trf filter](trf.png)
 
 Keep everything outside of the green box the same as whatever circuit you want to modify.
+This circut can produce quite a bit of output power, which may be illegal if a long antenna is connected.
 
 # Antenna
 
