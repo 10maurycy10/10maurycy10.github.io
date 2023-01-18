@@ -2,14 +2,14 @@
 title: "Fun with tiny FM transmitters"
 date: 2023-01-17T17:11:23-08:00
 tags: ["wireless"]
-draft: true
+draft: false
 ---
 
 It is surprisingly easy to make a working FM transmitter with just one transistor and a handful of passive components.
 
 ![Schematic diagram of a simple FM transmitter](base.png)
 
-This circuit runs from a single 9 volt batter for around 100 hours.
+This circuit runs from a single 9 volt battery.
 The coil is 6 turns of solid core hook up wire wrapped around a 3mm form, and the antenna is 30-90cm of wire.
 With a audio signal from a headphone output is connected between ground and the 100nF capacitor, the audio can be head on a nearby FM radio.
 Another 100nF capacitor can be connected across the power supply/battery to improve performance.
@@ -35,8 +35,6 @@ This is a two (three with the second RF stage describe later) transistor device,
 The flashing LED can be replaced with a wire, this results in a constant tone.
 
 ![A schematic of a radio beacon](beacon.png)
-
-This is not very practical as an item tracker due to the high power consumption, and low battery life.
 
 # Improving frequency stability
 
