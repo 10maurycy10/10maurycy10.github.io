@@ -76,3 +76,7 @@ From my understanding of part 15 of the FCC rules, low power transmitters are al
 One restriction is that you are not allowed to interfere with licensed transmitters (FM is fairly resistant to interference), so tune it away from local stations, this will massively improve range.
 As long as you don't go outside of that range (you can check with an oscilloscope or FM radio), or transmit with higher power than these circuits with the recommended antenna, you are not breaking the law.
 The actual limit for signals with less than 200kHz bandwidth on the FM band is 250 µV/m @ 3 m
+
+You can find the full regulations on unlicensed transmitters at [ecfr.gov](https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-15).
+
+[The FCC has also released a summary of the rules for such transmitters](https://transition.fcc.gov/oet/info/documents/bulletins/oet63/oet63rev.pdf)
