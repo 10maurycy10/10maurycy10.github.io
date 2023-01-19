@@ -13,3 +13,4 @@ Instead of a continuously running transmitter and audio oscillator modulated wit
 This circuit can also be expanded with a class-C second stage, giving good range or allowing a shorter antenna.
 
 ![Schematic of VHF FM band tracker with class-C amp](tracker2.png)
+

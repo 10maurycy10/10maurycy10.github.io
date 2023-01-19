@@ -38,23 +38,18 @@ Lots of vacuum tube based designs exist, but tubes are hard to buy and very powe
 [GSchem schematic files](regen.sch)
 
 In most variable capacitors, the shaft is connected to one of the terminals, ensure that this is the terminal connected to ground.
-
 Failing to do this will lead to massive hand-capacitance issues.
-
 I recommend adding a empty 2 pin component socket in parallel to the 30 pF variable capacitor, this allows increasing the capacitance (by adding a capacitor) if you have issues getting the set to regenerate.
 
 # The coil
 
 The coil should be wound on a form of around 2in/4.3cm such as a toilet paper roll or PVC pipe.
-
 For the nicest and most compact results, it should be wound with magnet wire, but any fine insulated wire will work.
-
 The tank coil should have around 60-80 turns, and the ticker should have around 10.
 
 # Antenna
 
 The circuit must be grounded, outlet ground works fine.
-
 As an antenna, a length of wire (2-4 m seems to work best) suspended in the air works great. (A finger also works, but this causes hand capacitance problems)
 
 # Fine Tuning
