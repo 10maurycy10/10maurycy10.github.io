@@ -5,6 +5,8 @@ tags: ["wireless"]
 draft: false
 ---
 
+**important: the 330 ohm resistor on the base of the 2N3606 should be a 330K or the ciruit will not work**
+
 ![Schematic of VHF FM band tracker](tracker.png)
 
 Expanding on the [foxhunt FM transmitter design](../fun_with_fm_transmiters#fox-hunting-beeper), using a pulse generator circuit stolen from [Talking electronics](https://talkingelectronics.com/).
