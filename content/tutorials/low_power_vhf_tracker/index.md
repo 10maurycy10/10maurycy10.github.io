@@ -2,8 +2,10 @@
 title: "Low power VHF tracker"
 date: 2023-01-18T09:03:03-08:00
 tags: ["wireless"]
-draft: false
+draft: true
 ---
+
+**important: the 330 ohm resistor on the base of the 2N3606 should be a 330K or the ciruit will not work**
 
 ![Schematic of VHF FM band tracker](tracker.png)
 
