@@ -1,0 +1,15 @@
+---
+title: "Low power VHF tracker"
+date: 2023-01-18T09:03:03-08:00
+tags: ["wireless"]
+draft: false
+---
+
+![Sechmatic of VHF FM band tracker](tracker.png)
+
+Expanding on the [foxhunt FM transmiter design](../fun_with_fm_transmiters#fox-hunting-beeper), using a pulse generator circut stolen from [Talking electronics](https://talkingelectronics.com/).
+Instead of a contiunusly running transmiter and audio occilator modulated with a flashing led, this circut cuts only sends breef pulses to the audio and rf occilator, resulting in a dramatic battery life improvemtn. (1000 hours is possible)
+
+This circut can also be expanded with a class-C second stage, giving good range or allowing a shorter antenna.
+
+![Sechmatic of VHF FM band tracker with class-C amp](tracker2.png)
