@@ -61,8 +61,10 @@ If the circuit is mounted in a metal box, take advantage of it by connecting it 
 
 # Maximizing range
 
-Despite having an output of just a few milliwatts, these circuits can achieve an impressive range (>100m) if used on an empty channel with a good receiver. 
+Despite having an output of just a few milliwatts, these circuits can achieve an impressive range (>100m) if used on an empty channel with a good receiver, and with good antenna placement. 
 [You can use radio-locator](https://radio-locator.com/cgi-bin/vacant) to find the best channel.
+
+In my tests on flat ground with obsticles (suburban housing), 50m is common.
 
 Another big factor of range is antenna placement and transmitter location. 
 VHF propagation mostly line-of-site, so minimizing obstacles between the transmitter and receiver is important. 
