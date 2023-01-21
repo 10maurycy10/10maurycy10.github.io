@@ -55,6 +55,8 @@ This should make it possible to power it from 2 AA batteries, or a single 3v coi
 
 # Improving frequency stability with a class-c amplifier stage
 
+Note: use a 5 pF capactor on the base of the new transistor.
+
 These circuits work, but the frequency changes a lot from something as small as moving your hand next to the antenna, and sometimes the oscillation breaks down entirely.
 The solution is another RF stage (this has the added benefit of reducing radiated harmonics):
 
