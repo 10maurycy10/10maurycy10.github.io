@@ -53,7 +53,7 @@ This circuit draws 2.4 milli amps from a 9v batter and should last for around 10
 With a second RF stage, runs down to 2 volts without the flashing LED.
 This should make it possible to power it from 2 AA batteries, or a single 3v coin cell, instead of a 9v battery, as long as the LED is omitted, and at the expense of range.
 
-# Improving frequency stability with a class-c amplifier stage
+# Improving range and frequency stability with a class-c amplifier stage
 
 Note: use a 5 pF capactor on the base of the new transistor.
 
