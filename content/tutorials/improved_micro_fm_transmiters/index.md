@@ -17,7 +17,7 @@ Beacon:
 
 The improvements consist of 2 modified resistor values, the emitter resistor on the oscillator stage (Not much power is needed for the output stage), and the bias resistor for the amplifier.
 
-Together these changes allow the device to run 1.5x as long with almost no effect on output power.
+Together these changes allow the device to run 1.5x as long with almost no effect on output power, and run down to 2V with a reduced output..
 
 # Construction advice
 
@@ -27,8 +27,8 @@ Perfboards/Matrixboards are a good way to create a compact and resilient layout.
 The coils are 6 turns of insulated wire around a 3mm diameter form, and should be adjustable if a trimmer cap is not used. (able to be compressed/stretched out to change frequency).
 If a non adjustable coil is used, or more accurate tuning is desired (to hit an empty channel in an area with lots of stations), a variable/trimmer capacitor cab replace the fixed capacitor parallel to the coils.
 
-The antenna should be 10-60 cm of insulated wire. (longer wires may violate the power limit in the US)
-If you are using the full 9v, cut the antenna to 7cm in the US to avoid voilating FCC part 15 power requirements.
+The antenna should be 10-30 cm of insulated wire for 4.5 volt and below, and around 7cm for 9v.
+(longer wires may violate the power limit in the US, but some places let you use more power, please check local laws first)
 
 
 # Adjustment
