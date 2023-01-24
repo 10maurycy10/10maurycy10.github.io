@@ -1,8 +1,8 @@
 ---
 title: "Improved micro FM transmitters"
 date: 2023-01-23T12:25:46-08:00
-tags: []
-draft: true
+tags: ["wireless"]
+draft: false
 ---
 
 Here are the full schematics for a (slightly improved) FM bug and beacon with a class-C output stage described in the [last post](fun_with_fm_transmiters).
