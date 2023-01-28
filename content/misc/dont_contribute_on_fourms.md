@@ -57,10 +57,10 @@ All of these problems are avoided with a personal website, which can be designed
 
 Many projects and games are moving to Discord as the only avalable platform for support and documenation.
 Discord has all of the listed problems and more.
-There is no way to backup a discord server, and even if a backup is created, there us no way to replicate the Discord UI.
-Discord has been known to delete entire servers with no notice or appeal.
-(Compromized bots or admins have also done this, with no way to roll back the server.)
-Discord is not indexed by search engines, and requires an account to view, and not archived by archive.org.
+There is no way to backup a discord server, and even if a backup is created, there is no way to replicate the Discord UI.
+They has been known to delete entire servers with no notice or appeal.
+Compromized bots or admins have also done this, with no way to roll back the server.
+Servers are not indexed by search engines, and require an account to view, and not archived by archive.org.
 Overall, information posted to Discord is hard to find, hard to archive, and may be deleted at any time.
 
 # The alternative
