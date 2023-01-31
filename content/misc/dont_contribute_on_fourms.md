@@ -5,7 +5,7 @@ tags: []
 draft: false
 ---
 
-Nothing of value should solely be posted on web forums like Reddit, HN, Facebook, Slashdot, Instagram or any similar site.
+Nothing of value should solely be posted on web forums like Reddit, HN, Facebook, Discord, Slashdot, Instagram or any similar site.
 Web forums typical have short lifespans, few have lasted longer than 10 years.
 Popularity is also no guarantee of continued service, [hundreds of well known and used services have been shut down by large companies like google, with all data lost](https://killedbygoogle.com/).
 
@@ -17,7 +17,7 @@ When a web forum shuts down, the data is often forever left inaccessible.
 Web forum owners very rarely release archives or data dumps, meaning that if a user has not archived (and published elsewhere) all of the content, it is forever lost.
 Most forums have no public facing API that could allow a backup or archive to be created, so even *if* a user wants to, and has the resources to, preserve the information, they have no viable way to do so.
 Even web crawlers like the ones used by [archive.org](https://archive.org) are often unable to archive web forums.
-For example, the Internet Archive doesn't archive Reddit threads, nor Facebook pages.
+For example, the Internet Archive doesn't archive Discord threads, nor Facebook pages.
 
 Backing up a simple website is super easy, nearly every site on the internet being backed up on archive.org.
 
@@ -52,6 +52,16 @@ Social media is not typically very accessible to people with impaired vision, us
 According to the WHO, over 285 million people have some form of vision disability, and have difficulty with such sites.
 
 All of these problems are avoided with a personal website, which can be designed as you wish, and are typically very accessible.
+
+# Example: Discord
+
+Many projects and games are moving to Discord as the only avalable platform for support and documenation.
+Discord has all of the listed problems and more.
+There is no way to backup a discord server, and even if a backup is created, there is no way to replicate the Discord UI.
+They has been known to delete entire servers with no notice or appeal.
+Compromized bots or admins have also done this, with no way to roll back the server.
+Servers are not indexed by search engines, and require an account to view, and not archived by archive.org.
+Overall, information posted to Discord is hard to find, hard to archive, and may be deleted at any time.
 
 # The alternative
 
