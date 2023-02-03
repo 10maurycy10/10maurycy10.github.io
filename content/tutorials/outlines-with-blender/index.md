@@ -8,6 +8,11 @@ draft: false
 If you want your renderings to look like drawings, the single most important thing is to add outlines.
 Even on semi-realistic renderings, outlining can improve clarity.
 
+![An unlight scene with non decernable geometry.](flat.png)
+![An unlught scene with outlines.](cel.png)
+The differece outlines can make. (slightly modified blender example)
+
+
 # Inverted Hull
 
 Hull shading involves rendering a slightly larger version of the object, the hull, inside out, and in a different color (usualy black).
