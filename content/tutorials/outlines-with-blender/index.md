@@ -8,14 +8,14 @@ draft: false
 If you want your renderings to look like drawings, the single most important thing is to add outlines.
 Even on semi-realistic renderings, outlining can improve clarity.
 
-![An unlight scene with non decernable geometry.](flat.png)
+![An unlight scene with non discernible geometry.](flat.png)
 ![An unlught scene with outlines.](cel.png)
-The differece outlines can make. (slightly modified blender example)
+The difference outlines can make. (slightly modified blender example)
 
 
 # Inverted Hull
 
-Hull shading involves rendering a slightly larger version of the object, the hull, inside out, and in a different color (usualy black).
+Hull shading involves rendering a slightly larger version of the object, the hull, inside out, and in a different color (usually black).
 Because the vertex order is inverted, backface culling causes only the parts of the hull *behind* the object to be rendered.
 This results in an outline around the edges of the object.
 
@@ -29,13 +29,13 @@ Finally set the ``offset`` to 1 (add hull outside of object) and ``thickness`` t
 You can adjust the ``thickness`` parameter on the ``solidify modifier`` to change the thickness of the outline.
 If you enable ``viewport shading`` you can see the effect of it in the viewport and while you are adjusting the thickness.
 
-One limitation of the inverted hull method is that it only draws outlines behind objects, and not on edges in front of the object, meaning that it still requires shading for more complex geomteties.
+One limitation of the inverted hull method is that it only draws outlines behind objects, and not on edges in front of the object, meaning that it still requires shading for more complex geometries.
 ![An inverted hull on a unlight cube.](unshaded_hull.png)
 Notice the lack of outlining the edges on the front of the cube.
 
 # Edge detection Cel shading
 
-Edge detecton based Cel shading outlines all of an objects edges, making the geometry very visible, even without lighting.
+Edge detection based Cel shading outlines all of an objects edges, making the geometry very visible, even without lighting.
 
 ![Some Cel shaded objects, unlight](unshaded_cel.png)
 Cel shading, applied on a unlight object.
