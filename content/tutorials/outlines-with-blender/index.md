@@ -8,8 +8,8 @@ draft: false
 If you want your renderings to look like drawings, the single most important thing is to add outlines.
 Even on semi-realistic renderings, outlining can improve clarity.
 
-![An unlight scene with non discernible geometry.](flat.png)
-![An unlught scene with outlines.](cel.png)
+![An unlight scene with non discernible geometry.](flat.webp)
+![An unlught scene with outlines.](cel.webp)
 The difference outlines can make. (slightly modified blender example)
 
 
@@ -19,7 +19,7 @@ Hull shading involves rendering a slightly larger version of the object, the hul
 Because the vertex order is inverted, backface culling causes only the parts of the hull *behind* the object to be rendered.
 This results in an outline around the edges of the object.
 
-![An inverted hull on a lighted cube.](shaded_hull.png)
+![An inverted hull on a lighted cube.](shaded_hull.webp)
 
 To do this in Blender, add a new material to the object (in slot 2), and set the color to the outline color (black for the example).
 Then in ``material properties``, make sure to enable ``backface culling`` for the newly added material.
@@ -30,17 +30,17 @@ You can adjust the ``thickness`` parameter on the ``solidify modifier`` to chang
 If you enable ``viewport shading`` you can see the effect of it in the viewport and while you are adjusting the thickness.
 
 One limitation of the inverted hull method is that it only draws outlines behind objects, and not on edges in front of the object, meaning that it still requires shading for more complex geometries.
-![An inverted hull on a unlight cube.](unshaded_hull.png)
+![An inverted hull on a unlight cube.](unshaded_hull.webp)
 Notice the lack of outlining the edges on the front of the cube.
 
 # Edge detection Cel shading
 
 Edge detection based Cel shading outlines all of an objects edges, making the geometry very visible, even without lighting.
 
-![Some Cel shaded objects, unlight](unshaded_cel.png)
+![Some Cel shaded objects, unlight](unshaded_cel.webp)
 Cel shading, applied on a unlight object.
 
-![Some Cel shaded objects, light](shaded_cel.png)
+![Some Cel shaded objects, light](shaded_cel.webp)
 Cel shading and lighting with blender's Principled BSDF.
 
 Another way to add outlines is to run a sobel filter on the depth and normal maps of the final rendered image, then use that to create the outlines.
@@ -51,7 +51,7 @@ Then go into the compositing tab and check use nodes.
 
 Create two ``Filter`` nodes, and connect the ``Depth`` and ``Normal`` render layers to the ``Image`` input and set the filter type to ``Sobel``.
 
-![A render showing white outlines](cel_depth.png)
+![A render showing white outlines](cel_depth.webp)
 The result on running a Sobel filter on the depth pass.
 
 Now pass the image output of the filters into the ``Image`` input of ``Blur`` nodes to smooth out the jagged edges, and increase the size parameter to ``5``.
@@ -60,7 +60,7 @@ Finally, pass the ``Image`` output of that ``Alpha Over`` node into the ``Alpha`
 
 You can adjust the ``Fac`` value on the Sobel filters to adjust where outlines are added.
 
-![The finished node tree, used to generate the example images](nodes.png)
+![The finished node tree, used to generate the example images](nodes.webp)
 
 # Example files
 
