@@ -1,5 +1,5 @@
 ---
-title: "What is machine learning work anyway? [ML1]"
+title: "What is machine learning anyway? [ML1]"
 date: 2023-02-10T12:55:55-08:00
 tags: ["ai"]
 draft: false
