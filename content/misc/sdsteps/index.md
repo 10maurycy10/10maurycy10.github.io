@@ -12,7 +12,7 @@ No. Here a a bunch of images generated with stable diffusion (K-LMS scheduler), 
 
 |Prompt| 5 steps|10 steps|20 steps|40 steps|80 steps|160 steps|
 |-|--------|--------|--------|--------|--------|---------|
-|A fantasy landscape.|![](u5.png)|![](u10.png)|![](u20.png)|![](u40.png)|![](u80.png)|![](u160.png)|
+|A fantasy landscape.|![](u5.webp)|![](u10.webp)|![](u20.webp)|![](u40.webp)|![](u80.webp)|![](u160.webp)|
 
 Personaly, I cant tell the difference between the 40, 80 and 160 step images, and 20 steps looks quite similar.
 However, in the time it takes to generate a single 160 step images, you could generate *8* 20 step images!
@@ -29,6 +29,7 @@ This is the same prompt, just with a different seed:
 
 |Prompt| 5 steps|10 steps|20 steps|40 steps|80 steps|160 steps|
 |-|-|-|-|-|-|-|
-|A fantasy landscape.|![](o5.png)|![](o10.png)|![](o20.png)|![](o40.png)|![](o80.png)|![](o160.png)|
+|A fantasy landscape.|![](o5.webp)|![](o10.webp)|![](o20.webp)|![](o40.webp)|![](o80.webp)|![](o160.webp)|
 
 Once again, we see very litle differences after 20 steps.
+
