@@ -2,7 +2,7 @@
 title: "Deep learning, or going beyond linear regression [ML2]"
 date: 2023-02-10T17:54:59-08:00
 tags: ["ai"]
-draft: true
+draft: false
 math: true
 ---
 
