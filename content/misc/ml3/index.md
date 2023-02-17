@@ -87,3 +87,5 @@ matplotlib.pyplot.savefig("final.png")
 ![](final.png)
 
 Very good results due to the better training algorithm and longer training.
+
+[You can get the code here](ml3.py)
