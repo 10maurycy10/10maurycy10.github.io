@@ -84,8 +84,13 @@ matplotlib.pyplot.scatter(data[0],prediction.detach().numpy())
 matplotlib.pyplot.savefig("final.png")
 ```
 
+With 500 steps:
 ![](final.png)
 
-Very good results due to the better training algorithm and longer training.
+With 5000 steps, only 1s to train :)
+![](final2.png)
+
+- Blue: training data
+- Orange: predictions
 
 [You can get the code here](ml3.py)
