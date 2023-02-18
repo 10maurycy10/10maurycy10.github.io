@@ -16,7 +16,6 @@ Installing it is very easy. (I would recommend using your system package manager
 pip install torch
 ```
 
-To test it out, let's see how to reimplement the last posts network with pytorch.
 Because iteration in python is slow, torch provides vector ("tensors") types, that allow working with many values at a time, similar to numpy `ndarray`s.
 
 ```py
@@ -24,6 +23,7 @@ import torch
 tensor = torch.tensor([[1,2], [3,4]])
 ```
 
+To test it out, let's see how to reimplement the last posts network with pytorch.
 Torch provides prebuilt primitives for constructing deep networks, so this step is easy:
 
 ```py
