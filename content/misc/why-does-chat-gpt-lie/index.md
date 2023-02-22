@@ -19,9 +19,9 @@ The quick red fox jumped over the [BLANK]
 ```
 
 It produces a prediction of the most likely words to follow a string of text.
+In this example the model might predict that the next words are `lazy brown dog`.
 (Technically, it uses tokens witch are fragments of words or punctuation)
 This is fundamentally the same problem to the autocomplete on most phones, just done better.
-In this example the model might predict that the next words are `lazy brown dog`.
 The differences between LLM's and your phone's autocomplete is the size and complexity of the model (allowing more complex output and the cost of size and speed), and training data size.
 
 While your phone's predictive model might be a small markov chain model trained on just a few megabytes of text, GPT-3 (the base of Chat-GPT) has 175 *billion* parameters and was trained on *petabytes* of text scraped from the internet.
