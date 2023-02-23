@@ -1,0 +1,35 @@
+---
+title: "Exploring NFC communications with a crystal radio."
+date: 2023-02-22T16:32:42-08:00
+tags: ["nfc", "wireless"]
+draft: true
+---
+
+NFC smart cards are commony used for a wide varaity of applications including contactless payments, building access control, and 2 factor authentication.
+These smart cards have no power source, yet are capable of bidirectional comunication, storing data, and performing cryptographic operations.
+In each of these cards is a circut straight out of the 1900s: The crystal radio.
+
+Most of the card is taken up by a flat coil, witch can often be seen if the card is held up to a bright light.
+Another component you can easyly see this way is a capacitor, which looks like a large (ususaly square) opaque region.
+The capacitor is placed in paralel with the coil, forming a paralel tuned circut (resonalt at 13.56 MHz), similar to a crystal radio.
+
+A NFC card reader contains a similar (but usualy larger) coil through witch AC at 13.56 MHz is passed.
+When the card is placed nearby to the reader, the coil is magenticly coopled the coil in the reader, and this creates volatage in tuned circut.
+This AC volatge is then recified by a diode and used to power the microcontroler on the card.
+
+![A tuned circut connected to a diode recifyer](xtal2.png)
+
+Once the card is powered up, the reader and card can comunicate using ASK.
+Basicly, the reader momentary removes or reduces transimited power, and the card can respond by changing it's power comsumption.
+The card, of course, needs a capacitor to store eneargy to keep the microcontroler running when the reader's transmit coil is turned off.
+The modulation depths used for this can ether be 100% (fully removing power) or 10% (slightly reducing power, used at lower datarates).
+
+This communication is super easy to sniff using a trival circut:
+(Some cards use BPSK which is a bit harder to detect, but most use ASK and will work with this circut.)
+
+![A untuned circut driving a envelope detector](xtal.png)
+
+I used an antenna consiting of 5 turns of solid core wire rouply in the shape of a typical NFC smart card.
+After connecting the output of the circut to an occiloscope, and placing the antenna between the reader (a phone) and the card (A MIFARE DESfire based transit card), the signals from the reader were easyaly visable on the scope.
+The card's signals were visable as smaller dips (but still over 50% of the volage) on the output.
+
