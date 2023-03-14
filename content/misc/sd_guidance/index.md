@@ -1,6 +1,6 @@
 ---
 title: "Exploring stable diffusion guidance."
-date: 2023-03-10T09:17:29-08:00
+date: 2023-03-13T09:17:29-08:00
 tags: ["stable-diffusion"]
 draft: false
 ---
