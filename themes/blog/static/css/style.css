@@ -87,9 +87,12 @@ legend {
 }
 
 /*keep images centered in column */
-img {
+img:not(.icon) {
 	margin: auto;
 	max-width: 40em;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* Narrow screen layout */
