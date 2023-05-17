@@ -32,7 +32,7 @@ Here is a table of wavelengths and ideal diameters for an antenna for WiFi and a
 For wide bands like 5 GHz WiFi, I have used the lower frequency, as these antennas are more effected by being to small than too big
 |Use|Frequency|Wavelength (λ)|Min Diameter|Max Diameter|
 |--|--|--|-|-|
-|**2.4 GHz WiFi**|2412 MHz|120 mm|40 mm|91 mm|
+|**2.4 GHz WiFi**|2412 MHz|120 mm|73 mm|95 mm|
 |**5 GHz WiFi**|5150 MHz|58 mm|34 mm|44 mm|
 |GOES 16 downlink|1686.6 MHz|177 mm|104 mm|136 mm|
 |C Band downlink (lower)|3700 MHz|81 mm|47 mm|62 mm|
