@@ -24,9 +24,9 @@ For TM0,1, the minimum frequency \\( \frac{2.403 c} { \pi d \sqrt{k} } \\).
 
 {{<rawhtml>}}<sub>Source: "Microwave Engineering" by Pozar</sub>{{</rawhtml>}}
 
-We can use this to compute a diameter range for the antenna for any frequency: \\( \frac{1.841 \* c}{\pi f} < d < \frac{2.403 \* c}{\pi f} \\).
+We can use this to compute a diameter range for the antenna for any frequency: \\( \frac{1.841  c}{\pi f} < d < \frac{2.403  c}{\pi f} \\).
 
-The lower limit is hard, it will not work with a smaller diameter, the upper limit is less important, the antenna will simply lose some efficiency.
+The lower limit is hard, it will not work *at all* with a smaller diameter, the upper limit is less important, the antenna will simply lose some efficiency.
 
 Here is a table of wavelengths and ideal diameters for an antenna for WiFi and a few satellite downlinks (these make great DIY feedhorns for dish antennas).
 For wide bands like 5 GHz WiFi, I have used the lower frequency, as these antennas are more effected by being to small than too big
@@ -70,7 +70,7 @@ Connect the shield of the RF connector or the ground of the dongle to the wavegu
 
 # Applications
 
-The antenna is linearly polarized, in the same direction as the monopole is, so try rotating it to improve signal strength, and directional, so it has to be pointed at the other station's antenna.
+The antenna is linearly polarized, in the same direction as the monopole is, so try rotating it to improve signal strength, and directional, so it has to be pointed at the other station's antenna to work well.
 
 The antenna can be used as is, as a high gain antenna for wireless networking, Bluetooth (same band as 2.4 GHz WiFi), providing a good 12-14 dB of gain over the stock antenna (25 times more signal!)
 With 2 antenna's, facing each other, you can get as good as 28 dB gain (500 times as much signal).
@@ -113,7 +113,7 @@ function update() {
 |Parameter|Value|
 |-|-|
 |Wavelength|{{<rawhtml>}}<p id="wavelength"> - </p>{{</rawhtml>}}|
-|Length on Monopole|{{<rawhtml>}}<p id="monopole">-</p>{{</rawhtml>}}|
+|Length of Monopole|{{<rawhtml>}}<p id="monopole">-</p>{{</rawhtml>}}|
 |Min diameter|{{<rawhtml>}}<p id="mind">-</p>{{</rawhtml>}}|
 |Max recommended diameter|{{<rawhtml>}}<p id="maxd">-</p>{{</rawhtml>}}|
 |Minimum antenna length|{{<rawhtml>}}<p id="minlength">-</p>{{</rawhtml>}}|
