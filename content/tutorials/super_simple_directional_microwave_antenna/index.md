@@ -24,28 +24,59 @@ For TM0,1, the minimum frequency \\( \frac{2.403 c} { \pi d \sqrt{k} } \\).
 
 {{<rawhtml>}}<sub>Source: "Microwave Engineering" by Pozar</sub>{{</rawhtml>}}
 
-We can use this to compute a diameter range for the antenna for any frequency: \\( \frac{1.841  c}{\pi f} < d < \frac{2.403  c}{\pi f} \\).
+We can use this to compute a diameter range for the antenna for any frequency: 
+
+$$  \frac{1.841  c}{\pi f} < d < \frac{2.403  c}{\pi f} $$
 
 The lower limit is hard, it will not work *at all* with a smaller diameter, the upper limit is less important, the antenna will simply lose some efficiency.
-It is better to have the antenna larger than the TE1,1 cutoff, as it becomes easer for the waves to propigate.
-The ideal diameter will be the TM0,1 cuttoff as this will provide the best possible impedence match.
+In fact, ideal performance will be at the TM0,1 cutoff, aim there when making/finding a waveguide.
 
 Here is a table of wavelengths and ideal diameters for an antenna for WiFi and a few satellite downlinks (these make great DIY feedhorns for dish antennas).
 For wide bands like 5 GHz WiFi, I have used the lower frequency, as these antennas are more effected by being to small than too big
-|Use|Frequency|Wavelength (λ)|Min Diameter|Max Diameter|
+|Use|Frequency|Wavelength (λ)|Min Possible Diameter, use one significantly larger|Ideal Diameter|
 |--|--|--|-|-|
 |**2.4 GHz WiFi**|2412 MHz|120 mm|73 mm|95 mm|
 |**5 GHz WiFi**|5150 MHz|58 mm|34 mm|44 mm|
 |GOES 16 downlink|1686.6 MHz|177 mm|104 mm|136 mm|
-|C Band downlink (lower)|3700 MHz|81 mm|47 mm|62 mm|
-|C Band downlink (upper)|4000 MHz|75 mm|43 mm|57 mm|
-|Ku Band|12000 MHz|25 mm|14 mm|19 mm|
+
+The length of the antenna is not critical, but a longer antenna will have better directivity, I recommended at least 3/4 wavelength.
 
 To efficiently create a wave in the TE1,1 mode, you need monopole antenna that is a quarter of a wavelength long, and spaced a quarter of a wavelength from the closed end of the can.
 The reason for this is that the wave, as it travels towards the closed end, is phase shifted (delayed) by 90 deg (1/4 of a cycle), then the reflection is phase shifted by 180 deg, and finally by another 90 deg during the return trip.
 Once the reflected wave reaches the monopole, it is been shifted 360 deg and syncs up with the radiated signal, creating a stronger signal.
 
-The length of the antenna is not critical, but a longer antenna will have better directivity, I recommended at least 3/4 wavelength.
+
+<!--
+## Impedence conseratons [UPDATE 2023-05]
+
+I haven't realy mentioned Impedence here.
+In conventional electronics, Impedence (Z) is how much a component impedes current flow for AC.
+Mesured in Ohms(Ω), unlike resistance, it is a complex number, meaning it has two parts, real (in phase current flow, highest at the highest voltage) and imaginary (out of phase current, does not draw power).
+Overall impedence is equal to 
+For an antenna, we want it to present
+-->
+
+## Speed of light in a waveguide
+
+One thing that complicates the math here is that in a waveguide, the *phase velocity* of light is *higher* than the normal speed of light.
+Phase velocity is the speed at which a point of constant phase (voltage and magnetic feild) moves in the waveguide.
+
+$$ v_{phase} = \frac{c}{\sqrt(1-(f_{cutoff} / f ))} $$
+
+This means that the optimal place for the monople antenna will be a bit further than half a wavelength outside of the waveguide (in free space).
+
+$$ \lambda_{waveguide} = \frac{c}{f \sqrt(1-(f_{cutoff} / f ))} $$
+
+If f is higher than the cuttoff freqency, for example for a 95mm waveguide at 2410 MHz, then as \\( f_{cuttof} = \frac{1.841 c} { \pi d }\\) for TE1,1, the cuttoff freqency is 1851 GHz.
+The means the wavelenth in the guide is *twice* that in free space. This would leads to a 90 degree phase shift between the radated singal and the reflected signal in the antenna, leading to a worse impedence match and less radiated signal.
+This needs to be compensated for to get good performance. (You can use the second calculator tool at the bottom)
+
+Side Note: Does this violate the laws of physics? 
+No, becuase while the phase velocity is faster than the speed of light, you can't send information any faster than the speed of light.
+Similar to how a dot from a laser pointer can "move" faster than the speed of light.
+The actual speed of a pulse in a waveguide also depends on the freqency, but is always below c.
+This has the intresting side effect that the phases and time of arival of a signal will change as it travels trough a waveguide, this effect is stronger the closer to the cutoff freqency the signal is.
+This is called dispersion and can cause problems for wideband signals, and the solution here is build the antenna with a higher diameter, reducing the differences in propigation speed.
 
 # Construction 
 
@@ -81,9 +112,9 @@ A short one (3/4 wavelength total length) makes a good DIY feedhorn for a a dish
 
 You can also turn one into a horn antenna, by adding a metal horn onto the end of the waveguide.
 
-# Calculator
-
-This is a tool for quickly calculating the dimensions of the antenna:
+# Diameter calculator
+A
+This is a tool for quickly calculating the the waveguide and monopole sizes of the antenna.
 
 {{< rawhtml >}} 
 
@@ -96,14 +127,14 @@ function update() {
     var pi = 3.14
     var freq = +document.getElementById("freq").value;
     var wavelength = c/freq;
-    document.getElementById("wavelength").innerText = round(wavelength) + "mm";
-    document.getElementById("monopole").innerText = round(wavelength/4) + "mm";
-    document.getElementById("minlength").innerText = round(wavelength*3/4) + "mm";
+    document.getElementById("wavelength").innerText = round(wavelength) + " mm";
+    document.getElementById("monopole").innerText = round(wavelength/4) + " mm";
+    document.getElementById("minlength").innerText = round(wavelength*3/4) + " mm";
 
     var lower_limit = 1.841*c/(pi*freq);
     var upper_limit = 2.403*c/(pi*freq);
-    document.getElementById("mind").innerText = round(lower_limit) + "mm";
-    document.getElementById("maxd").innerText = round(upper_limit) + "mm";
+    document.getElementById("mind").innerText = round(lower_limit) + " mm";
+    document.getElementById("maxd").innerText = round(upper_limit) + " mm";
 }
 
 </script>
@@ -114,11 +145,67 @@ function update() {
 
 |Parameter|Value|
 |-|-|
-|Wavelength|{{<rawhtml>}}<p id="wavelength"> - </p>{{</rawhtml>}}|
+|Wavelength in free space|{{<rawhtml>}}<p id="wavelength"> - </p>{{</rawhtml>}}|
 |Length of Monopole|{{<rawhtml>}}<p id="monopole">-</p>{{</rawhtml>}}|
-|Absolute min diameter (must a few % wider to work well)|{{<rawhtml>}}<p id="mind">-</p>{{</rawhtml>}}|
-|Max recommended/Ideal diameter|{{<rawhtml>}}<p id="maxd">-</p>{{</rawhtml>}}|
-|Minimum antenna length|{{<rawhtml>}}<p id="minlength">-</p>{{</rawhtml>}}|
+|Absolute min diameter, must significantly wider to work well|{{<rawhtml>}}<p id="mind">-</p>{{</rawhtml>}}|
+|Ideal diameter, performance falls off after this|{{<rawhtml>}}<p id="maxd">-</p>{{</rawhtml>}}|
+|Aproximate minimum antenna length|{{<rawhtml>}}<p id="minlength">-</p>{{</rawhtml>}}|
+
+
+# Monopole placement calculator
+
+This will compute the ideal location for the monople antenna
+
+{{< rawhtml >}} 
+
+<script>
+
+function update2() {
+    var c = 300 * 1000; // Speed of light, in mm MHz
+    var pi = 3.14;
+    var freq = +document.getElementById("freq2").value;
+    var diam = +document.getElementById("diam2").value;
+    
+    var cutoff = (1.841 * c) / (pi * diam);
+    
+    if ((cutoff/freq) < 4/5) {
+        document.getElementById("warning").innerText = "Warning, diameter is impracticaly low," + 
+        " this will lead to a compromized performance and require an impractical length,"+
+        " you should get a larger waveguideIf you want to contiune, place the monople 1/4 of the waveguide's length from the back.";
+    } else {
+        document.getElementById("warning").innerText = "";
+    }
+    
+    if (freq <= cutoff) {
+        document.getElementById("warning").innerText = "The diamerter is too low, THE ANTENNA WILL NOT WORK";
+    }
+
+    document.getElementById("te2").innerText = Math.round(cutoff) + " MHz";
+
+    var fr = cutoff/freq;
+    var wavelength = c/(freq*Math.sqrt(1 - (fr * fr)));
+    
+    document.getElementById("wavelength2").innerText = Math.round(wavelength) + " mm";
+    document.getElementById("quarter2").innerText = Math.round(wavelength/4) + " mm";
+    document.getElementById("l2").innerText = Math.round(wavelength*3/4) + " mm";
+
+}
+
+</script>
+
+<p>Enter frequency in MHz (use lowest frequency for large bands): <input id="freq2"/>, diameter in mm <input id="diam2"/> <button onclick='update2()'>Calculate</button></p>
+
+<p><b id="warning"></b></p>
+
+{{</ rawhtml >}} 
+
+|Parameter|Value|
+|-|-|
+|TE1,1 cutoff|{{<rawhtml>}}<p id="te2"> - </p>{{</rawhtml>}}|
+|Wavelength in waveguide|{{<rawhtml>}}<p id="wavelength2"> - </p>{{</rawhtml>}}|
+|Quarter Wavelength in waveguide/Optimal monopole spacing from back|{{<rawhtml>}}<p id="quarter2"> - </p>{{</rawhtml>}}|
+|Min total for good performance|{{<rawhtml>}}<p id="l2"> - </p>{{</rawhtml>}}|
+
+The monopoles length should be half of the free space wavelength, and never more than half the diameter of the waveguide.
 
 ![A diagram of the antenna, showing a 1/4 wavelength monopole and 1/4 wavelength spacing from the back of the can](cantenna.png)
-
