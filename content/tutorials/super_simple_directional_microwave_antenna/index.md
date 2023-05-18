@@ -27,6 +27,8 @@ For TM0,1, the minimum frequency \\( \frac{2.403 c} { \pi d \sqrt{k} } \\).
 We can use this to compute a diameter range for the antenna for any frequency: \\( \frac{1.841  c}{\pi f} < d < \frac{2.403  c}{\pi f} \\).
 
 The lower limit is hard, it will not work *at all* with a smaller diameter, the upper limit is less important, the antenna will simply lose some efficiency.
+It is better to have the antenna larger than the TE1,1 cutoff, as it becomes easer for the waves to propigate.
+The ideal diameter will be the TM0,1 cuttoff as this will provide the best possible impedence match.
 
 Here is a table of wavelengths and ideal diameters for an antenna for WiFi and a few satellite downlinks (these make great DIY feedhorns for dish antennas).
 For wide bands like 5 GHz WiFi, I have used the lower frequency, as these antennas are more effected by being to small than too big
@@ -114,8 +116,8 @@ function update() {
 |-|-|
 |Wavelength|{{<rawhtml>}}<p id="wavelength"> - </p>{{</rawhtml>}}|
 |Length of Monopole|{{<rawhtml>}}<p id="monopole">-</p>{{</rawhtml>}}|
-|Min diameter|{{<rawhtml>}}<p id="mind">-</p>{{</rawhtml>}}|
-|Max recommended diameter|{{<rawhtml>}}<p id="maxd">-</p>{{</rawhtml>}}|
+|Absolute min diameter (must a few % wider to work well)|{{<rawhtml>}}<p id="mind">-</p>{{</rawhtml>}}|
+|Max recommended/Ideal diameter|{{<rawhtml>}}<p id="maxd">-</p>{{</rawhtml>}}|
 |Minimum antenna length|{{<rawhtml>}}<p id="minlength">-</p>{{</rawhtml>}}|
 
 ![A diagram of the antenna, showing a 1/4 wavelength monopole and 1/4 wavelength spacing from the back of the can](cantenna.png)
