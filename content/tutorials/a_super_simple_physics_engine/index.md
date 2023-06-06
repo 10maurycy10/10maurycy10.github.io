@@ -7,7 +7,7 @@ math: true
 ---
 
 It is very easy to create a simple physics engine that works decently well with very little code.
-I wont be covering rendering, but it is fairly straightforwards (Code snippets will be in C, but this technique will work in any language).
+I wont be covering rendering, but it is fairly straightforward. (Code snippets will be in C, but this technique will work in any language).
 
 The trick is to use Verlet integration, a mathematical trick to integrate (compute a solution to) Newton's laws of motion.
 Verlet integration comes down to this equation:
@@ -72,7 +72,7 @@ The timestep is how much time passes between every simulation step. If the simul
 The actual integration looks quite ugly becuase of C's lack of a built in vector type, so enjoy this psedocode:
 
 ```py
-def position(body, dt):
+def update_position(body, dt):
 	# Compute velocity in terms of units/timestep	
 	velocity = body.position - body.position_old;
 	# Save the position before updating
