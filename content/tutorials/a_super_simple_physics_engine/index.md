@@ -61,7 +61,7 @@ Acceleration here will be used to sum up the effect of forces acting on the obje
 typedef struct Body {
         float radius;
         
-	Vector2 position_old;
+        Vector2 position_old;
         Vector2 position;
         Vector2 acceleration;
 } Body;
@@ -128,7 +128,7 @@ int insert_object(World* world, Body object) {
         if (world->capacity > world->size) {
                 world->objects[world->size] = object;
                 world->size++;
-		return 1;
+                return 1;
         } else {
                 return 0;
         }
@@ -161,17 +161,17 @@ void apply_gravity(World* w) {
 ```
 
 Now, simply calling `update_positions` and `apply_gravity`, can simulate a whole bunch of objects at once.
-Objects falling into an infinite void is fine and all, but the simulation becomes a lot more interesting if you limit the objects to a certain range.
 
-This is where the magic of Verlet integration comes in, all that has to be done is to check if the object is outside of the bounds (here a circle with a radius if centered on the origin)
+Objects falling into an infinite void is fine and all, but the simulation becomes a lot more interesting if you limit the objects to a certain range.
+This is where the magic of Verlet integration comes in, all that has to be done is to check if the object is outside of the bounds (here a circle with a radius of 9 centered on the origin)
 Verlet integration takes care of all the dynamics, and the object ends up nicely sliding around inside of the sphere:
 
 ```c
 void collide(World* w) {
-        // Bound the center of an object to 3 units away from (0, 0)
+        // Bound the center of an object to 9 units away from (0, 0)
         for (int i = 0; i < w->size; i++) {
-                if (vector_length(w->objects[i].position) > (3*3)) {
-                        float position_scale = (3*3) / vector_length(w->objects[i].position);
+                if (vector_length(w->objects[i].position) > 9) {
+                        float position_scale = 9 / vector_length(w->objects[i].position);
                         // position = position * scale
                         w->objects[i].position = vector_mul_scaler(w->objects[i].position,position_scale);
                 }
