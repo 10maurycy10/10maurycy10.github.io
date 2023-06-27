@@ -7,6 +7,8 @@ draft: false
 
 <!-- While graphics card are much faster at this stuff, and off-the-shelf game engines mean that you can make an FPS without ever touching a renderer,  -->
 
+This series will go over the functioning of a simple Doom style 3d software renderer intended for a first person game.
+
 A renderer needs something to actually render, lets start by placing a wall in the game world, representing it as 2 points in *2d* space. (don't worry, it will be 3d soon.)
 If this is just drawn as a line on screen, the result looks like this:
 
