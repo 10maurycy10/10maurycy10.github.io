@@ -5,6 +5,8 @@ tags: ["programming", "3d"]
 draft: false
 ---
 
+<!--trival change to force rebuild -->
+
 [Currently the render works quite nicely](../part2), but calling it 3d is a bit of a stretch. 
 While does provide a first person viewpoint, the entire map is a the same height.
 Games with this limitation were, like Wolfenstein 3D, were released and did quite well, but modern audiences want a bit more 3d in their 3d.
