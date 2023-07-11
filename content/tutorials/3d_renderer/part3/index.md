@@ -48,8 +48,6 @@ Essentially, what this is doing is rendering 2 walls above and below the portal,
 That's it, a working 3d software renderer.
 While not capable of rendering arbitrary 3d geometry, it is actually slightly more capable than the DOOM renderer.
 
-Part 4 will cover adding texturing to the render, to make thing look more interesting.
-
 [Here is the code used to render the images, including the renderer, basic (and buggy) movement code, and map loading.](https://github.com/10maurycy10/3d_engine/tree/2ed75fbd396e85dcb48ebaaa3de588889e8fed88)
 
 
