@@ -1,8 +1,8 @@
 ---
 title: "How helpful languages create bugs."
 date: 2023-07-20T13:44:43-07:00
-tags: []
-draft: true
+tags: ["programming"]
+draft: false
 ---
 
 This post is overlaps with [the last post, a rant on helpful languages](../in_defence_of_c) but presents the ideas in a much cleaner and more in depth manner.
