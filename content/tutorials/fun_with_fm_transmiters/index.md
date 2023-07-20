@@ -101,12 +101,14 @@ If you don't have any of these tools, check the value of the capacitor across th
 
 # Legality
 
-This section only applies to the US.
-From my understanding of part 15 of the FCC rules, low power transmitters are allowed in the FM broadcast band (and quite a few other places) from 88 to 108 MHz.
-One restriction is that you are not allowed to interfere with licensed transmitters (FM is fairly resistant to interference), so tune it away from local stations, this will massively improve range.
-As long as you don't go outside of that range (you can check with an oscilloscope or FM radio), or transmit with higher power than these circuits with the recommended antenna, you are not breaking the law.
-The actual limit for signals with less than 200kHz bandwidth on the FM band is 250 µV/m @ 3 m
+DISCLAIMER: This section only applies to the US, regulations in other areas may be different.
 
-You can find the full regulations on unlicensed transmitters at [ecfr.gov](https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-15).
+I am not a lawyer, and this is not legal advice.
+Part 15 of the FCC rules allows low power trasmiters in the FM broadcast band from 88 to 108 Mhz (Some other bands also allowed, and some are strictly forbiden, like the aircraft band).
+These transmiters are not allowed to interfere with licenced transmitters, but as FM is farly resistant to interference, interference will be minimal.
+I would recomend you set the transmitter to a empty part of the band to avoid creating interference and improve range. (other stations can interfere with you).
+As long as you don't go outside of the band or transmit with high power, you are not breaking the law.
 
-[The FCC has also released a summary of the rules for such transmitters](https://transition.fcc.gov/oet/info/documents/bulletins/oet63/oet63rev.pdf)
+You can find the full part 15 rules here [ecfr.gov](https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-15).
+
+[The FCC has also released a summary of the the part 15 rules](https://transition.fcc.gov/oet/info/documents/bulletins/oet63/oet63rev.pdf)
