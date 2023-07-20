@@ -1,5 +1,5 @@
 ---
-title: New virus (Windows PSA/Copypasta)
+title: New virus (Windows Copypasta)
 tags: ["rant", "linux", "windows"]
 date: 2022-09-14
 ---
