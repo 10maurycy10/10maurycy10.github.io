@@ -55,7 +55,7 @@ This should make it possible to power it from 2 AA batteries, or a single 3v coi
 
 # Improving range and frequency stability with a class-c amplifier stage
 
-Note: use a 5 pF capactor on the base of the new transistor.
+Note: use a 5 pF capacitor on the base of the new transistor.
 
 These circuits work, but the frequency changes a lot from something as small as moving your hand next to the antenna, and sometimes the oscillation breaks down entirely.
 The solution is another RF stage (this has the added benefit of reducing radiated harmonics):
@@ -104,9 +104,9 @@ If you don't have any of these tools, check the value of the capacitor across th
 DISCLAIMER: This section only applies to the US, regulations in other areas may be different.
 
 I am not a lawyer, and this is not legal advice.
-Part 15 of the FCC rules allows low power trasmiters in the FM broadcast band from 88 to 108 Mhz (Some other bands also allowed, and some are strictly forbiden, like the aircraft band).
-These transmiters are not allowed to interfere with licenced transmitters, but as FM is farly resistant to interference, interference will be minimal.
-I would recomend you set the transmitter to a empty part of the band to avoid creating interference and improve range. (other stations can interfere with you).
+Part 15 of the FCC rules allows low power transmitters in the FM broadcast band from 88 to 108 MHz (Some other bands also allowed, and some are strictly forbidden, like the aircraft band).
+These transmitters are not allowed to interfere with licensed transmitters, but as FM is fairly resistant to interference, interference will be minimal.
+I would recommend you set the transmitter to a empty part of the band to avoid creating interference and improve range. (other stations can interfere with you).
 As long as you don't go outside of the band or transmit with high power, you are not breaking the law.
 
 You can find the full part 15 rules here [ecfr.gov](https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-15).
