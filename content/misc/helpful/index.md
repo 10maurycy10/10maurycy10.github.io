@@ -14,7 +14,7 @@ Take this function in C:
 
 ```c
 float foo(float a, float b) {
-	return a+b
+	return a+b;
 }
 ```
 
@@ -39,7 +39,7 @@ Operator overloading results in a similar problem, consider this C++ code:
 
 ```c
 Vector2f multiply(Vector2f b, Vector2f b) {
-	return a * b
+	return a * b;
 }
 ```
 
@@ -52,10 +52,10 @@ A similar case occurs with function overloading.
 If there is an add function that is overloaded to work on both ints and floats, what happens when you pass different datatypes?
 
 ```c
-int a = 1
-float b = 1.1
+int a = 1;
+float b = 1.1;
 
-add(a, b) // What does this return?
+add(a, b); // What does this return?
 ```
 Now it's unclear what precision the calculation is carried out with, that .1 *might* be silently dropped, or it *might* not.
 This gets a lot worse when you combine multiple overloaded/generic functions together, while the computer might be able to figure it out, a human often can't.
@@ -63,7 +63,7 @@ This gets a lot worse when you combine multiple overloaded/generic functions tog
 While code in Python or JavaScript or C++ looks readable, it can often be literally impossible to know what code does before it is run (and it can even change at runtime):
 
 ```py
-value = some_complex_function_that_involves_half_of_you_codebase()
+value = some_complex_function_that_involves_half_of_your_codebase()
 # Is this repeating a string 2 times, or multiplying a number by 2?
 value * 2
 ```
