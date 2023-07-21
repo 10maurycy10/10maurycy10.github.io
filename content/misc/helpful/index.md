@@ -5,7 +5,7 @@ tags: ["programming"]
 draft: false
 ---
 
-This post is overlaps with [the last post, a rant on helpful languages](../in_defence_of_c) but presents the ideas in a much cleaner and more in depth manner.
+
 
 A key part of programming is that you will spend more time looking at you code then the compiler.
 While of course it is important for the computer to be able to figure out what to do, it is equally important for you to be able to tell what the computer is doing.
