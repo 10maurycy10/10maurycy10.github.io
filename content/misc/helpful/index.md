@@ -38,7 +38,7 @@ If you dont know what the computer is actually doing, how are you supposed to kn
 Operator overloading results in a similar problem, consider this C++ code:
 
 ```c
-Vector2f multiply(Vector2f b, Vector2f b) {
+Vector2f multiply(Vector3f b, Vector3f b) {
 	return a * b;
 }
 ```
@@ -95,8 +95,8 @@ By this metric, python is much better then c:
 C:
 
 ```c
-Vector2f foo(Vector2f a, Vector2f b) {
-	return vector2f_cross(a, b);
+Vector3f foo(Vector3f a, Vector3f b) {
+	return vector3f_cross(a, b);
 }
 ```
 
