@@ -2,7 +2,7 @@
 title: "In defense of C or \"Why you spend 5 hours debugging only to find a typo\""
 date: 2023-07-19T15:12:39-07:00
 tags: ["programming", "rants"]
-draft: false
+draft: true
 ---
 
 C is a language that gets a lot of hate, for having very little features, manual memory management, and generally a lot of footguns.
