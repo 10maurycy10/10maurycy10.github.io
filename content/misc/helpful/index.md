@@ -5,7 +5,7 @@ tags: ["programming"]
 draft: false
 ---
 
-This post is overlaps with [the last post, a rant on helpful languages](../in_defence_of_c) but presents the ideas in a much cleaner and more in depth manner.
+
 
 A key part of programming is that you will spend more time looking at you code then the compiler.
 While of course it is important for the computer to be able to figure out what to do, it is equally important for you to be able to tell what the computer is doing.
@@ -14,7 +14,7 @@ Take this function in C:
 
 ```c
 float foo(float a, float b) {
-	return a+b
+	return a+b;
 }
 ```
 
@@ -38,8 +38,8 @@ If you dont know what the computer is actually doing, how are you supposed to kn
 Operator overloading results in a similar problem, consider this C++ code:
 
 ```c
-Vector2f multiply(Vector2f b, Vector2f b) {
-	return a * b
+Vector2f multiply(Vector3f b, Vector3f b) {
+	return a * b;
 }
 ```
 
@@ -52,10 +52,10 @@ A similar case occurs with function overloading.
 If there is an add function that is overloaded to work on both ints and floats, what happens when you pass different datatypes?
 
 ```c
-int a = 1
-float b = 1.1
+int a = 1;
+float b = 1.1;
 
-add(a, b) // What does this return?
+add(a, b); // What does this return?
 ```
 Now it's unclear what precision the calculation is carried out with, that .1 *might* be silently dropped, or it *might* not.
 This gets a lot worse when you combine multiple overloaded/generic functions together, while the computer might be able to figure it out, a human often can't.
@@ -63,7 +63,7 @@ This gets a lot worse when you combine multiple overloaded/generic functions tog
 While code in Python or JavaScript or C++ looks readable, it can often be literally impossible to know what code does before it is run (and it can even change at runtime):
 
 ```py
-value = some_complex_function_that_involves_half_of_you_codebase()
+value = some_complex_function_that_involves_half_of_your_codebase()
 # Is this repeating a string 2 times, or multiplying a number by 2?
 value * 2
 ```
@@ -95,8 +95,8 @@ By this metric, python is much better then c:
 C:
 
 ```c
-Vector2f foo(Vector2f a, Vector2f b) {
-	return vector2f_cross(a, b);
+Vector3f foo(Vector3f a, Vector3f b) {
+	return vector3f_cross(a, b);
 }
 ```
 
