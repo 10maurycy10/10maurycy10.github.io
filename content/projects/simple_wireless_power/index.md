@@ -1,5 +1,5 @@
 ---
-title: "Simple wireless power demonstration circuit"
+title: "A simple wireless power demonstration circuit"
 date: 2023-07-31T14:18:33-07:00
 tags: ["electronics", "wireless"]
 draft: false
