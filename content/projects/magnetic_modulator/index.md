@@ -50,5 +50,5 @@ Historical, much larger versions of this system were used to switch hundreds of 
 While for amplification and modulation, core saturation based systems are almost fully replaced by transistor based systems, but one application remains: High power current regulation.
 In applications like arc welding, a huge amount of current (hundreds of amps) has to be controlled.
 The simplest way to do this is by placing one winding of a transformer in series with the load (the arc in this case), and applying a small DC current to saturate the core.
-Once saturated, the inductance of the winding drops, allowing much more current trough then could otherwise flow.
+Once saturated, the inductance of the winding drops, allowing much more current to flow then could otherwise.
 (This works because the control side has more wingdings, so comparatively small current will saturate the core) 
