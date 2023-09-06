@@ -1,5 +1,5 @@
 ---
-title: "Designing a Discrete transistor DIWHY Computer"
+title: "Designing a Discrete Transistor Computer"
 date: 2023-09-04T12:18:08-07:00
 tags: ["onebit"]
 draft: false
@@ -9,12 +9,12 @@ Computers are ubiquitous, but nearly all computers are literal black boxes: inte
 
 ![A typical computer](blackbox.jpg)
 
-Sure, in older, larger computers you might be able to see the data being transferred in and out of memory with a few LED's, but the data still disappears into an black box: the CPU.
+Sure, in older, larger computers you might be able to see the data being transferred in and out of memory with a few LEDs, but the data still disappears into an black box: the CPU.
 Even if you decap an old CPU like the Z80 or MOS 6502, all you can see is a static view of the transistors, you can't see the computer actually *computing*.
 The only real option for computer where you can follow data all the way through a computation is to build it yourself.
 
 To avoid replacing one black box with another black box, I want to use as the simplest components available:
-No FPGA's, no EPROMs, no integrated registers, latches, adders, logic gates, etc.
+No FPGAs, no EPROMs, no integrated registers, latches, adders, logic gates, etc.
 
 I also want a computer that is at least somewhat useful for real life tasks, these are the design goals for the computer:
 
@@ -73,7 +73,7 @@ This is what the instruction set currently looks like, this will probably change
 |1111 F|RET |Skips the next instruction and sets the return flag|
 
 Addressing will be done separately in the interest of modularity, so it can be as simple or as complex as needed for the given application.
-Jumping is also handled externaly, with the CPU just signaling to external circuitry to execute the jump, at which point it could load a value from a predetermined location in memory into the program counter, or just reset it to address 0.
+Jumping is also handled externally, with the CPU just signaling to external circuitry to execute the jump, at which point it could load a value from a predetermined location in memory into the program counter, or just reset it to address 0.
 
 As for physical implementation, relays are wonderfully mechanical, but are expensive and very slow, adding several milliseconds of delay with every relay.
 Transistors, with their very low cost, low power consumption, small size and fast switching are a much more practical option.
@@ -86,8 +86,8 @@ As far as part count, a 2 input NAND gate constructed out of CMOS requires 4 tra
 One problem with CMOS is that constructing a CMOS gate on a PCB effectively requires multiple layers, or a huge amount of jumpers.
 
 NMOS logic has lower part count then CMOS, with a NAND gate requiring 2 transistors and one resistor, however, NMOS gates consumes power when idle.
-However this logic is quite slow with discrete transistors, with a speed/power consuption tradeoff, for example the well known Monster6502 was limited to a clock speed of 50kHz.
-To run the Monster6502 at 1MHz, you would have to reduce the pull up resistors to a 20th of their value, resulting in a power consumtion of over 100W!
+However this logic is quite slow with discrete transistors, with a speed/power consumption trade off, for example the well known Monster6502 was limited to a clock speed of 50kHz.
+To run the Monster6502 at 1MHz, you would have to reduce the pull up resistors to a 20th of their value, resulting in a power consumption of over 100W!
 
 DTL is different from CMOS and NMOS is that it uses BJT transistors. 
 The logic itself is implemented using diodes, and transistors are used to amplify and invert signals between gates.
@@ -105,7 +105,7 @@ Instead of operating the transistors fully-on or fully-off as switches (saturati
 ECL is super fast, even out of discrete transistors, with propagation times of just a few nanoseconds.
 ECL NOR gates (effectively equivalent to NANDs) take 3 transistors, and 3 resistors, and consume a more power then RTL, but have better fanout.
 
-ECL has a few other quirks, namely the very close logic levels, logic high and logic low can be as close as 500mV, requiring additional components to couple to LED's.
+ECL has a few other quirks, namely the very close logic levels, logic high and logic low can be as close as 500mV, requiring additional components to couple to LEDs.
 Rather annoyingly, ECL requires either dual power supply rails (for example 3.3 and 3.0 volts), or differential signals, which complicates construction.
 
 |Type|Devices per NAND/NOR|Quirks|
@@ -115,6 +115,6 @@ Rather annoyingly, ECL requires either dual power supply rails (for example 3.3 
 |DTL|5|Limited fanout w/o buffers|
 |RTL|5|Limited fanout w/o buffers|
 |TTL|5-10|Multiple types of transistors|
-|ECL|6|Dual power supplies, requires level sifters for driving LED's and other logic types|
+|ECL|6|Dual power supplies, requires level sifters for driving LEDs and other logic types|
 
 Overall DTL/RTL seems the best option, with ECL being an option if speed becomes an issue and a 2 layer PCB is available.
