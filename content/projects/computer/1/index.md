@@ -33,16 +33,16 @@ Even supposedly simple designs, like [Ben Eater's 8 bit breadboard computer](htt
 Just looking at the ALU, it requires 2 8-bit registers, and an 8-bit adder. 
 A level triggered D-latch can be built with 4 NAND/NOR gates per bit, and a edge triggered master-slave latch requires 9.
 The ALU's accumulator register has to be edge triggered, so it takes 72 gates, while the B register can be level triggered, with 32 gates.
-A single bit full adder can be constructed using 9 NAND/NOR gates, so for the full 8 bit adder requires 176 gates.
+A single bit full adder can be constructed using 9 NAND/NOR gates, so the full 8 bit adder requires 176 gates.
 In total, excluding bus transceiver and control logic, the ALU and associated registers take 280 gates or 560 transistors with NMOS logic, just to add 2 8-bit numbers!
 
-The reason this computer is so massive is that it has an 8 bit ALU, registers and data bus, and every thing has to be repeated 8 times.
+The reason this computer is so massive is that it has an 8 bit ALU, registers and data bus, so everything has to be repeated 8 times.
  Would it be possible to get away with just one bit?
 Yes, and it has actually been done with the [MC14500](http://www.bitsavers.org/components/motorola/14500/MC14500B_Industrial_Control_Unit_Handbook_1977.pdf) chip.
 The MC14500 chip has a *single* 1 bit register (9 gates) and a 1 bit logic unit (4 3-input gates and 1 4-input gate) for doing Boolean arithmetic.
 The all of the actual computing could be handled in just 14 gates (33 transistors)! 
 
-The architecture for my computer will be very heavily based on the MC14500 chip, but with built in arithmetic capability (The MC14500 takes 12 instructions for a 1 bit addition).
+The architecture for my computer will be very heavily based on the MC14500 chip, but with built in arithmetic capability.
 This requires adding in a full adder (9 gates) and a register (also 9 gates) for storing the carry between bits.
 
 The CPU will have 3 1-bit registers: Accumulator, Carry and Output Enable (and skip, but that one is not user visible, and will be an S/R latch, not a D flip-flop).
@@ -83,10 +83,10 @@ There are multiple options for building logic gates out of transistors, the most
 CMOS logic has *zero* standby power consumption, but can consume a lot of power during rapid state transitions, especial if built out of larger transistors.
 It also has unlimited fanout, but larger fanouts come at a cost of speed.
 As far as part count, a 2 input NAND gate constructed out of CMOS requires 4 transistors, and no other components.
-One problem with CMOS is that constructing a CMOS gate on a PCB effectively requires multiple layers, or a huge amount of jumpers.
+One problem with CMOS is that constructing a CMOS gate on a PCB requires multiple layers, or a huge amount of jumpers.
 
-NMOS logic has lower part count then CMOS, with a NAND gate requiring 2 transistors and one resistor, however, NMOS gates consumes power when idle.
-However this logic is quite slow with discrete transistors, with a speed/power consumption trade off, for example the well known Monster6502 was limited to a clock speed of 50kHz.
+NMOS logic has lower part count then CMOS, with a NAND gate requiring 2 transistors and one resistor, however, NMOS gates consume power when idle.
+However this type of logic is quite slow with discrete transistors, with a steep speed/power consumption trade off, for example the well known Monster6502 was limited to a clock speed of 50kHz.
 To run the Monster6502 at 1MHz, you would have to reduce the pull up resistors to a 20th of their value, resulting in a power consumption of over 100W!
 
 DTL is different from CMOS and NMOS is that it uses BJT transistors. 
@@ -101,7 +101,7 @@ A 2 input RTL NAND gate requires 2 transistors and 3 resistors.
 RTL does have a fairly limited fanout, meaning buffering will be required in some places.
 
 There is another, mostly forgotten logic family, ECL, that operates totally differently then any other type of logic.
-Instead of operating the transistors fully-on or fully-off as switches (saturation), ECL operates transistors in the linear region, and connected them as differential pairs.
+Instead of operating the transistors fully-on or fully-off like switches (saturation), ECL operates transistors in the linear region, and connects them as differential pairs.
 ECL is super fast, even out of discrete transistors, with propagation times of just a few nanoseconds.
 ECL NOR gates (effectively equivalent to NANDs) take 3 transistors, and 3 resistors, and consume a more power then RTL, but have better fanout.
 
