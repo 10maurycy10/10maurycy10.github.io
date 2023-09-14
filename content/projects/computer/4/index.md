@@ -2,7 +2,7 @@
 title: "One bit computer: designing a register"
 date: 2023-09-07T18:22:11-07:00
 tags: ["onebit"]
-draft: true
+draft: false
 ---
 
 Two NOT gates wired into a loop have a rather interesting property: They have 2 distinct stable states:
