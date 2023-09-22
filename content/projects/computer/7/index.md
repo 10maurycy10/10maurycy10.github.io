@@ -73,8 +73,8 @@ The index register not selected by the register select bit will be mapped into m
 |-|-|-|
 |0x0|0x0|Value of the accumulator register, read only|
 |0x0|0x0|Halt flag, stops execution if a one is written, write only|
-|0x1|0xf|The currently *unselected* index register|
-|0x10|0x1f|Jump destination|
+|0x1|0xf|The currently *unselected* index register (MSB first)|
+|0x10|0x1f|Jump destination (MSB first)|
 |0x20|0x7fff|Memory, will include IO at some point|
 
 # Opcodes:
