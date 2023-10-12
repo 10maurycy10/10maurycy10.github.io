@@ -1,0 +1,34 @@
+---
+title: "One bit computer: transistor level register design"
+date: 2023-10-10T17:54:14-07:00
+tags: ["onebit"]
+draft: false
+---
+
+Previosly, I looked at [gate level register designes](../4), now we have to go down to the transistor level.
+
+The loop of NOT gates looks like this:
+
+![A loop of transistor NOT gates](notloop.png)
+
+Adding inputs inputs is easier then with logic gates, by simply adding another transistor to pull the output of a gate low:
+
+![An SR flip flop built from transistors](sr.png)
+
+To ensure things happen at the right time, the flip flop needs an enable input.
+The simplest way to add this is by connecting/disconnecting the ground to the transistors on the input.
+Only if the enable is high, will the input transistors be able to pull down a NOT gate's output and change the state of the latch: 
+
+![The same latch with an enable input added by gating ground](sr_enable.png)
+
+This sr-latch-with-enable circuit can be used as a d-latch by connecting the data input to the `set` input, and an inverted copy to the `reset` input:
+
+![The same thing, connected as a d-latch](latch.png)
+
+This version also includes an indicator LED on a pull up resistor, which does cut into high level voltage quite a bit, but this can be minimized to just 1.6 to 2 volts by using a red/orange LED.
+A high of 3 volts should be fine, even with a diode on a gate input.
+
+An edge triggered d-flip-flop can be constructed with 2 of these.
+By chaining them together (the second one's `d` and `d_bar` inputs connected to the first ones `q` and `q_bar` outputs) and using non-overlapping enable signals.
+
+In total the computer will require 7 latches, one for OEN, and 2 each for the accumulator, carry and skip registers.
