@@ -49,7 +49,7 @@ The output will be one if 2 or more of the inputs are.
 The rest of the adder is a bit harder, but this diagram makes it look a lot more complex then it actually is because it shows the differential signals as separate wires:
 
 ![A full adder constructed out of majority logic](adder.png)
-Note that while this diagram shows 2 inputs connected to a single output, these should be using separate output windings to ensure the signal strength is the same as other inputs.
+Note that while this diagram shows multiple inputs connected to a single output, these should be separate output windings.
 
 This adder takes just 15 cores, which is a surprisingly reasonable amount for such a weird form of logic.
 It also just uses 2 of the 3 clock lines, the third could be used to implement an accumulator, or a shift register to add multi-bit numbers.
