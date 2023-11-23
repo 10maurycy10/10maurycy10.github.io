@@ -49,6 +49,7 @@ The output will be one if 2 or more of the inputs are.
 The rest of the adder is a bit harder, but this diagram makes it look a lot more complex then it actually is because it shows the differential signals as separate wires:
 
 ![A full adder constructed out of majority logic](adder.png)
+Note that while this diagram shows 2 inputs connected to a single output, these should be using separate output windings to ensure the signal strength is the same as other inputs.
 
 This adder takes just 15 cores, which is a surprisingly reasonable amount for such a weird form of logic.
 It also just uses 2 of the 3 clock lines, the third could be used to implement an accumulator, or a shift register to add multi-bit numbers.
@@ -68,5 +69,5 @@ These computers did use some tubes to generate the high frequency AC needed, swi
 	With separate bias and AC input windings, just switching one on and off is fine.
 
 [^3]:
-	A miniturized version of this using quantum effects called the ["Quantum flux parametron"](https://en.wikipedia.org/wiki/Quantum_flux_parametron) has gotten a some recent attention for high speed and super low power logic, but requires to be impractically cold to function.
-	At large scales, the high power efficeny might outweigh the costs of cooling the device, but this technology has yet to be demostrated on scales larger then a 12 bit adder.
+	A miniaturized version of this using quantum effects called the ["Quantum flux parametron"](https://en.wikipedia.org/wiki/Quantum_flux_parametron) has gotten a some recent attention for high speed and super low power logic, but requires to be impractically cold to function.
+	At large scales, the high power efficiency might outweigh the costs of cooling the device, but this technology has yet to be demonstrated on scales larger then a 12 bit adder.
