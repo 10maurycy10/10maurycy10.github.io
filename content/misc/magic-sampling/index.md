@@ -2,7 +2,7 @@
 title: "Magical slowing down signals with sampling."
 date: 2023-11-30T21:02:54-08:00
 tags: ["electronics"]
-draft: true
+draft: false
 ---
 
 Mixers are the classic way to convert a signal to a lower frequency so it can be processed or measured easier.
