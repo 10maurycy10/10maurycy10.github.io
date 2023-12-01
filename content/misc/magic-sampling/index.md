@@ -1,5 +1,5 @@
 ---
-title: "Magical slowing down signals with sampling."
+title: "Magically slowing down signals with sampling."
 date: 2023-11-30T21:02:54-08:00
 tags: ["electronics"]
 draft: false
