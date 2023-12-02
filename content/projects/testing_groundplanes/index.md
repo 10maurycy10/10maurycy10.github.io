@@ -2,7 +2,7 @@
 title: "Testing PCB ground plane myths"
 date: 2023-12-01T15:54:07-08:00
 tags: ['electronics']
-draft: true
+draft: false
 ---
 
 <!-- Intro -->
