@@ -1,6 +1,6 @@
 ---
 title: "Testing PCB ground plane myths"
-date: 2023-12-01T15:54:06-08:00
+date: 2023-12-01T15:54:07-08:00
 tags: ['electronics']
 draft: true
 ---

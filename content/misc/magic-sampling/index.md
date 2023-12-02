@@ -1,6 +1,6 @@
 ---
 title: "Magically slowing down signals with sampling."
-date: 2023-11-30T21:02:54-08:00
+date: 2023-11-30T18:06:21-07:00
 tags: ["electronics"]
 draft: false
 ---
