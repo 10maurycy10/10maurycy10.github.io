@@ -6,15 +6,17 @@ draft: false
 ---
 
 <!-- Intro -->
+<!--
 
 On the internet, you can find a lot of advice on how to design PCBs, particularly regarding ground planes and high speed or small signal routing.
 But how much of this is correct, and does any of it matter for hobby projects?
+-->
 
 <!-- Myths -->
 
 Basically everyone agrees that a ground plane provides a low inductance and low resistance return path for current, and prevents crosstalk/coupling between traces.
 
-A ground plane does this by providing a return path[^return] that is physically close to the trace.
+A ground plane does this by providing a return path[^return] for current that is physically close to the trace.
 Inductance and inductive coupling depend of the area of the loop formed, which minimized by a ground plane.
 With capacitive coupling, the ground plane "shorts" the electric field between traces, minimizing *mutual* capacitance.
 
@@ -25,7 +27,7 @@ Some say that you should place a shield trace between fast signals, others say y
 
 So to test some of these claims, I designed a (1.6 mm thick) board with pairs of 15 mm traces and 2 mm of clearance between them.
 Both for capacitive and inductive coupling, long, parallel and nearby tracks are the worst case.
-Each end of the traces had a pin, and if a ground plane was present, a ground pin was placed by the trace pins to keep the return path as close as possible:
+Each end of the traces has a pin, and if a ground plane was present, a ground pin was placed by the trace pins to keep the return path as close as possible:
 
 ![The layout of the PCB I used](board.png)
 
@@ -42,8 +44,8 @@ I ran tests with a 50 MHz sine wave (10ns rise/fall times), which should be repr
 
 # Capacitive coupling
 
-To measure capacitive coupling, I connected a function generator set to 5v, 50 MHz sine to one end of one trace, and a scope to the other end of the other trace.
-For tests with a ground plane, I removed the stock ground lead of the scope probe, and added a short (<2cm) length of wire from the probe's ground ring to the ground pane.
+To measure capacitive coupling, I connected a function generator set to a 5v 50 MHz sine to one end of one trace, and a scope to the other end of the other trace.
+For tests with a ground plane, I removed the stock ground lead of the scope probe, and used a short (<2cm) length of wire from the probe's ground ring to the ground pane.
 For the tests without one, I just clipped the scope's ground clip to the function generator's ground lead.
 
 ![Capacitive coupling test setup](c.png)
@@ -64,13 +66,13 @@ These measurements are only accurate to around 5%, so pay no attention to single
 |88 mV|Double sided ground + shield trace[^trace]|
 |48 mV|Double sided ground + shield trace[^trace] + via stitching|
 
-A ground plane reduced the capacitive coupling by more then 2 times, even in this worst case layout.
-Splitting the ground plane, often recommended between power supply, digital and analog sections increased coupling.
-A double sided ground only improved things if both sides were connected with vias, and worked much better if a grounded shield trace was placed between the two traces.
+A ground plane reduced capacitive coupling by more then 2 times, even in this worst case layout.
+Splitting the ground plane, often recommended between power supply, digital and analog sections *increased* coupling.
+A double sided ground only improved things if both sides were connected with vias right next to the trace, and worked much better if a grounded shield trace was placed between the two traces.
 (more than 16 times better then no ground plane!)
 
 At least at this much-smaller-then-a-wavelength scale, a short trace under the ground plane has a fairly small effect.
-I also measured the signal coupled into the main trace from the one crossing it at on the back side at 153mV, significant, but not as nearly as bad as a parallel run.
+I also measured the signal coupled into the main trace from the one crossing it at 153mV, significant, but not as nearly as bad as a parallel run.
 
 Another thing of note about a ground plane is that traces over it have a significant capacitance to ground of around .7 pF per cm for the 1mm wide traces I used.
 This can cause trouble for high impedance signals, even on relatively short traces.
@@ -100,12 +102,12 @@ Again, these measurements are only accurate to around 5%, so pay no attention to
 |10 mV|33 mV|Two layer ground + shield trace|
 |10 mV|7 mV|Two layer ground + shield trace + via stitching|
 
-The results here are similar to the capacitance results, and don't contradict any of the conclusions made there. 
+The results here are similar to the capacitance results, and don't contridict any of the conclusions made there. 
 While it looks like inductive coupling is insignificant compared to capacitive coupling, it can effect traces with a very low driving impedance (like the *0 Ohm* short used for testing), and the current used here was just a miliamp, not the several amps common for driving MOSFET gates and the like.
 
 # Does any of this even matter?
 
-While 50 MHz seems quite high, this type of coupling can happen be with digital signals.
+While 50 MHz seems quite high, this type of coupling can easly happen with digital signals.
 Even of the frequency of a square wave is just a few kilohertz, it can have [harmonics up into the hundreds of megahertz depending on the rise time.](https://lcamtuf.substack.com/p/square-waves-or-non-elephant-biology)
 Digital lines themselves are fairly resistant to interference because of the low impedance output and large gap between logic levels.
 
