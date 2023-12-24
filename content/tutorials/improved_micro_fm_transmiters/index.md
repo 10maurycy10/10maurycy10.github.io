@@ -27,10 +27,6 @@ Perfboards/Matrixboards are a good way to create a compact and resilient layout.
 The coils are 6 turns of insulated wire around a 3mm diameter form, and should be adjustable if a trimmer cap is not used. (able to be compressed/stretched out to change frequency).
 If a non adjustable coil is used, or more accurate tuning is desired (to hit an empty channel in an area with lots of stations), a variable/trimmer capacitor cab replace the fixed capacitor parallel to the coils.
 
-The antenna should be 10-30 cm of insulated wire for 4.5 volt and below, and around 7cm for 9v.
-(longer wires may violate the power limit in the US, but some places let you use more power, please check local laws first)
-
-
 # Adjustment
 
 First tune a FM radio to an empty channel (failing that, the one with the weakest signal), then adjust the coil (or the capacitor) in the middle of the schematic to set the frequency.

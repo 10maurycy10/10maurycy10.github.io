@@ -98,17 +98,3 @@ Cutting the antenna to 10cm is a quick way to check if this is happening.
 
 Another possible issue is if the transmitter falls out of the FM band, this can be checked with an oscilloscope, spectrum analyzer, or frequency counter.
 If you don't have any of these tools, check the value of the capacitor across the tuning coil and try adjusting the tuning coil.
-
-# Legality
-
-DISCLAIMER: This section only applies to the US, regulations in other areas may be different.
-
-I am not a lawyer, and this is not legal advice.
-Part 15 of the FCC rules allows low power transmitters in the FM broadcast band from 88 to 108 MHz (Some other bands also allowed, and some are strictly forbidden, like the aircraft band).
-These transmitters are not allowed to interfere with licensed transmitters, but as FM is fairly resistant to interference, interference will be minimal.
-I would recommend you set the transmitter to a empty part of the band to avoid creating interference and improve range. (other stations can interfere with you).
-As long as you don't go outside of the band or transmit with high power, you are not breaking the law.
-
-You can find the full part 15 rules here [ecfr.gov](https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-15).
-
-[The FCC has also released a summary of the the part 15 rules](https://transition.fcc.gov/oet/info/documents/bulletins/oet63/oet63rev.pdf)
