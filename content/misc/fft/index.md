@@ -164,12 +164,12 @@ time = [sample/len(freq) for sample in time] # Scale it.
 
 [^shannon]:
 	Going up to one full revolution per sample might seem pointless, given the Nyquist–Shannon sampling theorem, but this is actually useful in some cases.
-	Rotating nearly one full revolution is equivelent to rotating a small amount backwards, that is *negative* frequency.
+	Rotating nearly one full revolution is equivelent to rotating a small amount backwards, a *negative* frequency.
 	Negative frequencies don't make much sense if you look at a sine wave, which is only half of the circle.
-	If you have both the sine and cosine, real and imaginary components, like from a IQ mixer, this can actauly be useful.
-	This means the first half of the transform is from 0 to half the smaple rate, and the next half is from half the sample rate to 0, but negative.
+	If you have both the sine and cosine, real and imaginary components, like from a IQ mixer, this can be useful.
+	The first half of the transform is from 0 to half the smaple rate, and the next half is from half the sample rate to 0, but negative.
 	For real number inputs, the second half of the FFT can simply be discarded.
 
 [^radix]:
-	This is the most common number to use, because it is the smallest one that works and because programmers like powers of two.
-	The algorithm itself can be generalized to other small numbers, and this reduces the need to pad the samples with zeros before the FFT, speading it up.
+	Two is the most common number to use, because it is the smallest one that works and because programmers like powers of two.
+	The algorithm itself can be generalized to other small numbers, and this can reduce the need to pad the samples with zeros before the FFT, speeding it up.
