@@ -2,8 +2,7 @@
 title: "The (Cooley–Tukey) Fast Fourier Transform"
 date: 2023-12-27T13:24:54-08:00
 tags: ["programming"]
-draft: true
-math: true
+draft: false
 ---
 
 The discrete Fourier transform breaks down a signal represented as a list of samples into its constituent frequencies.
