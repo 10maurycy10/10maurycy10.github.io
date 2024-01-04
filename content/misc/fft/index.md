@@ -147,7 +147,7 @@ def ifft2(samples):
 	rot = e**(-2*pi*i/n) # Extra rotation per bin
 	c_rot = 1 # Current rotation between even and odd
 	# Combine them
-	transform = [0] * len(samples)
+	combined = [0] * len(samples)
 	for j in range(len(samples)//2):
 		p = even[j]
 		q = odd[j] * c_rot
