@@ -71,7 +71,8 @@ def fft2(samples):
 	Pad the input with zeros before calling if it is not already a power of 2.
 	"""
 	# Trivial base case
-	if len(samples) == 1: return samples
+	n = len(samples)
+	if n == 1: return samples
 	# Compute sub FFTs
 	even = fft2(samples[0::2])
 	odd = fft2(samples[1::2])
@@ -79,12 +80,12 @@ def fft2(samples):
 	rot = e**(2*pi*i/n) # Extra rotation per bin
 	c_rot = 1 # Current rotation between even and odd
 	# Combine them
-	combined = [0] * len(samples)
-	for j in range(len(samples)//2):
+	combined = [0] * n
+	for j in range(n//2):
 		p = even[j]
 		q = odd[j] * c_rot
 		combined[j] = p + q
-		combined[j + len(samples)//2] = p - q # Negation is a 180 degree rotation
+		combined[j + n//2] = p - q # Negation is a 180 degree rotation
 		# Increase the rotation for the next bin
 		c_rot *= rot
 	return combined
@@ -138,7 +139,8 @@ def ifft2(samples):
 	The outputs will be scaled by the number of samples, and should be divided by them
 	"""
 	# Trivial base case
-	if len(samples) == 1: return samples
+	n = len(samples)
+	if len(n) == 1: return samples
 	# Compute sub IFFTs
 	even = ifft2(samples[0::2])
 	odd = ifft2(samples[1::2])
@@ -147,12 +149,12 @@ def ifft2(samples):
 	rot = e**(-2*pi*i/n) # Extra rotation per bin
 	c_rot = 1 # Current rotation between even and odd
 	# Combine them
-	combined = [0] * len(samples)
-	for j in range(len(samples)//2):
+	combined = [0] * n
+	for j in range(n//2):
 		p = even[j]
 		q = odd[j] * c_rot
 		combined[j] = p + q
-		combined[j + len(samples)//2] = p - q # Negation is a 180 degree rotation
+		combined[j + n//2] = p - q # Negation is a 180 degree rotation
 		# Increase the rotation for the next bin
 		c_rot *= rot
 	return combined
