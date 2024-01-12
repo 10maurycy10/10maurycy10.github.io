@@ -27,7 +27,7 @@ Notice the scale change.
 <!-- Recovery --->
 
 With the added noise, the data looks completely unrecognizable.
-But while the plot shows 100 Hz of bandwith, because the signal only changes once per second, the receiver can average one second of data, canceling out most of the noise:
+But while the plot shows 100 Hz of bandwidth, because the signal only changes once per second, the receiver can average one second of data, canceling out most of the noise:
 
 ![](avg.png)
 
@@ -105,4 +105,4 @@ In fact, random codebooks are optimal with a large enough codeword size, but hig
 
 Real error correction schemes don't use random "codebooks", because they become impossible to store as the message gets longer. 
 Another problem with random codebooks is that the only way to decode a signal is to compare it to every possible codeword by brute force, which is very slow.
-Practial methods instead use some (rather complex) function that turns a message into a code, designed in such a way that the reciever can quickly find the closest valid 'codeword'.
+Practical methods instead use some (rather complex) function that turns a message into a code, designed in such a way that the receiver can quickly find the closest valid 'codeword'.
