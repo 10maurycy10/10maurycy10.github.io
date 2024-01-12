@@ -1,6 +1,6 @@
 ---
 title: "The Principle of Error Correction"
-date: 2024-01-11T13:54:23-08:00
+date: 2024-01-12T13:54:23-08:00
 tags: ["wireless"]
 draft: false
 ---
