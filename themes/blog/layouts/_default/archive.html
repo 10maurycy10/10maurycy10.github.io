@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang=en>
+
+{{- partial "head.html" . -}}
+<body>
+{{- partial "header.html" . -}}
+
+
+<div id=content>
+
+<h1> {{ .Title }}: </h1>
+
+{{ .Content }}
+
+{{ range .Site.RegularPages.GroupByDate "2006"}}
+
+{{if .Key}}
+
+<h2> {{ .Key }}: </h2>
+<ol>
+
+{{ range .Pages.ByDate.Reverse }}
+
+<li><a href="{{ .RelPermalink }}">{{ .Title }}</a> {{- partial "metadata.html" . -}} </li>
+
+{{ end }}
+
+</ol>
+{{ end }}
+{{ end }}
+
+</div>
+{{- partial "footer.html" . -}}
+</body>
+</html>
+
