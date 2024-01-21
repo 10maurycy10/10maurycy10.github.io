@@ -1,0 +1,36 @@
+{{ define "title" -}}
+  Blog List | {{ .Site.Title }}
+{{- end }}
+{{ define "header" }}
+  {{ partial "masthead.html" . }}
+{{ end }}
+{{ define "main" }}
+  <header>
+    <h1>{{ .Title }}</h1>
+  </header>
+  
+  <section>
+    {{ $prev := 3000}}
+    {{range .Site.RegularPages}}
+      {{if .Date}}
+      {{if gt $prev (.Date.Format "2006")}}
+      {{ if ne $prev 3000}}
+        </table>
+      {{ end }}
+      <h2>{{ .Date.Format "2006" }}</h2>
+      <table class="all-posts">
+      {{end}}
+      <tr>
+        <td>{{.Date.Format "02 Jan"}}</td>
+        <td><a class="no-underline" href="{{.Permalink}}">{{.Title}}</a></td>
+      </tr>
+      {{ $prev = .Date.Format "2006"}}
+      {{end}}
+    {{end}}
+  </table>    
+  </section>
+
+{{ end }}
+{{ define "footer" }}
+  {{ partial "powered-by.html" . }}
+{{ end }}
