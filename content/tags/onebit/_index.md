@@ -1,5 +1,5 @@
 ---
-title: "One bit computer overview"
+title: "One bit computer"
 ---
 
 I am working on building a computer with no ICs.
