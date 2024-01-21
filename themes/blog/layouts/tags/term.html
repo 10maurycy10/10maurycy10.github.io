@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<meta name="robots" content="noindex">
+
+{{- partial "head.html" . -}}
+<body>
+{{- partial "header.html" . -}}
+
+
+<div id=content>
+
+<h1> List page: {{ .Title }}</h1>
+
+{{ .Content }}
+
+{{ range .Pages.ByPublishDate.Reverse }}
+
+<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3> {{ .Summary }}
+
+{{ partial "metadata.html" . }}
+
+{{ end }}
+
+</div>
+{{- partial "footer.html" . -}}
+</body>
+</html>
+

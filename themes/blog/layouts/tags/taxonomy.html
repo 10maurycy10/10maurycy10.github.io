@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<meta name="robots" content="noindex">
+
+{{- partial "head.html" . -}}
+<body>
+{{- partial "header.html" . -}}
+
+
+<div id=content>
+
+<h1> All tags: </h1>
+
+{{ .Content }}
+
+<ul>
+
+{{ range .Pages.ByTitle }}
+
+<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li> 
+
+{{ end }}
+
+</ul>
+
+</div>
+{{- partial "footer.html" . -}}
+</body>
+</html>
