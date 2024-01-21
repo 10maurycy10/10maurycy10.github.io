@@ -126,4 +126,4 @@ img:not(.icon) {
 	display: inline-block;
 }
 /* Stop footnotes from messing up line spacing */
-sup { vertical-align: top; font-size: 0.5em; }
+sup { vertical-align: top; font-size: 0.6em; }
