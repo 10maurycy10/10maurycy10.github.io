@@ -125,4 +125,5 @@ img:not(.icon) {
 	margin-right: 8px;
 	display: inline-block;
 }
-
+/* Stop footnotes from messing up line spacing */
+sup { vertical-align: top; font-size: 0.6em; }
