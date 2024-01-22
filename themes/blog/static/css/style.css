@@ -97,7 +97,7 @@ img:not(.icon) {
 }
 
 /* Narrow screen layout */
-@media (max-width: 100em) {
+@media (max-width: 65em) {
 	#sidebar {
 		margin: auto;
 		max-width: --body-width;
@@ -105,7 +105,7 @@ img:not(.icon) {
 }
 
 /* Wide screen layout with sidebar on side and content centered */
-@media (min-width: 100em) {
+@media (min-width: 65em) {
 	#sidebar {
 		position: fixed;
 		max-width: --sidebar-width;
