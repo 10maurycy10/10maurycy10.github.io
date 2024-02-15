@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+Sitemap: https://10maurycy10.github.io/sitemap.xml
