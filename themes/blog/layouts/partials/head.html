@@ -4,6 +4,7 @@
 <meta name="description" content="{{ .Summary }}"/>
 <link rel="alternate" type="application/rss+xml" title="Post feed" href=/index.xml>
 <link rel="stylesheet" href="/css/style.css">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
 {{ $title := print .Title " | " .Site.Title }}
 {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
 {{ if .Params.math}}{{ partial "katex.html" . }}{{ end }}
