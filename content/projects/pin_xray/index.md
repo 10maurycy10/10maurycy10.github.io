@@ -85,12 +85,12 @@ A sneaky source of noise is the detector capacitance, a large detector capacitan
 The feedback loop will compensate with more gain, increasing noise.
 
 An easy way to reduce the capacitance is to increase the bias voltage, but this also increases leakage current, so the optimal voltage has to be experimentally determined.
-Another fix is to use a smaller area photodiode, but these also have lower sensitivities.
+Another fix is to use a smaller area photodiode, but that results in lower sensitivities.
 Specialized X-ray detectors with very small capacitances and a built in FET exist, but they are rather expensive.
 
 Osciloscopes are also not the best for small signals, mine has ~200 μV of noise peak to peak, even on the lowest bandwith setting.
 Most of the noise in the trace still appears even with the probe unpluged.
-A quick improvement is to use a 1x probe or directly connect the scope to the circuit, becuase a 10x probe will attenuate the signal to 1/10 of the orignal amplitude, making scope noise 10 times worse.
+A simple trick is to use a 1x probe or directly connect the scope to the circuit, becuase a 10x probe will attenuate the signal to 1/10 of the orignal amplitude, making scope noise 10 times worse.
 With a 10x probe the signal shown in the "results" section would be burried under 2 mV of noise.
 
 [^photon]: Interactions between an electron and light are quantized, either a electron absorbs the entire photon energy (planks constant \* frequency) or none of it.
