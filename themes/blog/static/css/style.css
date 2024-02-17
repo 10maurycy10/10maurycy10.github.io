@@ -99,8 +99,7 @@ img:not(.icon) {
 /* Narrow screen layout */
 @media (max-width: 65em) {
 	#sidebar {
-		margin: auto;
-		max-width: --body-width;
+		max-width: --sidebar-width;
 	}
 }
 
@@ -127,4 +126,6 @@ img:not(.icon) {
 	display: inline-block;
 }
 /* Stop footnotes from messing up line spacing */
-sup { vertical-align: top; font-size: 0.6em; }
+sup { vertical-align: top; font-size: .7em; }
+sup a::before { content: "[" }
+sup a::after { content: "]" }
