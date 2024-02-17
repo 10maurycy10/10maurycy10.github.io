@@ -2,3 +2,8 @@ baseURL = 'http://10maurycy10.github.io/'
 languageCode = 'en-us'
 title = 'thin threads'
 theme = "blog"
+
+[sitemap]
+  changeFreq = 'never'
+  filename = 'sitemap.xml'
+  priority = -1
