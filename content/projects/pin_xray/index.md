@@ -64,7 +64,7 @@ The photodiode was exposed to 10 keV X-rays from a tritium filled tube. 1 mV and
 
 The amplifier and detector are very sensitive to stray electric fields, and must be placed in a grounded metal box.
 Additionally, the detector needs to shielded from light, even a small amount of light will reduce gain and increase noise, as well as creating ringing and even oscillation.
-A piece of aluminum foil, around 16 μm thick, can be used as an window to let x-rays in.
+A piece of aluminum foil which is around 16 μm thick, can be used as an window to let x-rays in, while blocking light and RF.
 
 The supply also needs to be clean, the filtering can improved with a 100 Ohm resistor in series with the supply, or alternatively just by using batteries.
 
