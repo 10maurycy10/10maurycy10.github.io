@@ -1,6 +1,6 @@
 ---
 title: "Generating a spectrum from the PIN diode X-ray detector."
-date: 2024-02-20T12:08:11-07:00
+date: 2024-02-21T11:18:22-07:00
 tags: ["electronics", "radiation"]
 draft: false
 ---
