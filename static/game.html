@@ -1,0 +1,224 @@
+<head>
+<title>Maurycy's thing</title>
+<!-- CSS -->
+<style>
+body {
+	background-color: black;
+	color: white;
+	font-family: sans-serif;
+}
+
+/* Situation Text  */
+h1 {
+	text-align: center;
+}
+p {
+	max-width: 20em;
+	margin: auto;
+}
+p#sc_desc {
+	font-size: 1.5em;
+}
+p.center {
+	text-align: center
+}
+
+/* Button syline */
+div {
+	margin: auto;
+	width: 30em;
+}
+button {
+	border: solid white 1px;
+}
+
+button#b2 {float: right;}
+button#b1 {float: left;}
+</style>
+</head>
+<body>
+<!-- Game UI -->
+<h1>Stuff Inc:</h1>
+<p class=center>
+<table>
+<tr><th><meter id="vmoney" value="0" max="6"></meter></th><th id="moneytxt">Money</th></tr>
+<tr><th><meter id="vpower" value="0" max="6"></meter></th><th id="powertxt">Power</th></tr>
+<tr><th><meter id="vwork" value="0" max="6"></meter></th><th id="worktxt">Workforce</th></tr>
+</table>
+<br/>
+<br/>
+</p>
+<p id="sc_desc">Loading...</p>
+<br/>
+<br/>
+<div>
+<button id="b1" onclick="pressed(1)">Wait.</button>
+<button id="b2" onclick="pressed(2)">Wait.</button>
+</div>
+<!-- Game Code -->
+<script defer>
+console.log("Running!")
+//
+// Resources
+// 	Money: Financies of the company
+//	Power: Militay power, spent by using force
+//	Eco: Enviroment
+//	Workforce: Discontent of the workforce
+//		
+
+var power = 3;
+var work = 3;
+var money = 3;
+
+// Events 
+let random = [
+	{
+		"description": "Most of our workers are refusing to work. They want more pay and better working conditions.",
+		"1": {"desc": "We can't afford it.", "next": "striking", "money": 1, "work": -1},
+		"2": {"desc": "Fine.", "money": -1, "work": 1},
+	},
+	{
+		"description": "Our managment recomends we bost employee moral by throwing a party. Somehow, news has gotten out and the workers will be unhappy if the is party cancled.",
+		"1": {"desc": "No way!", "money": 1, "work": -2},
+		"2": {"desc": "Sure!", "money": -1, "work": 1},
+	},
+	{
+		"description": "A competitor is having a bad quarter, this would be the optimal time to aquire them.",
+		"1": {"desc": "Not a chance.", "money": 1},
+		"2": {"desc": "Do it.", "money": -2, "work": 1, "power": 1},
+	},
+	{
+		"description": "A worker has died in the steel mill. The news will soon appear in the paper!",
+		"2": {"desc": "I don't care.", "work": -2, "power": -1},
+		"1": {"desc": "Don't let it happen.", "money": -2, "work": -1, "power": -1},
+	},
+	{
+		"description": "We have had an unusualy profitable year, what do you want to do with the money?",
+		"2": {"desc": "For me.", "money": +1},
+		"1": {"desc": "For the workers.", "work": +1},
+	},
+	{
+		"description": "The lead guard is requesting money for new equipment. This would greatly benifit our ability to defend ourselves.",
+		"1": {"desc": "No way.", "money": +1},
+		"2": {"desc": "Of course", "money": -1, "power": +2},
+	}
+];
+let special = {
+	"striking": {
+		"description": "The workers still refuse to work, if this continues will will be bankrupt!",
+		"2": {"desc": "Send guards in and force them to work.", "power": -1, "work": -1},
+		"1": {"desc": "Bribe the leaders of the union.", "money": -1}
+	},
+	"death_money": {
+		"description": "A mob of creditors stoms the factoy and hangs you. Your head is sold overseas for an exorbintant price.",
+		"1": {"desc": "What?", "gameover": 1},	"2": {"desc": "What?", "gameover": 1}
+	},
+	"death_work": {
+		"description": "A mob of angry workers storms in and brutaly stabs you to death.",
+		"1": {"desc": "...", "gameover": 1}, "2": {"desc": "...", "gameover": 1}
+	},
+	"death_power": {
+		"description": "Goons from the competition have blown up the factory and your house. You die in the hospital days later from srapnel.",
+		"1": {"desc": "...", "gameover": 1}, "2": {"desc": "...", "gameover": 1}
+	}
+};
+
+// Sequencng
+function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex > 0) {
+
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
+var deak = [];
+function next() {
+	if (deak.length > 0) return deak.pop();
+	deak = [...random];
+	shuffle(deak);
+	return deak.pop();
+}
+var current = next();
+display();
+
+function display() {
+	var cmoney = document.getElementById("vmoney").value;
+	var cpower = document.getElementById("vpower").value;
+	var cwork = document.getElementById("vwork").value;
+	var start = null
+	function frame(ts) {
+		if (!start) start = ts;
+		var progress = (ts - start)/1000;
+		document.getElementById("vmoney").value = money*progress + cmoney*(1-progress);
+		document.getElementById("vpower").value = power*progress + cpower*(1-progress);
+		document.getElementById("vwork").value = work*progress + cwork*(1-progress);
+		if (progress < 1) {
+			requestAnimationFrame(frame);
+		} else {
+			document.getElementById("sc_desc").innerText = current["description"];
+			document.getElementById("b1").innerText = current["1"]["desc"];
+			document.getElementById("b2").innerText = current["2"]["desc"];
+			document.getElementById("b1").innerText = current["1"]["desc"];
+		}
+	}
+	requestAnimationFrame(frame);
+}
+function pressed(option) {
+	console.log("User selected", option)
+	opt = current[option];
+	// Special event cianing
+	if (opt["next"]) {
+		dist = opt["dist"] || 0;
+		var idx = deak.length - dist;
+		if (idx < 0) idx = 0;
+		deak.splice(idx, 0, special[opt["next"]])
+	}
+	if (opt["gameover"]) {
+		var start = null;
+		function frame(ts) {
+			if (!start) start = ts;
+			var progress = (ts - start)/1000;
+			if (progress < 1) {
+				document.getElementById("vmoney").value = money*(1-progress);
+				document.getElementById("vpower").value = power*(1-progress);
+				document.getElementById("vwork").value = work*(1-progress);
+			}
+			if (progress > 2)  document.getElementById("sc_desc").innerText = "You lose... Want to try again?";
+			if (progress < 5) {
+				requestAnimationFrame(frame);
+			} else {
+				money = 3; power = 3; work = 3;
+				current = next();
+				display()
+			}
+		}
+		requestAnimationFrame(frame);
+		return	
+	}
+	// Resource
+	if (opt["power"])  power += opt["power"];
+	if (opt["work"])  work += opt["work"];
+	if (opt["money"]) money += opt["money"];
+	if (power > 6) power = 6;
+	if (power > 6) work = 6;
+	if (power > 6) money = 6;
+	// Lose conditions
+	current = next();
+	if (power <= 0) current = special["death_power"];
+	if (money <= 0) current = special["death_money"];
+	if (work <= 0) current = special["death_work"];
+	display()
+}
+</script>
+</body>
