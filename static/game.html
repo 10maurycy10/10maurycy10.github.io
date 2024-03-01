@@ -24,9 +24,13 @@ p.center {
 }
 
 /* Button syline */
+table, meter {
+	margin: auto;
+	width: 10em;
+}
 div {
 	margin: auto;
-	width: 30em;
+	width: 20em;
 }
 button {
 	border: solid white 1px;
@@ -41,9 +45,9 @@ button#b1 {float: left;}
 <h1>Stuff Inc:</h1>
 <p class=center>
 <table>
-<tr><th><meter id="vmoney" value="0" max="6"></meter></th><th id="moneytxt">Money</th></tr>
-<tr><th><meter id="vpower" value="0" max="6"></meter></th><th id="powertxt">Power</th></tr>
-<tr><th><meter id="vwork" value="0" max="6"></meter></th><th id="worktxt">Workforce</th></tr>
+<tr><th><meter id="vmoney" value="0" max="6"></meter></th><th id="moneytxt">&nbsp;&nbsp;Money</th></tr>
+<tr><th><meter id="vpower" value="0" max="6"></meter></th><th id="powertxt">&nbsp;&nbsp;Power</th></tr>
+<tr><th><meter id="vwork" value="0" max="6"></meter></th><th id="worktxt">&nbsp;&nbsp;Workforce</th></tr>
 </table>
 <br/>
 <br/>
@@ -83,7 +87,7 @@ let random = [
 		"2": {"desc": "Sure!", "money": -1, "work": 1},
 	},
 	{
-		"description": "A competitor is having a bad quarter, this would be the optimal time to aquire them.",
+		"description": "A competitor is having a bad quarter, this is the optimal time to aquire them.",
 		"1": {"desc": "Not a chance.", "money": 1},
 		"2": {"desc": "Do it.", "money": -2, "work": 1, "power": 1},
 	},
