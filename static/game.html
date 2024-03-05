@@ -105,6 +105,11 @@ let random = [
 		"description": "The lead guard is requesting money for new equipment. This would greatly benifit our ability to defend ourselves.",
 		"1": {"desc": "No way.", "money": +1},
 		"2": {"desc": "Of course", "money": -1, "power": +2},
+	},
+	{
+		"description": "Government regulators are trying to enforce better working conditions and fair competition.",
+		"1": {"desc": "No they don't.", "power": -1, "money": -1},
+		"2": {"desc": "Whatever.", "power": -2, "money": -2}
 	}
 ];
 let special = {
@@ -198,7 +203,9 @@ function pressed(option) {
 				document.getElementById("vpower").value = power*(1-progress);
 				document.getElementById("vwork").value = work*(1-progress);
 			}
-			if (progress > 2)  document.getElementById("sc_desc").innerText = "You lose... Want to try again?";
+			if (progress > 2) {
+				 document.getElementById("sc_desc").innerText = "You lose... Want to try again?";
+			}
 			if (progress < 5) {
 				requestAnimationFrame(frame);
 			} else {
