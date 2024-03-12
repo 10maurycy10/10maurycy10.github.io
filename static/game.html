@@ -42,7 +42,7 @@ button#b1 {float: left;}
 </head>
 <body>
 <!-- Game UI -->
-<h1>Stuff Inc:</h1>
+<h1>Iron Inc:</h1>
 <p class=center>
 <table>
 <tr><th><meter id="vmoney" value="0" max="6"></meter></th><th id="moneytxt">&nbsp;&nbsp;Money</th></tr>
@@ -110,6 +110,21 @@ let random = [
 		"description": "Government regulators are trying to enforce better working conditions and fair competition.",
 		"1": {"desc": "No they don't.", "power": -1, "money": -1},
 		"2": {"desc": "Whatever.", "power": -2, "money": -2}
+	},
+	{
+		"description": "An employee has come forward requesting more benifits for everyone.",
+		"1": {"desc": "No way.", "work": -1, "money": 1},
+		"2": {"desc": "Sure!", "work": 1, "power": -1}
+	},
+	{
+		"description": "Fumes from the steel mill are making people sick, they have started protest, blocking shipments of supplies.",
+		"1": {"desc": "Disperse the crowd.", "power": -1, "money": 1},
+		"2": {"desc": "Take mesures to reduce the fumes.", "money": -1}
+	},
+	{
+		"description": "Our staff manager recomends we higher childred, they cost less and don't complain about safety, but have to be keeped in line by force.",
+		"1": {"desc": "No."},
+		"2": {"desc": "Sure.", "money": 1, "power": -1, "work": 1}
 	}
 ];
 let special = {
