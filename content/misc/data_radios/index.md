@@ -33,6 +33,7 @@ An Arduino library for the module does exist, but it is limited to a small numbe
 In any case, writing a driver for it is not difficult, and all the information needed is in the [datasheet](https://www.mouser.com/datasheet/2/813/RFM69HCW_V1_1-2490219.pdf).
 
 All of the communication is done over SPI[^spi], which quite a simple protocol.
+A small pitfall here is that the datasheet has MOSI and MISO reversed, the pin near the edge is MISO.
 Most microcontrollers have built in SPI hardware, but it is quite easy to implement from scratch:
 
 ```c
