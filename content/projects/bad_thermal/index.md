@@ -5,27 +5,27 @@ tags: ["electronics"]
 draft: false
 ---
 
-A bolometer uses a weird method to detect light, detecting the heat from absorbing light.
-This limits sensitivity and speed, but works at wavelengths which are otherwise very difficult to detect, like thermal infrared.[^bandgap]
+A bolometer detects the heat from absorbing light.
+This comes with limits sensitivity and speed, but works at wavelengths which are very difficult to detect, like thermal infrared.[^bandgap]
 
 At its simplest, a bolometer is simply a black object attached to a heat sensor, both somewhat isolated from the surroundings.
 Typically a thermistor is used as the heat sensor, but I did not have any on hand, so I used a 1N4148 silicon diode.
 A diode's forward voltage falls with temperature, generally around -2 mV/K.
 
-I covered the diode with lampblack (carbon) becuase it is a fairly good wideband light absorber, and built up a quick circuit to measure the drop:
+I covered the diode with lampblack (carbon) becuase it is a fairly good wideband light absorber, and built up a quick circuit test the principle:
 
 ![A schematic of a diode as part of a voltage divider to measure the voltage drop.](drop.png)
 
-After the diode cooled to ambient temperature, touching it dropped the output voltage by a good 30 mV.
-But, this simple circuit won't work as a bolometer, becuase it is effected by ambient temperature, and even a fraction of a degree of error will ruin the results.
-The simplest way to fix this is by adding a second diode as a baseline reference, and measure the difference between the two voltage drops:
+After the diode cooled to ambient temperature, placing my finger on it dropped the output voltage by a good 30 mV.
+But, this simple circuit won't work as a bolometer, becuase it is effected by ambient temperature, even a fraction of a degree of error will overpower the tiny effect from thermal radiation.
+To compensate for this, I added a second diode as a baseline temperatred reference, and measured the difference between the two voltage drops:
 
 ![Diode bridge](bridge.png)
 
-There will be some voltage offset even at a equal temperature because 2 diodes will not be perfectly matched, but this can easily be zeroed out.
-This circuit is enough to detect a temperature difference, but not to measure the amount of heat flow.
+There will be some difference even at the same temperature becuase diodes will not be perfectly matched, but it can easily be zeroed out.
+We are getting somewhere, but this diode bridge circuit still can't measure the actual amount of heat flowing into the sensor.
 
-This measurement can be done with a small heater, like a 1k resistor attached to the sensor.
+To do this, I added small heater, a 1k resistor to the sensor.
 To maintain a constant temperature, the total power flowing into the sensor has to be constant, therefore the needed heater power will fall by exactly the input power.
 With an opamp adjusting the heater power to keep a constant sensor temperature, the input power can be measured as the drop in applied heater power:
 
@@ -52,7 +52,7 @@ Mine can detect the thermal radiation from a person from a few meters away, but 
 It also works as a half decent laser power meter, but with a 1k heater resistor running off 5 volts, it will max out at just 25 mW.
 This could be improved using a smaller value resistor for the heater, using 100 ohms would bring the max up to 250 mW.
 
-With a 50 ohm resistor attached to the sensor, it works as an RF power meter, but it is hard to get more then 20 dB of dynamic range from such a setup.
+With a 50 ohm resistor attached to the sensor, it works as an RF power meter, but I can't get more then around 20 dB of dynamic range.
 On the plus side, it works from DC to daylight (literally).
 
 [^bandgap]: Technically some very exotic semiconductors like Mercury Cadmium Teluride also detect thermal infrared, but these need to be cooled to cryogenic temperatures to function. 
