@@ -48,7 +48,6 @@ Convert the 2 voltages to powers, `Power = Voltage^2 / 1000 Ohms`, and subtract 
 
 Covering the sensor except for a small aperture it turns it into a terrible 1 pixel thermal camera.
 Mine can detect the thermal radiation from a person from a few meters away, but it takes a good 20 seconds to respond.
-Depending on the thermal mass of the sensor, it could just about be usable as a motion sensor.
 
 It also works as a half decent laser power meter, but with a 1k heater resistor running off 5 volts, it will max out at just 25 mW.
 This could be improved using a smaller value resistor for the heater, using 100 ohms would bring the max up to 250 mW.
