@@ -1,0 +1,54 @@
+---
+title: "Building a bolometer, or the world's worst thermal camera."
+date: 2024-04-28T12:18:15-06:00
+tags: ["electronics"]
+draft: true
+---
+
+A bolometer is rather weird way to detect light, by detecting the heat from abosrbing light.
+This limits sensitivity and speed, but works at wavelengths which are otherwise very difficult to detect, like thermal infrared.[^bandgap]
+
+At its simplest, a bolometer is simply a black object attached to a heat sensor, somewhat isolated from the suroundings.
+Most bolometers use a thermistor as the heat sensor, but I did not have any, so I used a 1N4148 silicon diode.
+A diode's forward voltage falls with temperature, generaly around -2 mV/K.
+
+I covered the diode with lampblack (carbon) becuase it is a fairly good wideband abosrber, and built up a quick circuit to mesure the drop:
+
+![A schematic of a diode as part of a voltage divider to mesure the voltage drop.](drop.png)
+
+After the diode cooled to ambient temperature, touching it dropped the output voltage by a good 30 mV.
+The biggest problem with this circuit is that it is effected by ambient temperature, even a fraction of a degree of difference will ruin the results.
+The easiest fix is to add a second reference diode, and mesure the difference between the voltage drops:
+
+![Diode bridge](bridge.png)
+
+There will be some voltage offset becuase 2 random diodes will not be perfectly matched, but this is constant and can be zeroed out.
+Now the circuit can detect even a fairly small heat flow into the detector, but has no way of mesuring it.
+
+This can be done by attaching a small heater, like a 1k resistor to the sensor.
+To maintain a given temperature, the total power flowing into the sensor has to be constant, so the needed heater power will drop by exactly the input power.
+With a simple opamp circuit adjusting the heater power to keep a constant sensor temperature, the input power can be mesured as the drop in heater power:
+
+![Heater feedback](nloop.png)
+
+I glued to the sensor diode (D1) to the heater, but taping them together works.
+The thermal mass of the heater/sensor/absorber assembly should be as small as possible to keep the thermal time constant resonable.
+
+The detector is sensitive to drafts, make sure to sheild the reference and sensor diodes from any air currents.
+Comercial bolometers are placed in a vacuum, but most vacuum chamber materials are opaque to thermal infrared, defeating the whole point.
+
+To make a measurement, first measure a baseline heater voltage with no light hitting the sensor, then expose sensor to light.
+After it reaches equilibrium, measure the heater voltage again.
+Convert the 2 voltages to powers, `Power = Voltage^2 / 1000 Ohms`, and subtract for the mesurement.
+
+Covering the sensor leaving just a small aperture, so that only radiation from a particular direction can reach it turns it into a terrible 1 pixel thermal camera.
+Depending on the thermal mass of the sensor, it might just about be usable as a motion sensor.
+Comerical motion sensors and thermal cameras use a similar detector, but one with much less thermal mass and with the absorber and detector in direct contact..
+
+It works as a half decent laser power meter, but with a 1k heater resistor running off 5 volts, it will max out at just 25 mW.
+This could be improved using a smaller value for the heater, using 100 ohms would bring the max up to 250 mW.
+
+With a 50 ohm resistor attached to the sensor, it works as an RF power meter, but it is hard to get more then 20 dB of dynamic range from such a setup.
+On the plus side, it would work from DC to daylight (literalyz).
+
+[^bandgap]: Technically some very exotic semiconductors like Mercury Cadmium Teluride also detect thermal infrared, but these need to be cooled to cryogenic temperatures to function. 
