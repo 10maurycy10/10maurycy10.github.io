@@ -31,6 +31,9 @@ With an opamp adjusting the heater power to keep a constant sensor temperature, 
 
 ![Heater feedback](nloop.png)
 
+Just about any opamp will do, as long as it can suppy 5 mA of current, which nearly all can.
+If yours has an offset null adjustment, you could use it for the bias adjustment in place a potentiometer on the diode bridge.
+
 I glued to the sensor diode (D1) to the heater, but taping them together works fine.
 The assembly should not be touching the circuit board to keep heat from escaping before it can be measured.
 Watch out for the photoelectric effect, the diodes need to be shielded from light if they are in a glass package (like the 1N4148).
@@ -45,13 +48,14 @@ Convert the 2 voltages to powers, `Power = Voltage^2 / 1000 Ohms`, and subtract 
 
 Covering the sensor except for a small aperture it turns it into a terrible 1 pixel thermal camera.
 Depending on the thermal mass of the sensor, it is just about be usable as a motion sensor.
+
 Commercial motion sensors and thermal cameras use a similar principle, but have a detector with much less thermal mass and with direct contact between the absorber and sensor.
 
 It also works as a half decent laser power meter, but with a 1k heater resistor running off 5 volts, it will max out at just 25 mW.
 This could be improved using a smaller value resistor for the heater, using 100 ohms would bring the max up to 250 mW.
 
 With a 50 ohm resistor attached to the sensor, it works as an RF power meter, but it is hard to get more then 20 dB of dynamic range from such a setup.
-On the plus side, it works DC to daylight (literally).
+On the plus side, it works from DC to daylight (literally).
 
 [^bandgap]: Technically some very exotic semiconductors like Mercury Cadmium Teluride also detect thermal infrared, but these need to be cooled to cryogenic temperatures to function. 
 
