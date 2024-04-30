@@ -2,10 +2,10 @@
 title: "Building a crude bolometer, or the world's worst thermal camera."
 date: 2024-04-28T12:18:15-06:00
 tags: ["electronics"]
-draft: true
+draft: false
 ---
 
-A bolometer uses a weird way to detect light, detecting the heat from absorbing light.
+A bolometer uses a weird method to detect light, detecting the heat from absorbing light.
 This limits sensitivity and speed, but works at wavelengths which are otherwise very difficult to detect, like thermal infrared.[^bandgap]
 
 At its simplest, a bolometer is simply a black object attached to a heat sensor, both somewhat isolated from the surroundings.
