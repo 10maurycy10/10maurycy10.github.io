@@ -6,8 +6,8 @@ draft: true
 ---
 
 
-Most descriptions of smoke detector describe them as using an ion chamber, with a strong alpha source inside.
-The alpha radiation ionizes the air inside the chamber, letting a current flow, which the detector measures.
+Most sources describe smoke detectors as using an ion chamber, with a strong alpha source inside.
+The alpha radiation ionizes the air inside the chamber, creating a small current flow, measured by the detector.
 When smoke enters through vents in chamber, it blocks the alpha particles, reducing the current and activating the alarm.
 A video on [the Wikipedia article](https://en.wikipedia.org/wiki/Smoke_detector) even gives a rough schematic[^wrong]:
 
