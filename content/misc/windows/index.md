@@ -2,6 +2,7 @@
 title: New virus (Windows Copypasta)
 tags: ["rant", "linux", "windows"]
 date: 2022-09-14
+draft: true
 ---
 
 ![Windows 10 logo](./windows10.svg)
