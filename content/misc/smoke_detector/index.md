@@ -2,7 +2,7 @@
 title: "How (ionization) smoke detectors actually work:"
 date: 2024-05-23
 tags: ["electronics", "radiation"]
-draft: true
+draft: false
 ---
 
 
