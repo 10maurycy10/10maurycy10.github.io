@@ -5,9 +5,9 @@ tags: ["electronics", "radiation"]
 draft: false
 ---
 
-To build an ion chamber, I soldered some wire to a small steel can as one electrode, drilled a hole and inserted another wire as the other electrode.
-I then covered the opening with a metal mesh to keep out static and stray fingers.
-Aluminum foil can be used for better shielding from static electricity, but at the cost of blocking alpha particles from entering[^foil]:
+To build the ion chamber, I soldered some wire to a small steel can as one electrode, drilled a hole and inserted another wire as the other electrode.
+I then covered the opening with metal mesh to keep out static and stray fingers.
+Aluminum foil can be used for better shielding from static electricity, but at the cost of blocking alpha particles from entering[^foil].
 
 ![A improvised ion chamber from a metal can](chamber.jpg)
 
@@ -31,13 +31,14 @@ I did not have a meter able to directly measure the picoamp[^picoamps] level ion
 Use small signal transistors, power ones will have too much leakage.
 
 The Darlington pair provides a gain of around 30,000, but the real trick is using a multimeter on voltage mode.
-That way the meter's 10 megaohm impedance acts as a current shunt, allowing it to measure the feeble current.
+That way the meter's own 10 megaohm impedance acts as a current shunt, allowing it to measure the amplified but still tiny current.
 The 1k resistor protects the transistors in the case of a short between the 2 chamber electrodes.
-Voltage is not critical, but going over around 10 volts massively increases leakage with my transistors.
 
-There is not much to love with this circuit, it is not very sensitive, and the gain and leakage current drift wildly with temperature, but it does work well enough to highlight some to weird properties of alpha radiation:
+The exact voltage is not critical, but going over around 11 volts massively increases leakage with my transistors.
 
-My circuit is saturated by a 1 uCi (37 kBq) Am-241 source at 3 cm away, but at 4 cm the reading drops to near background.
+There is not much to love with this circuit, it is not very sensitive, and both gain and leakage current drift wildly with temperature, but it does work well enough to highlight some to weird properties of alpha radiation:
+
+My chamber is saturated by a 1 uCi (37 kBq) Am-241 source at 3 cm away, but at 4 cm the reading drops to near background.
 This is because alphas are very good at ionizing air, and lose energy at a consistent 1.3 MeV per cm, and generating around 35,000 ion pairs in the process.
 
 Because of this, I had to make a proper alpha attenuator to compare the sensitivity of different circuits.
