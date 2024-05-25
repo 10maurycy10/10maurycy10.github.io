@@ -41,7 +41,7 @@ My circuit is saturated by a 1 uCi (37 kBq) Am-241 source at 3 cm away, but at 4
 This is because alphas are very good at ionizing air, and lose energy at a consistent 1.3 MeV per cm, and generating around 35,000 ion pairs in the process.
 
 Because of this, I had to make a proper alpha attenuator to compare the sensitivity of different circuits.
-To do this I cut a small .5 x .5 millimetre aperture in an aluminum foil shield over the chamber, the resulting attenuation depends on how close the source is to the aperture:
+To do this I cut a small .5 x .5 millimeter aperture in an aluminum foil shield over the chamber, the resulting attenuation depends on how close the source is to the aperture:
 
 |Distance from source:&nbsp;&nbsp;&nbsp;|Attenuation factor:&nbsp;&nbsp;&nbsp;|Alphas from 1 uCi Am-241:|
 |-|-|-|
@@ -51,7 +51,7 @@ To do this I cut a small .5 x .5 millimetre aperture in an aluminum foil shield 
 |15 mm|0.00003|1 per second|
 |20 mm|0.000015|.5 per second|
 
-Just 2 millimetres of distance gets the 1 uCi of Am-241 to the detection threshold of the simple Darlington circuit.
+Just 2 millimeters of distance gets the 1 uCi of Am-241 to the detection threshold of the simple Darlington circuit.
 
 # The power of time:
 
