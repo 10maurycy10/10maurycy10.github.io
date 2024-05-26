@@ -1,20 +1,19 @@
 ---
-title: "Making an ionization chamber radiation detector:"
+title: "Making a simple ionization chamber radiation detector:"
 date: 2024-05-24
 tags: ["electronics", "radiation"]
 draft: false
 ---
 
-To build the ion chamber, I soldered some wire to a small steel can as one electrode, drilled a hole and inserted another wire as the other electrode.
+To build the ion chamber, I soldered some wire to a steel can as one electrode, drilled a hole in the closed end and inserted another wire as the other electrode.
 I then covered the opening with metal mesh to keep out static and stray fingers.
 Aluminum foil can be used for better shielding from static electricity, but at the cost of blocking alpha particles from entering[^foil].
 
 ![A improvised ion chamber from a metal can](chamber.jpg)
 
-Larger cans will work fine, and will be more sensitive to beta and gamma.
+My can was quite small, but larger ones work fine and will be more sensitive.
 
 When radiation enters the chamber, it ionizes some of the air inside, allowing a tiny, often sub-picoamp current to flow between the electrodes.
-
 Air filled ion chambers are very sensitive to alpha, somewhat sensitive to beta but have fairly little gamma response.
 Beta and gamma response can be improved by using a larger chamber, or by filling it with pressurized gas, but doing this adds a quite lot of complexity.
 
@@ -77,7 +76,7 @@ My small chamber detects a background of 2 particles per minute, but this will v
 The circuit is still not perfect, the threshold is temperature sensitive, and the short reset pulses are not quite enough to fully discharge the FET.
 This creates a a far higher pulse rate background then just FET leakage alone when the circuit is set to frequently click.
 
-Both of these can be avoided by simply using a microcontrollers to handle the whole operation:
+Both of these can be avoided by simply using a microcontroller to handle the whole operation:
 
 ![Hooking up an MCU diagram of an ion chamber with a pulse frequency output](mcu.png)
 
@@ -86,7 +85,7 @@ With a long integration time, a microcontroler can measure very small amounts of
 
 [^picoamps]: Less then 10^-12 of an amp. That's 6 digits below 1 microamp. 
 
-[^foil]: Of course, if the source is placed inside the chamber, or is in the air like radon, the window material doesn't matter.
+[^foil]: Of course, if the source is placed inside the chamber, or is in the air like radon, alpha will be detected regardless.
 
 [^leak]: 
 	Importantly the leakage current is not constant, for my FET, the leakage drops drastically above 3 V at the source.
