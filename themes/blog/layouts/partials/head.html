@@ -8,4 +8,9 @@
 {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
 {{ if .Params.math}}{{ partial "katex.html" . }}{{ end }}
 <title>{{ $title }}</title>
+
+<!-- Google tracking tag: If you don't like this, just block it with any of a number of extentions -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J3VZ71MGJM"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-J3VZ71MGJM');</script>
+
 </head>
