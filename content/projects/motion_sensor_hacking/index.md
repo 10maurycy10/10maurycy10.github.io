@@ -1,6 +1,6 @@
 ---
 title: "Reverse engineering an RF motion sensor"
-date: 2024-06-21T20:41:18-06:00
+date: 2024-06-28T20:41:18-06:00
 tags: ["electronics", "wireless"]
 draft: false
 ---
