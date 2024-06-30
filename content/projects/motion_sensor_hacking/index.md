@@ -1,5 +1,5 @@
 ---
-title: "Reverse engineering an RF motion sensor"
+title: "Inside a 1 dollar radar motion sensor"
 date: 2024-06-28T20:41:18-06:00
 tags: ["electronics", "wireless"]
 draft: false
