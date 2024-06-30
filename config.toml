@@ -1,6 +1,6 @@
 baseURL = 'http://10maurycy10.github.io/'
 languageCode = 'en-us'
-title = 'thin threads'
+title = "Maurycy's blog"
 theme = "blog"
 
 [sitemap]
