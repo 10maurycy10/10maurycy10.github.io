@@ -49,12 +49,12 @@ But it's actually 2 oscillators in one, the microwave oscillation is pulsed at a
 ![20 MHz oscillation visible on emitter](squench.png)
 My scope can't see 3 GHz, but it's there everywhere except on the downward slopped part of the waveform. 
 
-What's happening is that as the oscillator runs, it changes the 66 pF capacitor, raising the emitter voltage until oscillator can't run anymore.
+What's happening is that as the oscillator runs, it changes the 33 pF capacitors, raising the emitter voltage until oscillator can't run anymore.
 At this point, the 220 ohm resistor discharges the capacitor, restarting the oscillation in just a few nanoseconds.
 
 This pulsing allows it to work as a super-regenerative receiver.
 Once the transistor's gain rises above one, the oscillator doesn't start immediately: It needs a tiny kick to get going. 
-Any signal in the resonator gets amplified again and again until it's large enough to charge the capacitor and restart the cycle.
+Any signal in the resonator gets amplified again and again until it's large enough to charge the capacitors and restart the cycle.
 Because of the exponential increase in amplitude, even a tiny amount of RF will increase the pulse frequency, turning the oscillator into a sensitive receiver.
 (This is why you never have to wait long for an oscillator to start, noise will quickly be amplified until it clips the transistor amplifier)
 
@@ -69,7 +69,7 @@ Indoors it works very nicely, with up to 5 meters of range, but outdoors with no
 
 # A bit of fun, an S-band transmitter:
 
-The first modification I tried was to remove the capacitor that causes the 20 MHz pulsing, which is actually two 33 pF capacitors in parallel:
+The first modification I tried was to remove the capacitors causing the 20 MHz pulsing:
 
 ![Image showing which 2 capacitors to remove](cw_tx.png)
 
