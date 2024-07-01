@@ -19,7 +19,7 @@ It turns out the `BISS0001` is an *infrared* motion sensor chip? How does that w
 
 Generally, motion and speed sensing (doppler) radars work by sending out a continuous carrier and mixing the received signal with the transmitted carrier to create a low frequency IF signal.
 If reflections are coming from a moving object, the received signal will slowly drift in and out of phase with the transmitted signal, creating a beat frequency at just a few hertz.
-Becuase a motion sensor doesn't care about the exact speed, all the chip has to do is look for millivolt-level changes: all the hard work is already done.
+Because a motion sensor doesn't care about the exact speed, all the chip has to do is look for millivolt-level changes: all the hard work is already done.
 
 In my module, the IF signal enters the chip on pin 14, but the chip outputs an amplified copy on pin 16, which is much more oscilloscope friendly:[^biss]
 
