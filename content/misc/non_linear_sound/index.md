@@ -1,6 +1,6 @@
 ---
 title: "Weekend project: Nonlinear sound propagation"
-date: 2024-09-02T18:21:35-06:00
+date: 2024-09-01T18:21:35-06:00
 tags: []
 draft: false
 ---
