@@ -87,7 +87,7 @@ However, if you're to the side, the distances will be different, and one of the 
 The larger the speaker, the larger the phase difference will be, and narrower the beam is.
 Shorter wavelengths need less time delay to cancel out, so the same size speaker will be more directional at higher frequencies.
 
-With waves coming from just a two points, there are lots of other spots where they will coincidentally line up, but with enough sources thas won't happen anywhere except directly in front of it.
+With waves coming from just a two points, there are lots of other spots where they will coincidentally line up, but with enough sources that won't happen anywhere except directly in front of it.
 
 For those interested in making own, you can use this formula to estimate the beam half-angle from the length:
 
