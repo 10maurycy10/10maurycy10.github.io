@@ -1,5 +1,5 @@
 ---
-title: "Making a rickroll laser, a parametric array speaker."
+title: "Making a rickroll laser: A parametric speaker."
 date: 2024-09-12T18:38:50-06:00
 tags: ["electronics"]
 draft: false
@@ -14,7 +14,7 @@ Ultrasound wavelengths are typically around a centimeter allowing a compact dire
 Ordinary coil-and-magnet speakers don't work well at the ultrasound range, so I had to use specialized piezoelectric transducers.
 These are quite small, mine had a diameter of just one centimeter:
 
-![](trans.jpg)
+![A photograph showing a small transducer in a metal can](trans.jpg)
 
 These transducers only work in a narrow range of frequencies, mine are designed for 40 kHz.
 With the 8 mm wavelength, they are large enough for some directionality, but not nearly enough for the "sound laser" effect I wanted.
@@ -22,7 +22,7 @@ With the 8 mm wavelength, they are large enough for some directionality, but not
 As a work around, I wired multiple transducers together in parallel to act as one very large transducer.
 My circuit board has room for 73 transducers, arranged in a 18 cm by 6 cm rectangle:
 
-![](array.jpg)
+![A photograph of a large array of transducers](array.jpg)
 
 This array is 20 wavelengths by 7 wavelengths, large enough to create quite a narrow beam.
 
@@ -39,10 +39,12 @@ They are sensitive to *charge*, and need both high voltage and high current, unl
 
 This is the circuit I designed to both generate the needed modulated ultrasound and drive the transducers:
 
-![](driver_sch.png)
+![A schematic diagram of the driver](driver_sch.png)
 
 It uses a 555 timer to create a 40 kHz carrier, which the op-amp pulse-width modulates with audio input.
-Pulse width modulation is equivalent to amplitude modulation, but can be amplified without needing to preserve analog voltage levels.
+Pulse width modulation is equivalent to amplitude modulation, but can be amplified without needing to preserve analog voltage levels:
+
+![A scope trace showing pulse width modulation](pwm.png)
 
 Once modulated, the signal goes into a class B/push-pull amplifier, which drives the final stage, a MOSFET H-bridge.
 I don't remember exactly what transistors I grabbed, but just about any enhancement mode power MOSFETs should work.
@@ -57,7 +59,7 @@ Thirty volts is reasonably loud, quite competitive with a regular speaker.
 
 Here's the prototype driver built up on a perfboard:
 
-![](driver.jpg)
+![A photograph of the assembled driver](driver.jpg)
 
 The result of all this is a beam of sound only a few degrees wide, just like a laser.
 You can hear sound, take a step to the side and it completely disappears.
