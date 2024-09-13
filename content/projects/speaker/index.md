@@ -85,8 +85,9 @@ Imagine the sound waves coming from two points on the edges of the speaker.
 If you're directly in front of it, the distances the sound has to take are identical, and the waves add up, creating a loud sound.
 However, if you're to the side, the distances will be different, and one of the waves will be shifted, canceling out the other.
 The larger the speaker, the larger the phase difference will be, and narrower the beam is.
+Shorter wavelengths need less time delay to cancel out, so the same size speaker will be more directional at higher frequencies.
 
-With waves coming from just a two points, there are lots of other spots where they will coincidentally line up, but with enough points this won't happen anywhere except directly in front of it.
+With waves coming from just a two points, there are lots of other spots where they will coincidentally line up, but with enough sources thas won't happen anywhere except directly in front of it.
 
 For those interested in making own, you can use this formula to estimate the beam half-angle from the length:
 
@@ -97,4 +98,4 @@ angle of first null = asin(wavelength / (2 * size))
 The shorter the array is in a direction the wider the beam will be in that direction.
 When held horizontally, a rectangular array will create a vertical fan pattern, fairly well suited for our mostly horizontal world.
 
-It's also important to minimize the spacing between transducers, gaps larger then a 70% of a wavelength or so will result in beams of sound coming out at weird angles.
+It's also important to minimize the spacing between transducers, large gaps will cause beams of sound to come out at weird angles.
