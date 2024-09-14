@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = "Maurycy's blog"
 theme = "blog"
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [sitemap]
   changeFreq = 'never'
   filename = 'sitemap.xml'

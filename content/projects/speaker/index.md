@@ -62,7 +62,12 @@ Here's the prototype driver built up on a perfboard:
 ![A photograph of the assembled driver](driver.jpg)
 
 The result of all this is a beam of sound only a few degrees wide, just like a laser.
-You can hear sound, take a step to the side and it completely disappears.
+You can hear sound, take a step to the side and it completely disappears:
+
+<iframe width="600" height="315" src="https://www.youtube.com/embed/YzRGDPET4Sw?si=k0ZCcU5Jo78Oe4n8" title="Video" frameborder="0" allow="encrypted-media; picture-in-picture;" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+> Music from [audionautix](http://audionautix.com).
+> The popping is an artifact from the microphone and is not audable in real life.
 
 The beam also bounces off objects, making it seam like the sound is coming from somewhere else.
 Strangely, the sound is actually louder when bouncing off a hard object like a wall then when listening to it directly. 
@@ -75,9 +80,9 @@ On the other hand, it's not really a good speaker.
 It has virtually no bass response, tends to distort louder audio, and is not all that loud.
 
 It also does strange things to microphones, playing a low frequency (10-200 Hz) sound will completely ruin recordings, even when not directly pointed at the microphone.
-This depends on the ultrasound directly hitting the microphone, which can be stopped with a wind cover or by sitting on the microphone.
+This depends on the ultrasound directly hitting the microphone, so can be stopped with those fuzzy wind covers.
 
-# Just why does this work?`
+# Just why does this work?
 
 It's not immediately intuitive why a speaker being larger makes it more directional.
 Imagine the sound waves coming from two points on the edges of the speaker.
