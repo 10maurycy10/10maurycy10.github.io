@@ -9,7 +9,7 @@ CH341B and CH341A based "MiniProgrammer" boards are by far the most common low c
 They're able to read and write from most SPI and I2C flash chips, often while the chip is still connected to its circuit.
 
 Unfortunately, the designers made some interesting choices: the board supplies 3.3 volts, while using 5 volt logic levels.
-When used on 3.3 volt systems, can burn out the chip, or worse, backfeed onto the rails and damage other parts on board.
+When used on 3.3 volt systems, this can burn out the chip, or worse, backfeed onto the rails and damage other parts on board.
 
 The internet already has lots of 3.3 volt modifications, but because 5 volt systems also exist, I decided to add a voltage switch:
 
