@@ -14,9 +14,11 @@
 
 {{ range first 100 .Site.RegularPages.ByPublishDate.Reverse }}
 
-<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3> {{ .Summary }}
-
+<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
 {{ partial "metadata.html" . }}
+{{ .Summary }}
+
+
 
 {{ end }}
 
