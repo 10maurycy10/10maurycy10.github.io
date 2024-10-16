@@ -1,5 +1,5 @@
 ---
-title: "CDMA, or how to multiplex without multiplexing"
+title: "CDMA: Unpacking signals"
 date: 2023-09-29T17:47:27-07:00
 tags: ["wireless"]
 draft: false
