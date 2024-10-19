@@ -3,7 +3,7 @@ title: "Making glow-in-the-dark strontium aluminate for Halloween:"
 summary: ""
 date: 2024-10-09
 tags: []
-draft: false
+draft: true
 ---
 
 ![](glow.jpg)
@@ -80,13 +80,13 @@ Urea: 63  mmol
 
 ||Mass&nbsp;&nbsp;&nbsp;&nbsp;|Molarity|
 |-|-|-|
-|Urea||14 mol| 
+|Urea|8.41 g|14 mol| 
 |Alumium hydroxide|0.78 g|1 mol|
 |Strontium carbonate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.73 g|0.5 mol|
-|Boric acid|0.18 g|0.3 mol|
-|Eurprium (+3) Oxide|&nbsp;&nbsp;|0.005 mol|
-|Dyprosium (+3) Oxide||0.01 mol|
+|Eurprium (+3) Oxide|0.01 g&nbsp;&nbsp;|0.005 mol|
+|Dyprosium (+3) Oxide|0.02 g|0.01 mol|
 |Total|||
+<!--|Boric acid|0.18 g|0.3 mol|-->
 
 I added everything **except the urea** to a small amount of water, and added nitric acid until it stopped bubling.
 I heated it on a hot plate to allow the oxides and hydroxides to fully react with the acid, forming a clear nitrate solution.
@@ -186,6 +186,14 @@ Both worked, but large amount of fumes released before composition.
 Flourecnece but very dim afterglow
 
 Try increasing urea and removing boric acid per zitoun24.pdf
+Boric acid probobly impeads crystalization under the very brief reaction times.
+A/B boric acid.
+Both produced faint glow, diffuse (no bright spots)
+
+Observed reheating product with torched yelded vert good luminecence.
+Tring preheating to 600 C before burning to increase max temp and slow cooling.
+
+Microwave synth: https://www.youtube.com/watch?v=yUK6EmVC_2Y
 
 ## Safety note
 
