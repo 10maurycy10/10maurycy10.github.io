@@ -16,7 +16,23 @@ It works by charging a small capacitor to the input voltage, and then moving tha
 The two clock signals consist of non-overlapping negative pulses, each making every other MOSFET momentarily conduct.
 Additionally, each pulse changes the voltage (but not charge) on every other capacitor, which helps pull charge from one stage to the next, preventing the samples from just smearing out.
 
-A schematic is fine and all, but to see how the device actually worked, opened one and put it under a microscope:
+I built up a simple circuit to test the chip:
+
+![](sch.png)
+
+The yellow trace is the input, and blue is the output:
+
+![](complex.png)
+![](beat.png)
+
+It works quite well, but the output has some nasty sampling kickout: 
+
+![](close.png)
+
+Without the RC network on the output, those spikes would go all the way to the top rail.
+In most applications, the delay line would be followed by a robust active low-pass filter to clean things up.
+
+I wanted to see how the device actually worked, so I opened one up and put it under a microscope:
 
 [![](metal_boxes.jpg)](metal.jpg)
 
@@ -52,7 +68,7 @@ If the voltage on the input metal layer is lower then the substrate, it creates 
 
 ![](components.jpg)
 
-Today, these devices are completely obsolete but a spin-off, the CCD camera sensor, is still used today.
+Today, these devices are completely obsolete -- but a spin-off, the CCD camera sensor, is still used today.
 Instead of discrete transistors and capacitors like the TCA350, they directly move charge trapped in inversion channel using three sets of gate wires.
 
 This requires an rather inconvenient 3 phase overlapping clock, but works amazingly well:

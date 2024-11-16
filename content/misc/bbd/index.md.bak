@@ -5,7 +5,7 @@ tags: ["electronics"]
 draft: false
 ---
 
-Nowadays, digitally delaying audio is easy, but historicaly we had to use devices like the TCA350, a fully analog delay line:
+Nowadays, digitally delaying audio is easy, but historically we had to use devices like the TCA350, a fully analog delay line:
 
 ![](device.jpg)
 
@@ -13,17 +13,33 @@ It works by charging a small capacitor to the input voltage, and then moving tha
 
 ![](tca.png)
 
-The two clock signals consist of non-overlapping negative pulses, each making every other MOSFET momentairly conduct.
+The two clock signals consist of non-overlapping negative pulses, each making every other MOSFET momentarily conduct.
 Additionally, each pulse changes the voltage (but not charge) on every other capacitor, which helps pull charge from one stage to the next, preventing the samples from just smearing out.
 
-A schematic is fine and all, but to see how the device actually worked, opened one and put it under a microscope:
+I built up a simple cicuit to test the chip:
+
+![](sch.png)
+
+The yellow trace is the input, and blue is the output:
+
+![](complex.png)
+![](beat.png)
+
+It works quite well, but the output has some nasty sampling kickout: 
+
+![](close.png)
+
+Without the RC network on the output, those spikes would go all the way to the top rail.
+In most applications, the delay line would be followed by a robust active low-pass filter to clean things up.
+
+I wanted to see how the device actually worked, so I opened one up and put it under a microscope:
 
 [![](metal_boxes.jpg)](metal.jpg)
 
 This is the aluminum interconnect layer, which is used to wire up all the transistors on the chip into a function circuit.
 
 The pads marked with yellow are connected to pins, which how the chip interacts with the outside world.
-The ground pin, on the lower left, is directly connected to the bulk silicon, ensuring that the body diodes of the transistors never conduct, becasue -- in typical 1970s electronics fasion -- the chip uses voltages below ground, not above it.
+The ground pin, on the lower left, is directly connected to the bulk silicon, ensuring that the body diodes of the transistors never conduct, because -- in typical 1970s electronics fashion -- the chip uses voltages below ground, not above it.
 
 There is a single MOSFET transistor in the red box, with the gate coming in from the left, and the drain and source going off the chip.
 This is T187 on the schematic, and is responsible for amplifying the output right before it leaves the chip.
@@ -41,9 +57,9 @@ To trace out the circuit, I overlaid the photos from before and after etching:
 Blue: metal, yellow: silicon
 
 Most of the chip is n-type silicon, some regions have been converted to p-type, which is visible in the photo.
-The junctions between p-type and n-type junctions act as diodes, which will aways be reverse biased becuase the substrate is connected to the highest voltage in the chip.
+The junctions between p-type and n-type junctions act as diodes, which will always be reverse biased becuase the substrate is connected to the highest voltage in the chip.
 Most of the silicon is covered in silicon dioxide, basically glass, which insulates it from the metal wires running over it.
-In these places, the p-type wells act as a seperate conducting layer.
+In these places, the p-type wells act as a separate conducting layer.
 
 ![](bbd.png)
 
@@ -52,7 +68,7 @@ If the voltage on the input metal layer is lower then the substrate, it creates 
 
 ![](components.jpg)
 
-Today, these devices are completely obsolete but a spin-off, the CCD camera sensor, is still used today.
+Today, these devices are completely obsolete -- but a spin-off, the CCD camera sensor, is still used today.
 Instead of discrete transistors and capacitors like the TCA350, they directly move charge trapped in inversion channel using three sets of gate wires.
 
 This requires an rather inconvenient 3 phase overlapping clock, but works amazingly well:
