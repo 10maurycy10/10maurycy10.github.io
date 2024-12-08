@@ -33,7 +33,7 @@ Without the RC network on the output, those spikes would go all the way to the p
 
 This happens because only every second capacitor holds a sample, with the other just being fully charged.
 As a MOSFET turns on, the next capacitor fully changes the currently holding a sample, moving a charge deficit along the chain.
-A voltage follower can only move current in one direction, but even so, a robust low pass filter is usualy required.
+A voltage follower can only move current in one direction, but even so, a robust low pass filter is usually required.
 
 I wanted to see how the device was built, so I opened one up and put it under a microscope:
 
