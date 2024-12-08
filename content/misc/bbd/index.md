@@ -14,7 +14,7 @@ It works by charging a small capacitor to the input voltage, and then moving tha
 ![](tca.png)
 
 The two clock signals consist of non-overlapping negative pulses, each making every other MOSFET momentarily conduct.
-Additionally, each pulse changes the voltage (but not charge) on every other capacitor, which helps pull charge from one stage to the next, preventing the samples from just smearing out.
+Additionally, each pulse changes the voltage (but not charge) on every other capacitor, which helps pull charge from one stage to the next, preventing the samples from smearing together.
 
 I built up a simple circuit to test the chip:
 
@@ -25,21 +25,24 @@ The yellow trace is the input, and blue is the output:
 ![](complex.png)
 ![](beat.png)
 
-It works quite well, but the output has some nasty sampling kickout: 
+Zooming in shows that the output has some nasty sampler kickout: 
 
 ![](close.png)
 
-Without the RC network on the output, those spikes would go all the way to the top rail.
-In most applications, the delay line would be followed by a robust active low-pass filter to clean things up.
+Without the RC network on the output, those spikes would go all the way to the positive rail.
 
-I wanted to see how the device actually worked, so I opened one up and put it under a microscope:
+This happens because only every second capacitor holds a sample, with the other just being fully charged.
+As a MOSFET turns on, the next capacitor fully changes the currently holding a sample, moving a charge deficit along the chain.
+A voltage follower can only move current in one direction, but even so, a robust low pass filter is usualy required.
+
+I wanted to see how the device was built, so I opened one up and put it under a microscope:
 
 [![](metal_boxes.jpg)](metal.jpg)
 
 This is the aluminum interconnect layer, which is used to wire up all the transistors on the chip into a function circuit.
 
 The pads marked with yellow are connected to pins, which how the chip interacts with the outside world.
-The ground pin, on the lower left, is directly connected to the bulk silicon, ensuring that the body diodes of the transistors never conduct, because -- in typical 1970s electronics fashion -- the chip uses voltages below ground, not above it.
+The ground pin, on the lower left, is directly connected to the bulk silicon, ensuring that the body diodes of the transistors never conduct, because -- in typical 1970s fashion -- the chip uses voltages below ground, not above it.
 
 There is a single MOSFET transistor in the red box, with the gate coming in from the left, and the drain and source going off the chip.
 This is T187 on the schematic, and is responsible for amplifying the output right before it leaves the chip.
