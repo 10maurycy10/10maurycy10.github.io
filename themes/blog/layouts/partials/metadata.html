@@ -4,5 +4,5 @@
 {{ range .Params.tags }}
 {{ $href := print (absURL "tags/") (urlize .) }}
 {{ $tag :=  $.Site.Taxonomies.tags.Get .}}
-(<a href="{{ $href }}">.</a>) 
+(<a href="{{ $href }}">{{ $tag.Page.Title }}</a>) 
 {{ end }}
