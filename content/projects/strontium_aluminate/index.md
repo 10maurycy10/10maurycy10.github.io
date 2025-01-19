@@ -49,9 +49,9 @@ After combining everything together, I added water and nitric acid until it all 
 
 ![](sol.jpg)
 
-The lanthanides are doppants: small amounts are needed to make the material glow, and different ones create diffent colors.
+The lanthanides are doppants: small amounts are needed to make the material glow, and different ones create different colors.
 I picked Eu+Dy because it produces the brightest glow, and that classic glow-in-the-dark green color.
-(which happens to have a wavelenght right around the peak sensitivy of the human eye)
+(which happens to have a wavelength right around the peak sensitivity of the human eye)
 
 I then evaporated the nitrate solution until just a mixture of salts was left.
 It's super important to get rid of all the acid at this point.
@@ -62,13 +62,13 @@ I then added 8.41 grams (140 mmol) of urea and enough water to dissolve everythi
 ![](mix.jpg)
 
 This urea both interferes with crystallization, which could otherwise separate the different salts, and can act as a fuel in a combustion reaction.
-(It can also form exposive salts with any left over acid, which is why it's important to remove it all.)
+(It can also form explosive salts with any left over acid, which is why it's important to remove it all.)
 
 After being heated to 300 C, the mixture formed a white foam.
 When ignited, it burned slowly and with almost no flame.
 Because it had a significant excess of fuel, the reaction also reduced the Europium to it's +2 state, which is the needed to make it glow.
 
-In theory, this combustion should also produce enough heat to form the strontium aluminate, I coudn't get this to work.
+In theory, this combustion should also produce enough heat to form the strontium aluminate, I couldn't get this to work.
 Instead, I just heated the combustion ashes with an oxy-propane torch:
 
 [![Strontium aluminate glowing](sra2lo4.jpg)](https://large.maurycyz.com/SrAl2O4.jpg)
