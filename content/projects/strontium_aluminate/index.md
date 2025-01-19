@@ -1,7 +1,7 @@
 ---
-title: "Making glow-in-the-dark strontium aluminate:"
+title: "Making glow-in-the-dark Strontium Aluminate:"
 date: 2025-01-18
-tags: ["Chemistry"]
+tags: ["chemistry"]
 draft: false
 summary: "<br/>Things that glow in the dark are cool, but I wanted to do something more then just buy glow powder from china.
 The undisputed king of glow in the dark materials is Strontium Aluminate, (SrAl<sub>2</sub>O<sub>4</sub>), which can glow brightly for hours after exposure to light. "
