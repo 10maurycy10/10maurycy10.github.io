@@ -83,6 +83,6 @@ On a related note, here's a cool phosphorescent rock from my brother's collectio
 [![Glowing rock](rock.jpg)](https://large.maurycyz.com/rock.jpg)
 
 Photo taken one second after hitting with a xenon flash lamp.
-I think it's agate with trace zinc and manganese ions (Willemite).
+I think it's agate with trace +2 zinc and manganese ions (Willemite).
 Trace uranium ions can also cause green fluorescence, but have no afterglow.
 
