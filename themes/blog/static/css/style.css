@@ -1,8 +1,4 @@
-/*****************************************************************************
- * This file is the colorscheam and layout for my site, feel free to steal   *
- * this file for your own site. (CC0)                                        *
- *****************************************************************************/
-
+/* */
 body {
 	--bodywidth: 40em;
 	--sidebarwidth: 40em;
@@ -10,80 +6,52 @@ body {
 	font-family: sans-serif;
 }
 
-input.wide {
-	width: 70em;
-}
-
-fieldset,form {
+/* Sidebar formatting */
+fieldset {
 	border-style: solid;
 	border-width: 1px;
-	border-color: #0f0;
+	border-color: #0d0;
+	color: #eee;
 	padding: 1em;
+	margin: 1em;
 }
-
 legend {
 	border-style: solid;
 	border-width: 1px;
-	border-color: #0f0;
-	padding: 0.3em;
-	/*margin: -0.5em;*/
+	border-color: #0d0;
+	padding: .3em;
 }
 
-/* ## DARK THEME COLORING ## */
+/* Dark theme and narrow column layout */
 @media screen {
 	#content {
 		margin: auto;
 		max-width: 40em;
 	}
-	
 	.wide  {
 		margin: auto;
 		max-width: 80em;
 	}
-
 	footer {
 		margin: auto;
 		max-width: 40em;
 	}
-
-	#sidebar {
-	}
-
 	#tile {
 		color: #eee;
 		margin:auto;
 	}
-
-	/* dark background */
 	body,input {
 		background: #111;
 		color: #eee;
 	}
-
-	/* Link styling */
-	a:visited {
-		color: #3cc
-	}
-	a {
-		color: #5ff
-	}
+	blockquote {color: #777;}
+	a:visited {color: #3cc}
+	a {color: #5ff}
 }
-
-/* Hide naviagtion on printouts */
 
 @media print {
 	#sidebar {
 		display: none
-	}
-	a:after {
-		color: #000;
-		text-decoration: none;
-		content: ']' '(' attr(href) ')';
-		visibility: visible;
-	}
-	a:before {
-		color: #000;
-		content: "[";
 	}
 }
 
@@ -127,5 +95,9 @@ img:not(.icon) {
 }
 /* Stop footnotes from messing up line spacing */
 sup { vertical-align: top; font-size: .7em; }
+
+/* Add brackets to footnotes */
 sup a::before { content: "[" }
 sup a::after { content: "]" }
+
+input.wide { width: 70em; }

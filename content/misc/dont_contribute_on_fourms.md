@@ -2,7 +2,7 @@
 title: "Please don't contribute anything of value on web forums"
 date: 2023-01-27T15:22:30-08:00
 tags: []
-draft: false
+draft: true
 ---
 
 Nothing of value should solely be posted on web forums like Reddit, HN, Facebook, Discord, Slashdot, Instagram or any similar site.
