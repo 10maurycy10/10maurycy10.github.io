@@ -40,20 +40,30 @@ While chemically simple, this was by far the most annoying step of the whole pro
 For one, if too much base is added, the aluminum will redissolve, so I had to keep checking the pH.
 Secondly, the reaction created a very annoying clay like product which took days to filter and wash.
 
-After that mess, I weighted out
+One thing I didn't mention earlier is that strontium aluminate can't glow on it's own.
+To make it work, small quantities of lanthanide dopants are added, and the specific element used determinse the color and intensity of the glow.
+It's really quite customizable, but I picked Europium and Dysprosium for that classic glow-in-the-dark green.
+
+With that out of the way, I weighted out
 1.74g (10 mmol) of the aluminum hydroxide I just made,
 0.73g (5 mmol) of strontium carbonate,
 0.01g (0.005 mmol) of Europium (III) oxide,
 and 0.02g (0.01 mmol) of Dysprosium (III) oxide. 
-After combining everything together, I added water and nitric acid until it all dissolved.
+After combining everything together, I added water and nitric acid until it all dissolved:
 
 ![](sol.jpg)
 
-The lanthanides are doppants: small amounts are needed to make the material glow, and different ones create different colors.
-I picked Eu+Dy because it produces the brightest glow, and that classic glow-in-the-dark green color.
-(which happens to have a wavelength right around the peak sensitivity of the human eye)
+During this step, the acid converts all the oxides, hydroxides and carbonates into nitrate salts: 
 
-I then evaporated the nitrate solution until just a mixture of salts was left.
+SrCO<sub>3</sub> + 2 HNO<sub>3</sub> ➙ Sr(NO<sub>3</sub>)<sub>2</sub> + 2 CO<sub>2 (gas)</sub> + H<sub>2</sub>O
+
+Al(OH)<sub>3</sub> + 3 HNO<sub>3</sub> ➙ Al(NO<sub>3</sub>)<sub>3</sub> + 3 H<sub>2</sub>O
+
+Eu<sub>2</sub>O<sub>3</sub> + 6 HNO<sub>3</sub> ➙ 2 Eu(NO<sub>3</sub>)<sub>3</sub> + 3 H<sub>2</sub>O
+
+Dy<sub>2</sub>O<sub>3</sub> + 6 HNO<sub>3</sub> ➙ 2 Dy(NO<sub>3</sub>)<sub>3</sub> + 3 H<sub>2</sub>O
+
+Next, I evaporated the solution until just a mixture of nitrate salts was left.
 It's super important to get rid of all the acid at this point.
 It should be heated to above 120 C, and keep there until no fumes are being produced, even when the chunks are crushed.
 
@@ -66,7 +76,7 @@ This urea both interferes with crystallization, which could otherwise separate t
 
 After being heated to 300 C, the mixture formed a white foam.
 When ignited, it burned slowly and with almost no flame.
-Because it had a significant excess of fuel, the reaction also reduced the Europium to it's +2 state, which is the needed to make it glow.
+Because it had a significant excess of fuel, the reaction also reduced the Europium to it's +2 state, which is the needed produce light.
 
 In theory, this combustion should also produce enough heat to form the strontium aluminate, I couldn't get this to work.
 Instead, I just heated the combustion ashes with an oxy-propane torch:
