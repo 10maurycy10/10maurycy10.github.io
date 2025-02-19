@@ -6,6 +6,17 @@ unlisted: true
 summary: 
 ---
 
+## M42: Large [2025-02-19]
+
+![](orion2.jpg)
+
+![](orion2_cc.jpg)
+
+Total exposure: 6 minutes (36 x 10 seconds)
+
+Shot with a ASI533, 0.63 reducer and C9.25 SCT on an equatorial mount.
+Processed with Siril.
+
 ## Horsehead nebula [2025-02-12]
 
 ![](horsehead1.jpg)
