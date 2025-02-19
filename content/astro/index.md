@@ -8,8 +8,6 @@ summary:
 
 ## M42: Large [2025-02-19]
 
-![](orion2.jpg)
-
 ![](orion2_cc.jpg)
 
 Total exposure: 6 minutes (36 x 10 seconds)
