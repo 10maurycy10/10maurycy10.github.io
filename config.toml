@@ -10,3 +10,7 @@ unsafe = true
   changeFreq = 'never'
   filename = 'sitemap.xml'
   priority = -1
+
+[services]
+  [services.rss]
+    limit = 10
