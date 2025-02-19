@@ -6,7 +6,7 @@ unlisted: true
 summary: 
 ---
 
-## M42: Large [2025-02-19]
+## M42: Orion nebula [2025-02-19]
 
 ![](orion2_cc.jpg)
 
@@ -15,7 +15,7 @@ Total exposure: 6 minutes (36 x 10 seconds)
 Shot with a ASI533, 0.63 reducer and C9.25 SCT on an equatorial mount.
 Processed with Siril.
 
-## Horsehead nebula [2025-02-12]
+## B33 + IC434: Horsehead nebula [2025-02-12]
 
 ![](horsehead1.jpg)
 
@@ -45,7 +45,7 @@ Total exposure: 1 second (100 x 10 ms)
 Shot with a ASI533, 0.63 reducer (not a good idea here) and C9.25 SCT on an equatorial mount.
 Processed with Siril.
 
-## Flame nebula [2025-02-10]
+## NGC2024: Flame nebula [2025-02-10]
 
 ![](flame1.jpg)
 
@@ -54,7 +54,7 @@ Total exposure: 1.2 hours (870 x 5 seconds) (during full moon)
 Shot with a ASI533, 0.63 reducer and C9.25 SCT on an equatorial mount.
 Processed with Siril.
 
-## M42: With a telescope [2025-01-28]
+## M42: Orion nebula (with a telescope) [2025-01-28]
 
 ![](orion1.jpg)
 
@@ -63,7 +63,7 @@ Total exposure: 100 seconds. (100 x 1 second)
 Shot with a ASI533 and C9.25 SCT on an equatorial mount.
 Processed in DeepSkyStacker and Siril.
 
-## M42: More data [2025-01-26]
+## M42: Orion nebula (more data) [2025-01-26]
 
 ![](longer.png)
 
@@ -74,7 +74,7 @@ Processed in DeepSkyStacker and Siril.
 
 The flame and Horsehead are in there if you squint.
 
-## M42: First tracked image [2025-01-24]
+## M42: Orion nebula (tracked) [2025-01-24]
 
 ![](tracked.png)
 
@@ -83,7 +83,7 @@ Total exposure: 4 minutes (20 x 13 seconds)
 Shot with a Canon EOS M6 mark II, using the included lens (45 mm focal length), on an equatorial mount.
 Processed in DeepSkyStacker and Siril.
 
-## M42: First image [2025-01-22]
+## M42: Orion nebula [2025-01-22]
 
 ![](first.png)
 
