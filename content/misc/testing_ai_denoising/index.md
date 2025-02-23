@@ -61,7 +61,7 @@ Here's what this process looks like as a video:
 > <div style="text-align: center"> Original image to Iteration 300 </div>
 
 That's actually really good.
-I can't think of any image processing step that would leave the image remotely recognizable after being run 300 times, much less with the image being actively messed with between runs.
+I can't think of any other image processing step that would leave the image remotely recognizable after being run 300 times, much less with the image being actively messed with between runs.
 
 While this is an very extreme example, but it does show that, at least with GraXpert, it won't to add fake details to you image.
 Instead, when overdone, it mutes color, removes details, and creates classic oversharpening artifacts.
