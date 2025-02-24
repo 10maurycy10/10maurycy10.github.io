@@ -50,13 +50,13 @@ Processed with Siril.
 
 ## NGC2024: Flame nebula [2025-02-10]
 
-![An image showing the flame nebula, and Alnitak. Stars are round and small. Dust surrounding the nebula is visible. However, the image is quite noisy.](flame1.jpg)
+![An image showing the flame nebula, and Alnitak. Stars are round and small. Dust surrounding the nebula is visible.](flame_denoised.jpg)
 > <div style="text-align: center">North is up.</div>
 
 Total exposure: 1.2 hours (870 x 5 seconds) (during full moon)
 
 Shot with a ASI533, 0.63 reducer and C9.25 SCT on an equatorial mount.
-Processed with Siril.
+Processed with Siril and GraXpert.
 
 ## M42: Orion nebula (with a telescope) [2025-01-28]
 
