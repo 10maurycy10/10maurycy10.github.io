@@ -6,6 +6,28 @@ unlisted: true
 summary: 
 ---
 
+## Jupiter (full focal length) [2025-03-05]
+
+![](jupiter2.jpg)
+> <div style="text-align: center">The north pole is the upper-right.</div>
+
+23786 frames * 10 ms captured in 4 minutes at 100 fps.
+
+Shot with an ASI533 and C9.25 SCT on an AVX equatorial mount.
+Processed with AutoStakkert and Siril.
+
+## M42: Orion nebula (narrowband) [2025-03-05]
+
+![](orion_ohs.jpg)
+> <div style="text-align: center">North is left.</div>
+
+Hydrogen-alpha + Oxygen III 191 * 10 seconds (31 minutes)
+
+Sulfur + Oxygen III: 268 * 20 seconds (1.5 hours)
+
+Shot with an ASI533, Askar C1 & C2, 0.63 reducer and C9.25 SCT on an AVX equatorial mount.
+Processed with Siril using an Oxygen-Hydrogen-Sulfur palette.
+
 ## M42: Orion nebula [2025-02-19]
 
 ![](orion2_cc.jpg)
