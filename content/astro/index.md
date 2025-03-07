@@ -1,10 +1,49 @@
 ---
-title: "My astrophotography"
+title: "Astrophotography"
 hidden: true
 layout: astro
 unlisted: true
 summary: 
 ---
+
+## Assorted pictures of space, taken from my backyard:
+
+What follows is a general explanation of how these are captured.
+Feel free to scroll past if you just want to see the results.
+
+Deep sky objects, like nebulae, are very dim and require many hours of exposure to capture properly.
+However, a multi-hour exposure would require an impossibly precise mount and could easily be ruined by passing satellites and clouds.
+Instead, I take multiple shorter exposures, which I then align and combine together into a single image.
+This allows any imperfect frames to be removed, without throwing away more then a few seconds of data.
+
+The final step is using a non-linear "stretch" to brighten up the fainter parts of the image, bringing the dynamic range down to something that can be displayed on a monitor.
+
+Planets and moons are very bright, but very small, with the views easily being spoiled by atmospheric distortion.
+To deal with this, I record a high frame rate video in hopes of catching a brief moment of perfect atmospheric conditions.
+I then stack together the sharpest frames from that video and apply wavelet sharpening to bring out the details.
+
+## M1: Crab nebula [2025-03-06]
+
+[![](crab1.jpg)](crab1_sharp.jpg)
+> <div style="text-align: center">North is in the upper right. Click image for digitally sharpened version</div>
+
+Hydrogen + Oxygen : 30 minutes (82 * 20 seconds)<br>
+Sulfur II + Oxygen : 33 minutes (99 * 20 seconds)<br>
+
+Shot with an ASI533, Askar C1 & C2, 0.63 reducer and C9.25 SCT on an AVX equatorial mount.
+Processed with Siril using an Hydrogen-Oxygen-Sulfur palette.
+
+## Half moon [2025-03-05]
+
+![](moon_stacked1.jpg)
+> <div style="text-align: center">The north pole is up.</div>
+
+10 frames * 10 ms captured.
+
+Shot with an ASI533, 0.63 reducer and C9.25 SCT on an AVX equatorial mount.
+Processed with Siril.
+
+Really just a test image, but turned out quite cool.
 
 ## Jupiter (full focal length) [2025-03-05]
 
@@ -21,9 +60,8 @@ Processed with AutoStakkert and Siril.
 ![](orion_ohs.jpg)
 > <div style="text-align: center">North is left.</div>
 
-Hydrogen-alpha + Oxygen III 191 * 10 seconds (31 minutes)
-
-Sulfur + Oxygen III: 268 * 20 seconds (1.5 hours)
+Hydrogen-alpha + Oxygen III 191 * 10 seconds (31 minutes)<br>
+Sulfur II + Oxygen III: 268 * 20 seconds (1.5 hours)
 
 Shot with an ASI533, Askar C1 & C2, 0.63 reducer and C9.25 SCT on an AVX equatorial mount.
 Processed with Siril using an Oxygen-Hydrogen-Sulfur palette.
