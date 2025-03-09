@@ -16,7 +16,11 @@ However, a multi-hour exposure would require an impossibly precise mount and cou
 Instead, I take multiple shorter exposures, which I then align and combine together into a single image.
 This allows any imperfect frames to be removed, without throwing away more then a few seconds of data.
 
-The final step is using a non-linear "stretch" to brighten up the fainter parts of the image, bringing the dynamic range down to something that can be displayed on a monitor.
+The final step is using a non-linear "stretch" function to brighten up the fainter parts of the image, bringing the dynamic range down to something that can be displayed on a monitor.
+
+Some of these photos are narrowband or "false color" images, for which I used filters to capture very specific parts of the spectrum, and then (rather arbitrarily) assigned them RGB colors.
+In these cases, I mention the palette used as something like this:
+"Oxygen-Hydrogen-Sulfur", which would indicate that the red channel is the Oxygen-III line, green is Hydrogen-alpha and blue is Sulfur-II.
 
 Planets and moons are very bright, but very small, with the views easily being spoiled by atmospheric distortion.
 To deal with this, I record a high frame rate video in hopes of catching a brief moment of perfect atmospheric conditions.
