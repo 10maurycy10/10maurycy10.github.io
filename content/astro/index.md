@@ -26,7 +26,7 @@ Planets and moons are very bright, but very small, with the views easily being s
 To deal with this, I record a high frame rate video in hopes of catching a brief moment of perfect atmospheric conditions.
 I then stack together the sharpest frames from that video and apply wavelet sharpening to bring out the details.
 
-# NGC2903: A spiral galaxy [2025-03-19]
+## NGC2903: A spiral galaxy [2025-03-19]
 
 ![](ngc2903.jpg)
 > <div style="text-align: center"> North is left. </div>
