@@ -26,6 +26,18 @@ Planets and moons are very bright, but very small, with the views easily being s
 To deal with this, I record a high frame rate video in hopes of catching a brief moment of perfect atmospheric conditions.
 I then stack together the sharpest frames from that video and apply wavelet sharpening to bring out the details.
 
+# NGC2903: A spiral galaxy [2025-03-19]
+
+![](ngc2903.jpg)
+> <div style="text-align: center"> North is left. </div>
+
+RGB Color: 70 minutes (140 * 30 seconds)
+
+Due to clouds, only 30 minutes of exposure was used in the stack. (60x30 seconds)
+
+Shot with an ASI533, 0.63 reducer and C9.25 SCT on an AVX equatorial mount, guided with an ASI120 mini.
+Processed with Siril in natural color.
+
 ## M1: Crab nebula [2025-03-06]
 
 [![](crab1.jpg)](crab1_sharp.jpg)
