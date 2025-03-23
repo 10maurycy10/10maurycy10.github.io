@@ -106,11 +106,10 @@ So far, I've been  ignoring a very important factor: Atmospheric seeing, or the 
 
 For small telescopes, under 100mm in aperture, like the small refactors commonly used for deep sky imaging, it's entirely possible for the seeing to be below your Dawes' limit:
 
-The commonly Redcat 51 has a Dawes' limit of 2.3 arcseconds, and should be largely unaffected except in particularly bad seeing. 
+The common Redcat 51 has a Dawes' limit of 2.3 arcseconds, and should be largely unaffected except in particularly bad seeing. 
 
-Things change a bit for large telescopes: 
-An 8-inch Schmidt-Cassegrain will have a Dawes' limit of 0.57 arcseconds, which is enough to be affected by seeing. 
-If the atmosphere spreads out light into a disk 2 arcseconds wide, then imaging at 1x Dawes' per pixel would not be a problem.
+On the other hand, a large 8-inch Schmidt-Cassegrain will have a Dawes' limit of 0.57 arcseconds, which is enough to be affected by seeing. 
+If the atmosphere spreads out light into a disk 2 arcseconds wide, then imaging at 1x Dawes' per pixel would be close to ideal sampling.
 
 Another important factor is that color camera's have approximately half the resolution you'd expect:
 Every pixel only sees a single color channel, so processing software has to interpolate between pixels to find the true color.
