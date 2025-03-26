@@ -3,8 +3,10 @@ title: "Making glow-in-the-dark Strontium Aluminate:"
 date: 2025-01-18
 tags: ["chemistry"]
 draft: false
-summary: "<br/>Things that glow in the dark are cool, but I wanted to do something more then just buy glow powder from china.
-The undisputed king of glow in the dark materials is Strontium Aluminate, (SrAl<sub>2</sub>O<sub>4</sub>), which can glow brightly for hours after exposure to light. "
+summary: "<br/>
+The undisputed king of glow in the dark materials is Strontium Aluminate (SrAl<sub>2</sub>O<sub>4</sub>) which glows brightly for hours after exposure to light. 
+Even better, all the components are fairly easy to get:
+Oxygen is everywhere, Aluminum is quite common, and while Strontium sounds exotic, it's rather easy to buy for making ceramics."
 ---
 
 Important disclaimer: 
@@ -17,9 +19,10 @@ Making things that glow in the dark is fun, but I wanted to do something more th
 
 The undisputed king of glow in the dark materials is Strontium Aluminate (SrAl<sub>2</sub>O<sub>4</sub>) which glows brightly for hours after exposure to light. 
 Even better, all the components are fairly easy to get:
-Oxygen is everywhere, Aluminum is quite common, and while Strontium sounds exotic, it's rather easy to buy for making ceramics.
+Oxygen is everywhere, Aluminum is quite common, and while Strontium sounds exotic, it's often sold for making ceramics.
 
-Because it's nearly impossible to mix metal oxides on an atomic level, strontium aluminate is usually made by decomposing soluble nitrate salts:
+Making the strontium aluminate is a bit harder because it's nearly impossible to mix the two metal oxides on an atomic level.
+Industrially, strontium aluminate is usually made by decomposing soluble nitrate salts:
 
 2 Sr(NO<sub>3</sub>)<sub>2</sub> + heat (~600 C)  ➙ 2 SrO + 4 NO<sub>2 (gas)</sub> + O<sub>2 (gas)</sub>
 
@@ -27,7 +30,7 @@ Because it's nearly impossible to mix metal oxides on an atomic level, strontium
 
 SrO + Al<sub>2</sub>O<sub>3</sub> + heat (~1200 C) ➙ SrAl<sub>2</sub>O<sub>4</sub>
 
-To make the aluminum nitrate, it's not possible to just dissolve aluminum metal in nitric acid, so I first made some aluminum hydroxide from potassium alum (a food preservative):
+To make Aluminum nitrate, it's not possible to just dissolve aluminum metal in nitric acid, so I had to make aluminum hydroxide from potassium alum (a food preservative):
 
 2 KAl(SO<sub>4</sub>)<sub>2</sub> + 5 NaOH   ➙ 2 Al(OH)<sub>3</sub> <sub>(precipitates)</sub> + 3 Na<sub>2</sub>SO<sub>4</sub> + K<sub>2</sub>SO<sub>4</sub>
 
@@ -41,7 +44,7 @@ For one, if too much base is added, the aluminum will redissolve, so I had to ke
 Secondly, the reaction created a very annoying clay like product which took days to filter and wash.
 
 One thing I didn't mention earlier is that strontium aluminate can't glow on it's own.
-To make it work, small quantities of lanthanide dopants are added, and the specific element used determinse the color and intensity of the glow.
+To make it work, small quantities of lanthanide doppants are added, and the specific element used determines the color and intensity of the glow.
 It's really quite customizable, but I picked Europium and Dysprosium for that classic glow-in-the-dark green.
 
 With that out of the way, I weighted out
@@ -71,8 +74,8 @@ I then added 8.41 grams (140 mmol) of urea and enough water to dissolve everythi
 
 ![](mix.jpg)
 
-This urea both interferes with crystallization, which could otherwise separate the different salts, and can act as a fuel in a combustion reaction.
-(It can also form explosive salts with any left over acid, which is why it's important to remove it all.)
+This urea both interferes with crystallization, which could otherwise separate the different salts, and can act as a fuel in a combustion reaction. 
+(Urea can also form explosive salts with left over acid, so it's important to evaporate it all before adding any.
 
 After being heated to 300 C, the mixture formed a white foam.
 When ignited, it burned slowly and with almost no flame.
