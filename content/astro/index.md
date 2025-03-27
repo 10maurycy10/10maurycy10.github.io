@@ -26,6 +26,16 @@ Planets and moons are very bright, but very small, with the views easily being s
 To deal with this, I record a high frame rate video in hopes of catching a brief moment of perfect atmospheric conditions.
 I then stack together the sharpest frames from that video and apply wavelet sharpening to bring out the details.
 
+## NGC3628: The hamburger galaxy [2025-03-26]
+
+![](NGC3628_1.jpg)
+> <div style="text-align: center"> North is down. </div>
+
+RGB Color: 41 minutes (246 * 10 seconds)
+
+Shot with an ASI533, 0.63 reducer and C9.25 SCT on an AVX equatorial mount, unguided.
+Processed with Siril in natural color.
+
 ## NGC2903: A spiral galaxy [2025-03-19]
 
 ![](ngc2903.jpg)
