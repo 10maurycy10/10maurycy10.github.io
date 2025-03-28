@@ -26,6 +26,20 @@ Planets and moons are very bright, but very small, with the views easily being s
 To deal with this, I record a high frame rate video in hopes of catching a brief moment of perfect atmospheric conditions.
 I then stack together the sharpest frames from that video and apply wavelet sharpening to bring out the details.
 
+## M81: Bode's galaxy [2025-03-27]
+
+[![](M81_1_small.jpg)](https://large.maurycyz.com/M81_1.jpg)
+> <div style="text-align: center"> North is up. Click for full resolution image.</div>
+
+Color: 15 minutes (30 * 20 seconds)
+
+Shot with an ASI533, 0.63 reducer and C9.25 SCT on an AVX equatorial mount, with an ASI120 + OAG.
+Processed with Siril in natural color.
+
+One thing that's quite cool are the extragalactic nebulae in the left arm (the pink "stars"):
+
+![](M81_nebulae.jpg)
+
 ## NGC3628: The hamburger galaxy [2025-03-26]
 
 ![](NGC3628_1.jpg)
