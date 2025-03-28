@@ -31,7 +31,7 @@ I then stack together the sharpest frames from that video and apply wavelet shar
 [![](M81_1_small.jpg)](https://large.maurycyz.com/M81_1.jpg)
 > <div style="text-align: center"> North is up. Click for full resolution image.</div>
 
-Color: 15 minutes (30 * 20 seconds)
+Color: 15 minutes (30 * 30 seconds)
 
 Shot with an ASI533, 0.63 reducer and C9.25 SCT on an AVX equatorial mount, with an ASI120 + OAG.
 Processed with Siril in natural color.
