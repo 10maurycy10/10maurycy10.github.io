@@ -2,7 +2,7 @@
 title: "Going faster with pytorch [ML part 3]"
 date: 2023-02-16T18:01:53-08:00
 tags: ["ai"]
-draft: false
+draft: true
 ---
 
 The last post's automatic differentiation engine was nice, but very slow, even by python standards.

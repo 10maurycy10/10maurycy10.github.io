@@ -2,7 +2,7 @@
 title: "What is machine learning anyway? [ML1]"
 date: 2023-02-10T12:55:55-08:00
 tags: ["ai"]
-draft: false
+draft: true
 ---
 
 Machine learning (ML) and Artificial intelligence (AI) are some of the most common buzzwords on the internet right now.

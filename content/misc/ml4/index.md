@@ -2,7 +2,7 @@
 title: "Image classification, on the MNIST dataset [ML4]"
 date: 2023-02-17T13:37:34-08:00
 tags: ["ai"]
-draft: false
+draft: true
 ---
 
 A common example of a problem that can be solved using ML, but is difficult otherwise is handwriting recognition.

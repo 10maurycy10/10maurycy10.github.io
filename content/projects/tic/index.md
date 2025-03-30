@@ -6,8 +6,6 @@ tags: ["games", "programming", "ai"]
 draft: false
 ---
 
-# The game
-
 [Tic Tac Toe](https://en.wikipedia.org/wiki/Tic-tac-toe) is a fairly simple 2 player game played on a 3*3 board.
 
 The players take turns placing a marker (typically X for player one and O for player 2) on a unoccupied space, and the first player that gets 3 in a line, including diagonals, wins.
@@ -222,15 +220,3 @@ def minmax(board, player):
 You can find all the python code (ready to run) [here](tic.py)
 
 [I have also rewritten it in C, with UI improvements](tic.c)
-
-# Going further
-
-I have made a list of suggestions if you chose to play around with this
-
-- Have the computer ask what player you want to play.
-
-- Allow input of an arbitrary board
-
-- Make sure the human has entered a legal move
-
-- Improve contrast, make it easier to spot empty squares
