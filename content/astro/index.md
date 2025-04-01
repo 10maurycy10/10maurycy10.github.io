@@ -36,6 +36,8 @@ Color: 2 hours (114 * 60 seconds)
 Shot with an ASI533 camera, 0.63 reducer and C9.25 SCT on an AVX equatorial mount, with an ASI120 + OAG for guiding.
 Processed with Siril in natural color.
 
+Raw stacks: [16-bit FITS](https://large.maurycyz.com/data/stacks/M51_1_stack.fit), [16-bit TIFF](https://large.maurycyz.com/data/stacks/M51_1_stack.tif)
+
 ## M81: Bode's galaxy [2025-03-27]
 
 [![](M81_1_small.jpg)](https://large.maurycyz.com/M81_1.jpg)
@@ -50,6 +52,8 @@ One thing that's quite cool are the extragalactic nebulae in the left arm (the p
 
 ![](M81_nebulae.jpg)
 
+Raw stacks: [32-bit FITS](https://large.maurycyz.com/data/stacks/M81_1.fit), [32-bit TIFF](https://large.maurycyz.com/data/stacks/M81_1.tif)
+
 ## NGC3628: The hamburger galaxy [2025-03-26]
 
 ![](NGC3628_1.jpg)
@@ -59,6 +63,8 @@ RGB Color: 41 minutes (246 * 10 seconds)
 
 Shot with an ASI533, 0.63 reducer and C9.25 SCT on an AVX equatorial mount, unguided.
 Processed with Siril in natural color.
+
+Raw stacks: [32-bit FITS](https://large.maurycyz.com/data/stacks/NGC3628_1.fit), [32-bit TIFF](https://large.maurycyz.com/data/stacks/NGC3628_1.tif)
 
 ## NGC2903: A spiral galaxy [2025-03-19]
 
@@ -71,6 +77,8 @@ Due to clouds, only 30 minutes of exposure was used in the stack. (60x30 seconds
 
 Shot with an ASI533, 0.63 reducer and C9.25 SCT on an AVX equatorial mount, guided with an ASI120 mini.
 Processed with Siril in natural color.
+
+Raw stacks: [16-bit FITS](https://large.maurycyz.com/data/stacks/NGC2903_1.fit), [16-bit TIFF](https://large.maurycyz.com/data/stacks/NGC2903_1.tif)
 
 ## M1: Crab nebula [2025-03-06]
 
