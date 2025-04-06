@@ -26,7 +26,7 @@ Planets and moons are very bright, but very small, with the views easily being s
 To deal with this, I record a high frame rate video in hopes of catching a brief moment of perfect atmospheric conditions.
 I then stack together the sharpest frames from that video and apply wavelet sharpening to bring out the details.
 
-## NGC4676: The mice galaxies [2025-04-05]
+## NGC4676: The mice galaxies [2025-04-04]
 
 [![](NGC4676_small.jpg)](https://large.maurycyz.com/NGC4676.jpg)
 > <div style="text-align: center"> North is up. Click for full resolution.</div>
