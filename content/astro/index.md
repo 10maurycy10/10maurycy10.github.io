@@ -36,7 +36,7 @@ Color: 55 minutes (55 * 60 seconds)
 Shot with an ASI533 camera, 0.63 reducer and C9.25 SCT on an AVX equatorial mount, unguided.
 Processed with Siril in natural color.
 
-Raw stacks: [16-bit FITS](https://large.maurycyz.com/data/stacks/NGC4676.fits), [16-bit TIFF](https://large.maurycyz.com/data/stacks/NGC4676.tif)
+Raw stacks: [16-bit FITS](https://large.maurycyz.com/data/stacks/NGC4676.fit), [16-bit TIFF](https://large.maurycyz.com/data/stacks/NGC4676.tif)
 
 ## NGC40: The bowtie nebula [2025-04-05]
 
