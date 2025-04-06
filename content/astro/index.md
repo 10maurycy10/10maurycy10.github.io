@@ -26,6 +26,18 @@ Planets and moons are very bright, but very small, with the views easily being s
 To deal with this, I record a high frame rate video in hopes of catching a brief moment of perfect atmospheric conditions.
 I then stack together the sharpest frames from that video and apply wavelet sharpening to bring out the details.
 
+## M3: A globular cluster [2025-04-06]
+
+![](M3_small.jpg)
+> <div style="text-align: center"> North is up.</div>
+
+Color: 1 minutes (6 * 10 seconds)
+
+Shot with an ASI533 camera, 0.63 reducer and C9.25 SCT on an AVX equatorial mount, unguided.
+Processed with Siril in natural color.
+
+This one was really an EAA image, but looked cool enough for me to give it a proper stretch and upload it.
+
 ## NGC 4490 + NGC 4485 [2025-04-03]
 
 [![](NGC4490_small.jpg)](https://large.maurycyz.com/NGC4490.jpg)
