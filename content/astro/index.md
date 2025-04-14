@@ -26,6 +26,19 @@ Planets and moons are very bright, but very small, with the views easily being s
 To deal with this, I record a high frame rate video in hopes of catching a brief moment of perfect atmospheric conditions.
 I then stack together the sharpest frames from that video and apply wavelet sharpening to bring out the details.
 
+## M82: The cigar galaxy [2025-04-14]
+
+![](M82.jpg)
+Color: 2 hours (140 * 60 seconds)
+
+Shot with an ASI533 camera, 0.63 reducer and C9.25 SCT on an AVX equatorial mount, guided by an ASI120.
+Processed with Siril in natural color.
+
+The magnitude 20 quasar [DWH M 82 4](https://simbad.u-strasbg.fr/simbad/sim-id?Ident=%40433350) is just about visible, but not well resolved from a nearby star and galaxy. 
+Even though some pixel peeping is required, it's the single most distant object I've photographed, with a light travel time of 3 billion years. (estimated from radial velocity)
+
+Raw stacks: [32-bit FITS](https://large.maurycyz.com/data/stacks/M82.fit)
+
 ## NGC4438: The eyes [2025-04-05]
 
 ![](NGC4438.jpg)
