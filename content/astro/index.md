@@ -35,7 +35,6 @@ Shot with an ASI533 camera, 0.63 reducer and C9.25 SCT on an AVX equatorial moun
 Processed with Siril in natural color.
 
 The magnitude 20 quasar [DWH M 82 4](https://simbad.u-strasbg.fr/simbad/sim-id?Ident=%40433350) is just about visible, but not well resolved from a nearby star and galaxy. 
-Even though some pixel peeping is required, it's the single most distant object I've photographed, with a light travel time of 3 billion years. (estimated from radial velocity)
 
 Raw stacks: [32-bit FITS](https://large.maurycyz.com/data/stacks/M82.fit)
 
