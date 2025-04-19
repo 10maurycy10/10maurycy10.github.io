@@ -26,7 +26,20 @@ Planets and moons are very bright, but very small, with the views easily being s
 To deal with this, I record a high frame rate video in hopes of catching a brief moment of perfect atmospheric conditions.
 I then stack together the sharpest frames from that video and apply wavelet sharpening to bring out the details.
 
-## Hickson 44: A galaxy cluster
+## Arp 214 + Hickson 56 [2024-04-18]:
+
+![](arp214.jpg)
+Color: 1 hour 44 minutes (104 * 60 seconds + 40 rejected subs)
+
+The large barred spiral in the upper right is NGC 3718 and the smaller spiral galaxy on the bottom right is NGC 3729.
+Hickson 56, an compact and mutually interacting group of galaxies is visible in the upper left. 
+
+Shot with an ASI533 camera, 0.63 reducer and C9.25 SCT on an AVX equatorial mount, guided by an ASI120.
+Processed with Siril in natural color.
+
+Raw stacks: [32-bit FITS](https://large.maurycyz.com/data/stacks/Arp214.fit)
+
+## Hickson 44: A galaxy cluster [2024-04-15]
 
 ![](Hickson44.jpg)
 Color: 33 minutes (110 * 20 seconds)
