@@ -26,6 +26,31 @@ Planets and moons are very bright, but very small, with the views easily being s
 To deal with this, I record a high frame rate video in hopes of catching a brief moment of perfect atmospheric conditions.
 I then stack together the sharpest frames from that video and apply wavelet sharpening to bring out the details.
 
+## Arp 18 [2024-04-25]:
+
+![](arp18.jpg)
+Color: 48 minutes (48 * 60 seconds + 41 rejected subs)
+
+Equipment: ASI533, 0.63 Reducer, C9.25 SCT and AVX mount + ASI120 and OAG.
+
+Raw stacks: [32-bit FITS](https://large.maurycyz.com/data/stacks/arp18.fit)
+
+## Arp 138 [2024-04-24]:
+
+![](arp183.jpg)
+Color: 51 minutes (51 * 60 seconds)
+
+Equipment: ASI533, 0.63 Reducer, C9.25 SCT and AVX mount + ASI120 and OAG.
+
+## Arp 84 [2024-04-23]:
+
+![](arp84.jpg)
+Color: 1 hour 30 minutes (90 * 60 seconds)
+
+Equipment: ASI533, 0.63 Reducer, C9.25 SCT and AVX mount + ASI120 and OAG.
+
+Raw stacks: [32-bit FITS](https://large.maurycyz.com/data/stacks/arp84.fit)
+
 ## Arp 214 + Hickson 56 [2024-04-18]:
 
 ![](arp214.jpg)
