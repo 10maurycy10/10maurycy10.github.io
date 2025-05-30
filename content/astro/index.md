@@ -26,6 +26,13 @@ Planets and moons are very bright, but very small, with the views easily being s
 To deal with this, I record a high frame rate video in hopes of catching a brief moment of perfect atmospheric conditions.
 I then stack together the sharpest frames from that video and apply wavelet sharpening to bring out the details.
 
+## NGC4565: The needle galaxy [2025-05-28]
+
+![](ngc4565.jpg)
+Color: 52 minutes (104 * 30 seconds + 50 rejected subs)
+
+Equipment: ASI533, 0.63 Reducer, C9.25 SCT and EQ6-R + ASI120 and OAG.
+
 ## M101 [2025-05-07]
 
 ![](M101.jpg)
