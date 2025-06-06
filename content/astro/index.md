@@ -26,6 +26,13 @@ Planets and moons are very bright, but very small, with the views easily being s
 To deal with this, I record a high frame rate video in hopes of catching a brief moment of perfect atmospheric conditions.
 I then stack together the sharpest frames from that video and apply wavelet sharpening to bring out the details.
 
+## M13: The Hercules cluster [2025-06-04]
+
+![](M13.jpg)
+Color: 23 minutes (46 * 30 seconds), during twilight
+
+Equipment: ASI533, 0.63 Reducer, C9.25 SCT and EQ6-R. 
+
 ## NGC4565: The needle galaxy [2025-05-28]
 
 ![](ngc4565.jpg)
