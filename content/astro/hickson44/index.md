@@ -1,6 +1,6 @@
 ---
 title: "Hickson 44: A galaxy cluster"
-date: 2026-04-15
+date: 2025-04-15
 tags: ["astro"]
 params:
   img: "/astro/old/Hickson44.jpg"

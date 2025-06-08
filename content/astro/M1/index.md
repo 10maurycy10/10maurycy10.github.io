@@ -1,6 +1,7 @@
 ---
 title: "M 1: The Crab Nebula"
 tags: ["astro"]
+date: 2025-03-06
 params:
   img: "/astro/old/crab1.jpg"
 ---
