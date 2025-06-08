@@ -10,15 +10,15 @@
 
 <div id=content>
 
-<h1> {{ .Title }}</h1>
+<h1> List page: {{ .Title }}</h1>
 
 {{ .Content }}
 
 {{ range .Pages.ByPublishDate.Reverse }}
 
-<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3> {{ .Summary }}
-
+<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
 {{ partial "metadata.html" . }}
+{{ .Summary }}
 
 {{ end }}
 
