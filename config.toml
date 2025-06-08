@@ -2,6 +2,7 @@ baseURL = 'http://maurycyz.com/'
 languageCode = 'en-us'
 title = "Maurycy's blog"
 theme = "blog"
+summaryLength = 20
 
 [markup.goldmark.renderer]
 unsafe = true
