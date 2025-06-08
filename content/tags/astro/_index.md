@@ -1,4 +1,4 @@
 ---
 title: Astrophotography
-layout: astro
+layout: images
 ---
