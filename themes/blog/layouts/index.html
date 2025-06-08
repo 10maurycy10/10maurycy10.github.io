@@ -13,6 +13,7 @@
 <h1>Recent posts:</h1>
 
 {{ range first 100 .Site.RegularPages.ByPublishDate.Reverse }}
+{{ if ((not (in .Params.tags "astro")))}}
 
 <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
 {{ partial "metadata.html" . }}
@@ -21,6 +22,7 @@
 
 
 
+{{ end }}
 {{ end }}
 
 </div>
