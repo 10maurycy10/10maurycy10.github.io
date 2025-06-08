@@ -1,0 +1,4 @@
+---
+title: Astrophotography
+layout: astro
+---

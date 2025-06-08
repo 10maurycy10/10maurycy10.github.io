@@ -7,9 +7,13 @@
 
 <div id=content>
 
-<h1> {{ .Title }}: </h1>
-
 {{ .Content }}
+{{ range .Pages.ByPublishDate.Reverse }}
+<a href="{{ .RelPermalink }}">
+<h1>{{ .Title }}</h1> 
+<img alt="Click for more details" src="{{ .Params.img }}" />
+</a>
+{{ end }}
 
 </div>
 {{- partial "footer.html" . -}}
