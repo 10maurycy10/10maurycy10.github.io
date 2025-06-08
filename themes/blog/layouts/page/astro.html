@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang=en>
+
+{{- partial "head.html" . -}}
+<body>
+{{- partial "header.html" . -}}
+
+<div id=content>
+
+{{ .Content }}
+{{ range .Pages.ByPublishDate.Reverse }}
+<a href="{{ .RelPermalink }}">
+<h1>{{ .Title }}</h1> 
+<img alt="Click for more details" src="{{ .Params.img }}" />
+</a>
+{{ end }}
+
+</div>
+{{- partial "footer.html" . -}}
+</body>
+</html>
+
