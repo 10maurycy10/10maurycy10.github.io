@@ -26,6 +26,12 @@ Planets and moons are very bright, but very small, with the views easily being s
 To deal with this, I record a high frame rate video in hopes of catching a brief moment of perfect atmospheric conditions.
 I then stack together the sharpest frames from that video and apply wavelet sharpening to bring out the details.
 
+## NGC7023: Iris nebula [2025-06-04]
+
+![](ngc7023.jpg)
+
+Equipment: ASI533, 0.63 Reducer, C9.25 SCT and EQ6-R. 
+
 ## M13: The Hercules cluster [2025-06-04]
 
 ![](M13.jpg)
