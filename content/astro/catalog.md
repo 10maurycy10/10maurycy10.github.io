@@ -33,9 +33,9 @@ title: "Images by catalog numbers"
 - [NGC 4490 + NGC 4485](https://maurycyz.com/astro/ngc4490/)
 - [NGC 5194](https://maurycyz.com/astro/m51/)
 - [NGC 3031](https://maurycyz.com/astro/m82/)
-- [NGC 3628](http://maurycy/astro/ngc3628/)
-- [NGC 2903](http://maurycy/astro/ngc2903/)
-- [NGC 1952](http://maurycy/astro/m1/)
+- [NGC 3628](http://maurycyz.com/astro/ngc3628/)
+- [NGC 2903](http://maurycyz.com/astro/ngc2903/)
+- [NGC 1952](http://maurycyz.com/astro/m1/)
 - [NGC 1976](https://maurycyz.com/astro/m42_filtered/)
 
 ### Arp (Unusual galaxies)
