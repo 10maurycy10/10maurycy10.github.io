@@ -112,11 +112,17 @@ input.wide { width: 70em; }
 		bottom: 1em;
 		right: 1em;
 
+		z-index: 1;
+
 		width: 20em;
 		border: solid;
 		border-style: white 1px;
-		background-color: black;
+		background-color: #111111;
 		padding: 1em;
+	}
+	#ad-note-content-wrapper {
+		margin-top: 0em;
+		margin-bottom: 0em;
 	}
 }}
 
