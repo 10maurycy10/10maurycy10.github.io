@@ -50,7 +50,6 @@ If the oscillator doesn't start during step 4, try reversing the polarity of the
 
 <!-- Pictures -->
 ![Final result](device.jpg)
-> <center>... but perhaps don't leave the diode hanging off the board like that, it'll cause drift. It's fine with a meter but is annoying with a speaker.</center>
 
 <!-- Results -->
 Using 5 cm coils, the circuit was able to detect a US quarter from 9 cm (3.5 inches), and a 12 oz soda can from 18 cm (7 inches).
