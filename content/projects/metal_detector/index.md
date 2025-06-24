@@ -32,7 +32,7 @@ Magnetic field lines are always closed loops, so the magnetic field around a coi
 The offset sense coil feels the same amount of flux inside the transmit coil as the flux outside of the coil, which cancels out any induced current. 
 
 ... at least until some metal gets close to the coils. 
-The field from the transmit coil will induce eddy currents the metal, and those currents will create their own magnetic field. 
+The field from the transmit coil will induce [eddy currents](https://en.wikipedia.org/wiki/Eddy_current) the metal, and those currents will create their own magnetic field. 
 This new magnetic field induces a current in the sense coil, which is detected by the receiver. 
 
 This does need careful adjustment to work, here's how:
