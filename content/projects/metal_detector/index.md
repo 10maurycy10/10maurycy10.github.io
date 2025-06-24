@@ -10,7 +10,7 @@ The feedback coil should be placed on top of the transmit coil, and the sense co
 ---
 
 This certainly isn't the best metal detector design,
-but with just 18 components, it's a fun thing you can quickly put together:
+but with just 15 components, it's a fun thing you can quickly put together:
 
 <!-- Schematic -->
 
