@@ -8,9 +8,9 @@ params:
 
 ![](ngc7023.jpg)
 
-Color: 47 minutes (95 * 30 seconds)
-
-Equipment: C9.25, 0.63 reducer, ASI533 MC (IMX533 OSC), EQ6-R mount (unguided). 
+- Color: 47 minutes (95 * 30 seconds)
+- Equipment: C9.25, 0.63 reducer, ASI533 MC (IMX533 OSC), EQ6-R mount (unguided). 
+- Processed with Siril, Noise reduction done with G'MIC's "Iain Noise reduction"
 
 This is the first reflection nebula I've imaged. 
 That bright blue star in the center is located right inside the nebula, and is illuminating the otherwise dark dust clouds.
