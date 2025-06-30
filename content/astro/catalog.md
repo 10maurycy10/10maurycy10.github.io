@@ -51,3 +51,6 @@ title: "Images by catalog numbers"
 
 - [Barnard 33](https://maurycyz.com/astro/b33/)
 
+## vdB (Reflection Nebulea)
+
+- [vdB 142](https://maurycyz.com/astro/ic1396a)
