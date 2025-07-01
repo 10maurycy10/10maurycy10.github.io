@@ -7,7 +7,7 @@ params:
 ---
 
 ![](/astro/ngc7635/full.jpg)
-> <center>1 arcsecond/pixel. 26x26 arcminutes. North is up.</center>
+> <center>0.5 arcsecond/pixel. 26x26 arcminutes. North is up.</center>
 
 - OSC color: 1.6 hours (99 * 60 seconds) 
 - Equipment: C9.25, 0.63 reducer, ASI533 MC (IMX533), EQ6-R mount. OAG + ASI210 for guiding. 
