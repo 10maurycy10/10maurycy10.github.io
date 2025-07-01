@@ -1,6 +1,3 @@
-User-agent: *
-Disallow: /tags
-
 # Exclude a bunch of LLM crawlers
 
 User-agent: CCBot
