@@ -13,6 +13,7 @@ title: "Images by catalog numbers"
 - [M 81](https://maurycyz.com/astro/m81/)
 - [M 82](https://maurycyz.com/astro/m82/)
 - [M 88](https://maurycyz.com/astro/m88/)
+- [M 94](https://maurycyz.com/astro/m94/)
 - [M 101](https://maurycyz.com/astro/m101/)
 
 ### NGC (misc)
@@ -32,6 +33,7 @@ title: "Images by catalog numbers"
 - [NGC 4501](https://maurycyz.com/astro/m88/)
 - [NGC 4565](https://maurycyz.com/astro/ngc4565/)
 - [NGC 4676](https://maurycyz.com/astro/ngc4676/)
+- [NGC 4736](https://maurycyz.com/astro/m94/)
 - [NGC 5194](https://maurycyz.com/astro/m51/)
 - [NGC 5272](https://maurycyz.com/astro/m3/)
 - [NGC 5395 + NGC 5394](https://maurycyz.com/astro/arp84/)
@@ -39,6 +41,7 @@ title: "Images by catalog numbers"
 - [NGC 6205](https://maurycyz.com/astro/m13/)
 - [NGC 6720](https://maurycyz.com/astro/m57/)
 - [NGC 7023](https://maurycyz.com/astro/ngc7023/)
+- [NGC 7635](https://maurycyz.com/astro/ngc7635/)
 
 ### Arp (Unusual galaxies)
 

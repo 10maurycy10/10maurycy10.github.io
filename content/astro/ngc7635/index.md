@@ -1,5 +1,5 @@
 ---
-title: "NGC 7635: The buuble nebula"
+title: "NGC 7635: The bubble nebula"
 date: 2025-07-01
 tags: ["astro"]
 params:
