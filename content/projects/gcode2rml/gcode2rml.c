@@ -28,6 +28,11 @@ void borked() {
 
 // Spindle speed and feed rate are set directly by the g-code parser
 
+#ifdef plotter
+void init() {
+	fprintf(out, "^PU;\n");
+}
+#else
 void init() {
 	fprintf(out, "V10;\r\n"); // Sane default movement speed, 10 mm/s
 	fprintf(out, "!DW;\r\n"); // No dwell time
@@ -35,11 +40,30 @@ void init() {
 	fprintf(out, "!MC0;\r\n"); // Stop spindle
 	fprintf(out, "!RC15;\r\n"); // Default to 12000 RPM, the max rotational speed of my machine
 }
+#endif
 
 float lin_units = 0.01; // 10s of um default
 // Track integers sent to machine to avoid accumulating errors.
 int rml_last_x = 0, rml_last_y = 0, rml_last_z = 0, rml_last_a = 0;
 
+#ifdef plotter
+void move(float x, float y, float z, float a) {
+	// This uses milinches
+	x /= 25.4; y /= 25.4; z /= 25.4;
+	x *= 1000; y *= 1000; z *= 1000;
+	// Compute movement neaded to reach position
+	int dx = x - rml_last_x;
+	int dy = y - rml_last_y;
+	int dz = z - rml_last_z;
+	rml_last_x += dx;
+	rml_last_y += dy;
+	rml_last_z += dz;
+	// Send to mill.
+	fprintf(out, "^PR%d,%d;\n", dx, dy);
+	if (dz > 0) fprintf(out, "^PU;\n");
+	if (dz < 0) fprintf(out, "^PD;\n");
+}
+#else
 void move(float x, float y, float z, float a) { // Abosolute movement in mm
 	// Scale to micrometers
 	x /= lin_units; y /= lin_units; z /= lin_units; a *= 1000;
@@ -60,6 +84,7 @@ void move(float x, float y, float z, float a) { // Abosolute movement in mm
 	if (da) fprintf(out, "A%f ", ((float)da)/1000);
 	fprintf(out, ";\r\n");
 }
+#endif
 
 ////////////////////
 // G code parsing //
@@ -300,6 +325,7 @@ void translate(char* command) {
 				fprintf(stderr, "gcode2rml: Unkown command 'G%d', ignoring.\n", g_command);
 				break;
 		}
+	#ifndef plotter
 	} else if (*command == 'S') { // Set Spindle speed
 		// Spindle speed is set in increments of 773 RPM (exerimentaly determined)
 		// If number > 0: real speed = 400 + number * 773
@@ -313,6 +339,7 @@ void translate(char* command) {
 		int setting = round((speed - 400) / 772);
 		if (setting == 0) setting = 1;
 		fprintf(out, "!RC%d;\r\n", (int)setting);
+	#endif
 	} else if (*command == 'F') { // Set feedrate
 		command++;
 		float feedrate = read_float(&command) * scale;
@@ -349,8 +376,10 @@ void translate(char* command) {
 			case 0: break; // Program stop
 			case 1: break; // Optional stop
 			case 30: case 2: break; // End of program
+			#ifndef plotter
 			case 3: case 4: fprintf(out, "!MC1;\r\n"); break; // Start spindle
 			case 5: fprintf(out, "!MC0;\r\n"); break; // Stop spindle
+			#endif
 			case 6:
 				if (*command == 'T') {
 					command++;

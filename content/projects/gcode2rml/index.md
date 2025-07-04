@@ -79,3 +79,13 @@ This is somewhat annoying as the machine is capable of micron scale movements, a
 The automatic tool changer is not supported because I don't have one. 
 
 Because it uses only the documented text-based commands, it should work on other Roland machines, but I don't have any to test it on.
+
+# Update: Plotter mode [2025-07-03]
+
+For 2d machines like the "Camm-1" vinyl cutter, compile the program with this command:
+
+```sh
+gcc gcode2rml.c -lm -o gcode2rml -Dplotter
+```
+Movement in +Z will be converted into a pen up and -Z into a pen down command.
+It's not perfect, and the machine will occasionaly give errors, but it seems to work well enough.
