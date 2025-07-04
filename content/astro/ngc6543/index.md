@@ -6,7 +6,7 @@ params:
   img: "/astro/ngc6543/ngc6543_small.jpg"
 ---
 
-![](/astro/ngc6543/ngc6543.png)
+![](/astro/ngc6543/ngc6543.jpg)
 > North is down. 0.5 arcseconds/pixel.
 
 - Color: 1 hour (60 * 60 seconds, none during astro-dark)
