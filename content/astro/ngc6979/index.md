@@ -6,7 +6,7 @@ params:
   img: "/astro/ngc6979/ngc6979_small.jpg"
 ---
 
-![](/astro/ngc6979/ngc6979.png)
+![](https://large.maurycyz.com/ngc6979.png)
 > North is down. 0.5 arcseconds/pixel.
 
 - Color: 1.6 hours (101 * 60 seconds)
