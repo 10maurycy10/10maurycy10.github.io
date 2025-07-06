@@ -22,4 +22,4 @@ This puts the comet at over 3 times escape velocity, much too fast for it to hav
 
 This is the third (and currently fastest) object discovered doing a high speed flyby of the solar system, hence the 3I designation. (I = Interstellar) 
 
-Raw stacks: [https://large.maurycyz.com/data/3i_atlas.fits](32-bit RICE compressed FITs)
+Raw stacks: [https://large.maurycyz.com/data/3i\_atlas.fits](32-bit RICE compressed FITs)
