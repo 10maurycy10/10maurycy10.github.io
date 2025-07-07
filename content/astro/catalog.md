@@ -1,6 +1,6 @@
 ---
 title: "Images by catalog numbers"
-date: 2025-07-07
+tags: ["astro"]
 ---
 
 ### Messier: (bright objects)
