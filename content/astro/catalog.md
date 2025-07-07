@@ -1,5 +1,6 @@
 ---
 title: "Images by catalog numbers"
+date: 2025-07-07
 ---
 
 ### Messier: (bright objects)
@@ -7,6 +8,7 @@ title: "Images by catalog numbers"
 - [M 1](https://maurycyz.com/astro/m1/)
 - [M 3](https://maurycyz.com/astro/m3/)
 - [M 13](https://maurycyz.com/astro/m13/)
+- [M 16](https://maurycyz.com/astro/m16/)
 - [M 42](https://maurycyz.com/astro/m42_filtered/)
 - [M 51](https://maurycyz.com/astro/m51/)
 - [M 57](https://maurycyz.com/astro/m57/)
@@ -39,7 +41,10 @@ title: "Images by catalog numbers"
 - [NGC 5395 + NGC 5394](https://maurycyz.com/astro/arp84/)
 - [NGC 5457](https://maurycyz.com/astro/m101/)
 - [NGC 6205](https://maurycyz.com/astro/m13/)
+- [NGC 6543](https://maurycyz.com/astro/ngc6543/)
+- [NGC 6611](https://maurycyz.com/astro/m16/)
 - [NGC 6720](https://maurycyz.com/astro/m57/)
+- [NGC 6979](https://maurycyz.com/astro/ngc6979/)
 - [NGC 7023](https://maurycyz.com/astro/ngc7023/)
 - [NGC 7635](https://maurycyz.com/astro/ngc7635/)
 
@@ -49,6 +54,7 @@ title: "Images by catalog numbers"
 - [Arp 84](https://maurycyz.com/astro/arp84/)
 - [Arp 138](https://maurycyz.com/astro/arp138/)
 - [Arp 214](https://maurycyz.com/astro/arp214/)
+- [Arp 269](https://maurycyz.com/astro/ngc4490/)
 
 ### Barnard (Dark Nebulea)
 
@@ -57,3 +63,9 @@ title: "Images by catalog numbers"
 ## vdB (Reflection Nebulea)
 
 - [vdB 142](https://maurycyz.com/astro/ic1396a)
+
+## Solar system
+
+- [Moon](https://maurycyz.com/astro/moon2/)
+- [Jupiter](https://maurycyz.com/astro/jupiter2/)
+- [3I/ATLAS](https://maurycyz.com/astro/3i_atlas/)

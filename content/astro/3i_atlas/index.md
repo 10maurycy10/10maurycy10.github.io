@@ -16,7 +16,7 @@ params:
 This was a bad night for shooting a magnitude ~17.5 object, with the moon, thin clouds and horrible dew.
 ... but considering what the weather's like at this time, I didn't know if I'd get another chance.
 
-The reason this object is interesting is that it's fast, around 72 km/s at the time of taking this photo.
+This comet is interesting is that it's *fast*, around 72 km/s at the time of taking this photo.
 For reference, Jupiter orbits at a similar distance with a speed of around 13 km/s. 
 This puts the comet at over 3 times escape velocity, much too fast for it to have simply fallen in from the outer solar system like most comets.
 
