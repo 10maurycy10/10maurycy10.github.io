@@ -47,6 +47,7 @@ tags: ["astro"]
 - [NGC 6979](https://maurycyz.com/astro/ngc6979/)
 - [NGC 7023](https://maurycyz.com/astro/ngc7023/)
 - [NGC 7635](https://maurycyz.com/astro/ngc7635/)
+- [NGC 7822](https://maurycyz.com/astro/ngc7822/)
 
 ### Arp (Unusual galaxies)
 
