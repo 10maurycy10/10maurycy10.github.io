@@ -1,0 +1,180 @@
+---
+title: "Dirt to airplanes: Making aluminium"
+date: 2025-07-20
+tags: ["chemistry"]
+draft: false
+summary: "<br>Three days of struggling to refine the most common metal on earth. Featuring low yields and yellow chemistry."
+---
+
+<br>
+<div style="padding: 0.5em; ; border: 2px solid; border-color: red">
+If you repeat this, please <b>wear eye protection</b>.
+No project is worth blindness.
+</div>
+
+![Dirt exposed on a hillside](dirt1.jpg)
+> <center>Dirt in its natural habitat.</center>
+
+I started by looking for dirt with lots of clay, very little organic matter, and no carbonate minerals.
+(If it bubbles with hydrochloric acid, find something else)
+
+![Box full of dirt](dirt2.jpg)
+> <center>Crude dirt</center>
+
+My dirt had a lot of rocks, so I added some water, stired it, and and poured the silty water into a separate container.
+After letting the silt settle, I transferred 150 mL of the dirt slurry to a beaker:
+
+![Beaker full of dirt](dirt3.jpg)
+> <center>Technical grade dirt.</center>
+
+Industrially, the aluminium is extracted using hot sodium hydroxide,
+but this won't work for my silica rich dirt due to the formation of insoluble sodium aluminosilicate.
+
+Instead, I added 150 ml of hydrochloric acid, which will slowly convert the aluminium oxides into aluminium chloride, but leave the silicon oxides untouched:
+
+![Beaker full of acidic dirt](acid1.jpg)
+> <center>Freshly fed acid</center>
+
+<center><b>Al<sub>2</sub>O<sub>3</sub> + 6 HCl ➔ 2 AlCl<sub>3</sub> + 3 H<sub>2</sub>O</b></center>
+
+<br>
+<div style="padding: 0.5em; ; border: 2px solid; border-color: red">
+If your dirt contains iron sulfide, this step might generate toxic hydrogen sulfide gas.
+Do it outside, and if it stinks, stay outside.
+</div>
+
+I covered the beaker and and kept the mixture warm (80 °C) for two days, with occasional stirring.
+Once it was done reacting, I let the dirt settle for a few hours and poured off the solution:
+
+![Very yellow solution](yellow1.jpg)
+> <center>ohno</center>
+
+Well... looks like the acid dissolved a lot of iron.
+To remove it, I added sodium hydroxide to neutralize all the acid:
+
+![Yellow solution with brown precipitate](brown1.jpg)
+
+<center><b>HCl + NaOH ➔ NaCl + H<sub>2</sub>O</b></center>
+<center><b>AlCl<sub>3</sub> + 3 NaOH ➔ Al(OH)<sub>3</sub> + 3 NaCl</b></center>
+<center><b>FeCl<sub>3</sub> + 3 NaOH ➔ Fe(OH)<sub>3</sub> + 3 NaCl</b></center>
+
+This caused both the iron and aluminium to precipitate as a hydroxide. 
+Because aluminium hydroxide can't decide if it's a base or an acid, it redissolves once excess sodium hydroxide is added:
+
+<center><b>Al(OH)<sub>3</sub> + NaOH ➔ Na(AlO<sub>2</sub>) + 2 H<sub>2</sub>O</b></center>
+
+After filtering out the iron precipitate, I was left with a mildly yellow alkaline solution: 
+
+![Straw colored solution](yellow3.jpg)
+
+To get the aluminium back out, I slowly poured in hydrochloric acid using phenolphthalein as a pH indicator:
+
+<center><b>Na(AlO<sub>2</sub>) + HCl + H<sub>2</sub>O ➔ Al(OH)<sub>3</sub> + NaCl</b></center>
+
+In strongly basic solutions, phenolphthalein is colorless, but it turns pink when the solution approaches neutral. 
+I stopped once all the pink disappeared for a second time, indicating that the solution was slightly acidic
+and that all the aluminium had precipitated.
+ 
+After filtering, I washed the aluminium hydroxide precipitate a few times with water and was left with a off-white paste:
+
+![Light yellow paste in a filter](yellow6.jpg)
+
+After drying the paste, I heated it to 800 °C, at which aluminium hydroxide decomposes to aluminium oxide:
+
+![Gray powder](white1.jpg)
+> <center> Lab grade dirt. </center>
+
+<center><b>2 Al(OH)<sub>3</sub> + heat ➔ Al<sub>2</sub>O<sub>3</sub> + 3 H<sub>2</sub>O</b></center>
+
+Aluminium metal is very reactive, and just like with alkali metals, the easiest way to make it is with molten salt electrolysis:
+
+<center><b>Al<sub>2</sub>O<sub>3</sub> ➔ 3 O <sup>2-</sup> + 2 Al<sup> 3+</sup></b></center>
+<center><b>2 O<sup> 2-</sup> ➔ O<sub>2</sub> + 2 electrons<sup> -</sup></b></center>
+<center><b>Al<sup> 3+</sup> + 3 electrons<sup> -</sup> ➔ Al</b></center>
+
+However, pure aluminium oxide melts at 2,072 °C, which is way hotter then any of my furnaces can get up to.
+Instead, I decided to dissolve the alumina in cryolite (sodium hexafluoroaluminate) which melts around 1,000 °C.
+Using a flux has the added bonus of protecting the newly formed aluminium from air.
+
+Cryolite can be produced from sodium aluminate and HF, but because it's just a solvent and isn't really consumed in the process, just bought some.
+(I also didn't want to work with hydrofluoric acid, which is extremly nasty)
+
+After mixing 500 mg of my aluminium oxide with 12g (~4%) of cryolite, I loaded it into a graphite crucible, which would become the negative electrode:
+
+![Electrodes](cell1.jpg)
+> <center>Hall-Héroult cell components</center>
+
+I placed the crucible into an electric furnace and heated it put to 1000 °C.
+Once it melted, I stuck in a preheated graphite electrode and ran the cell with a 22 amp, 18 volt power supply:
+
+![Preheating the cell](cell3.jpg)
+
+<div style="padding: 0.5em; border: 2px solid; border-color: red">
+While the flux is mostly unreactive, it does produce small amounts of hydrogen fluoride and weird flurocarbons. 
+Doing the electrolysis without ventilation is a great way to poison yourself in new and exciting ways.
+</div>
+
+After running it for 10 minutes, I dumped out the flux and... nothing.
+
+I was kinda expecting this because the power supply was only able to push around 0.8 amps of current though the cell.
+Over the course of 10 minutes, this would have at most produced 44mg of metal -- 
+a quantity small enough to go unnoticed in the large volume of flux I used. 
+
+This high resistance was due to the "Anode Effect", where above a critical current density, a layer of gas forms around the positive electrode.
+Once it forms, the gas layer reduces the available electrode surface, increasing the current density, causing more gas formation, covering more of the electrode...
+
+Once the cycle gets started, it drastically increases the cell resistance, and it only gets worse the harder you try and shove current though it.
+
+For the next run I made a larger electrode, and set up a rig to hold it in place so I could focus on controlling the current:
+
+![Anode take two](cell4.jpg)
+> <center>I forgot to take a picture before using it, so here's the aftermath. </center>
+
+The critical current density depends on alumina concentration, so for the second run, I bumped it up to 15% by adding some more alumina the flux recovered from the last attempt. 
+
+![Electrolysis cell held together by hopes and dreams.](cell5.jpg)
+> <center>Running the cell</center>
+
+![Looking down into the cell](cell6.jpg)
+> <center>The furnace is turned off. All that heat is being generated by the current.</center>
+
+This time, the cell drew 22 amps running at just under 5 volts, just like the real ones. 
+
+After 20 minutes, I turned off the current and kept it at 1000 °C for 5 minutes let the metal consolidate.
+After dumping out the crucible, one piece of flux had an exposed metal bead:
+
+![](metal1.jpg)
+
+... after breaking away the flux:
+
+![](metal2.jpg)
+> <center>Ooo shiny!</center>
+
+Here's what I collected after smashing apart the rest of the flux:
+
+![](metal3.jpg)
+> <center>0.29g of aluminium.</center>
+
+It's not quite enough to make an airplane, but still quite neat.
+
+## The math:
+
+The electrolysis was the only step that used reasonably pure starting materials, so it's the only one I can do math on:
+
+Twenty two amps for 20 minutes should have produced around 2 grams of metal, so I had a 13% faradic yield. 
+The cell was running at ~4.7 volts, so the energy efficiency was around 7.2% (excluding the heat used at startup). 
+
+Chemically, I had a total of 1.5 grams of alumina in the melt, and a 37% yield.
+The chemical yield would probably have been higher if I let the cell run longer. 
+
+## Geology notes:
+
+I couldn't find any aluminium in the wastewater, so I'd guess the main reason for the small yield of Al<sub>2</sub>O<sub>3</sub>
+was that the acid just didn't leach that much aluminium from the dirt.
+
+Many minerals contain both silicon and aluminium oxides, in which case the reaction will be limited by the formation of a layer of pure silicates on the surface.
+
+The best solution would be to source better ore, but the formation of Bauxite requires very long periods of chemical weathering. 
+Something really can't happen at at my place that has constant erosion and glaciers coming though every hundred thousand years or so.
+
+... but if you live somewhere flat, wet and warm, you might have better luck. 
