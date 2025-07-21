@@ -148,14 +148,13 @@ After dumping out the crucible, one piece of flux had an exposed metal bead:
 ... after breaking away the flux:
 
 ![](metal2.jpg)
-> <center>Ooo shiny!</center>
 
 Here's what I collected after smashing apart the rest of the flux:
 
 ![](metal3.jpg)
-> <center>0.29g of aluminium.</center>
+> <center>Ooo shiny!</center>
 
-It's not quite enough to make an airplane, but still quite neat.
+It's not quite enough (0.29 g) to make an airplane, but still quite neat.
 
 ## The math:
 
