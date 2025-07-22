@@ -86,7 +86,7 @@ Ionized Oxygen has a bright emission line at 500.7 nm, creating all the greens a
 
 The problem is that this line is right on the edge between green and blue.
 To my eyes, this wavelength looks like a greenish turquoise <span style="color: #00FFBA">(sRGB #00FFBA)</span>,
-but Sony camera sensors see it as cyan <span style="color: #50E4FF">(sRGB #50E4FF)</span>:
+but my camera's sensor sees it as cyan <span style="color: #50E4FF">(sRGB #50E4FF)</span>:
 
 [![Dumbbell Nebula](m27.jpg)](/astro/m27/)
 > <center>This nebula was formed by a dying red-giant star, so it's got lots of oxygen</center>
@@ -101,9 +101,6 @@ Just to be sure, let's try applying a daytime color correction matrix to the ima
 
 Did that just... saturate everything?
 It's made the oxygen bluer, hydrogen redder and pink stars even pinker.
-
-It might seem like I'm just picking on Sony, but that's just because I use one of their sensors for astrophotography. 
-All cameras have these problems, some are better then others, but none are perfect.
 
 Once you leave the familiar world of broadband light and pigments, of light bulbs and color charts, the premise of color calibration falls apart.
 There's simply no way to covert the colors seen by a camera to the colors that would be seen by the eye.
