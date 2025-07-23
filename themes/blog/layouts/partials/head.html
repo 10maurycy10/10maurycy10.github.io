@@ -2,7 +2,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="alternate" type="application/rss+xml" title="Post feed" href=/index.xml>
-<link rel="stylesheet" href="/css/style.css">
+<!-- Inline CSS to save round trips -->
+{{ with resources.Get "style.css" | minify}}
+<style>
+{{ .Content | safeCSS }}
+</style>
+{{ end }}
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 {{ $title := print .Title " (" .Site.Title ")" }}
 {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
