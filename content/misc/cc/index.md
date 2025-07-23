@@ -69,7 +69,7 @@ In this case, the real solution is easy: Just add a filter that prevents the inf
 
 # The trouble with plasma:
 
-Ionized hydrogen emits multiple wavelengths of light, but mostly red H-alpha at 565 nm , and a bit of blue H-beta at 486 nm.
+Ionized hydrogen emits multiple wavelengths of light, but mostly red H-alpha at 656 nm , and a bit of blue H-beta at 486 nm.
 Our eyes aren't very good at seeing the deep red H-alpha, so the dimmer blue H-beta is able to compete, resulting a pink color. 
 
 However, many cameras are very sensitive to H-alpha, so hydrogen shows up as red:
