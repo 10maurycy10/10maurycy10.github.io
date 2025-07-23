@@ -94,13 +94,18 @@ but my camera's sensor sees it as cyan <span style="color: #50E4FF">(sRGB #50E4F
 There's no way to calibrate this out, because making blues greener would result in green stars, which would also be wrong...
 and because the light is monochromatic, adding filters won't change the color, only the intensity.
 
-Just to be sure, let's try applying a daytime color correction matrix to the image:
+Just to be sure, let's try applying my sensor's color calibration matrix to the image:
 
 [![](m27_2.jpg)](/astro/m27/)
-> <center>"Color corrected" version</center>
+> <center>Color "calibrated" version</center>
 
 Did that just... saturate everything?
-It's made the oxygen bluer, hydrogen redder and pink stars even pinker.
+It made the oxygen bluer, hydrogen redder and stars pinker.
+
+A color matrix compensates for overlap between the sensor's color filters, which cause colors to look washed out. 
+This can be fixed by bumping up the saturation, but if the colors are wrong, this makes them worse. 
+
+# Space is space
 
 Once you leave the familiar world of broadband light and pigments, of light bulbs and color charts, the premise of color calibration falls apart.
 There's simply no way to covert the colors seen by a camera to the colors that would be seen by the eye.
@@ -113,4 +118,4 @@ In my images, I usually leave the colors as seen by my camera's filters and set 
 That way, at least the white point is somewhat objective:
 
 [![](balance.jpg)](/astro/m51/)
-> <center>Different whitepoints. The sun is a G2 spectral type star.<center>
+> <center>Comparing different white balance references. The sun is a G2(V) star.<center>
