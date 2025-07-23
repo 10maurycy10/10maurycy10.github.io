@@ -137,3 +137,8 @@ input.wide { width: 70em; }
 		display: none;
 	}
 }
+
+th {
+	text-align: left;
+	padding-right: 2em;
+}
