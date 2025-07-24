@@ -28,7 +28,7 @@ to:
 </style>
 ```
 
-Shaves seconds off the time it takes the page to load.
+... shaves seconds off the time it takes the page to load.
 
 CSS isn't heavy: the styling for this page weighs around 500 bytes compressed.
 Loading 500 bytes is practically instant on any modern network, but a request isn't. 
@@ -51,7 +51,7 @@ In this case, embedding CSS only saves one round trip, but that's still be notic
 
 Connection reuse can only happen if...
 
-- The main page is small enough to load in one round trip. (~14 kB of compressed data. This one is 9 kB, and that includes junk like the missing adblocker warning message.)
+- The main page is small enough to load in one round trip. (~14 kB of compressed data. This one is 4.3 kB, and that includes junk like the missing adblocker warning message.)
 - Only one resource is needed to render the page.
 - That resource is on the same domain as the page.
 
