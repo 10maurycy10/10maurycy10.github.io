@@ -3,28 +3,19 @@
 {{- partial "head.html" . -}}
 <body>
 {{- partial "header.html" . -}}
-
 <div id=content>
-
 <h1> {{ .Title }}</h1>
-
 {{ .Content }}
-
 <h1>Recent posts:</h1>
-
-{{ range first 100 .Site.RegularPages.ByPublishDate.Reverse }}
+{{ range first 10 .Site.RegularPages.ByPublishDate.Reverse }}
 {{ if ((not (in .Params.tags "astro")))}}
-
 <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
 {{ partial "metadata.html" . }}
 </br>
 {{ .Summary }}
-
-
-
 {{ end }}
 {{ end }}
-
+<h3><a href=/archive>Older posts...</a></h3>
 </div>
 {{- partial "footer.html" . -}}
 </body>
