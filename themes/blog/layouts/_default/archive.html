@@ -12,18 +12,19 @@
 
 {{ .Content }}
 
+<p>Note: excludes <a href=/tags/astro>astronomical images</a></p>
+
 {{ range .Site.RegularPages.GroupByDate "2006"}}
 
 {{if .Key}}
 
 <h2> {{ .Key }}: </h2>
-<ol>
+<ol reversed=true>
 
 {{ range .Pages.ByDate.Reverse }}
-
+{{ if ((not (in .Params.tags "astro")))}}
 <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> {{- partial "metadata.html" . -}} </li>
-
-<hr/>
+{{ end }}
 {{ end }}
 
 </ol>
