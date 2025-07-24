@@ -1,6 +1,7 @@
 # I told you not to touch it!
 User-agent: *
 Disallow: /bomb/*
+Disallow: /bomb
 
 # Exclude a bunch of LLM crawlers
 User-agent: CCBot
