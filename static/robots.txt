@@ -2,6 +2,7 @@
 User-agent: *
 Disallow: /bomb/*
 Disallow: /bomb
+Disallow: /babble/*
 
 # Exclude a bunch of LLM crawlers
 User-agent: CCBot
