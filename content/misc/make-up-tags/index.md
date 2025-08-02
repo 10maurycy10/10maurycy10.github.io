@@ -57,7 +57,7 @@ This isn't just a weird quirk, but is [standardized behavior](https://html.spec.
 If you include hyphens in the name, you can guarantee that your tag won't appear in any future versions of HTML.
 
 While you should use descriptive built-in tags if they exist, if it's a choice between &lt;div&gt; and &lt;span&gt;, 
-making up your own tag provides better readability then using a a bunch of class names.
+making up your own tag provides better readability then using a bunch of class names.
 
 As an example, if you have a bunch of nested tags:
 
