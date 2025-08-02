@@ -14,17 +14,21 @@ Infosec, mathematics, electronics, hobby machining
 
 [Ken Shirriff](https://www.righto.com/): Electronics reverse engineering and restoration
 
-[David Marodre](http://www.madore.org/~david/):Programming, math, literature. unmaintained.
+[David Marodre](http://www.madore.org/~david/): Programming, math, literature. (unmaintained)
 
 [XKCD](https://xkcd.com/) ([what if?](https://what-if.xkcd.com/)): Prolific nerd webcomic
 
-[Alan's Lab](http://www.vk2zay.net/): Electronics and radio. unmaintained.
-
-[Jan Vlnas](https://www.bitoff.org/): Webdevelopment rants
+[Alan's Lab](http://www.vk2zay.net/): Electronics and radio. (unmaintained)
 
 [Shamus Young](https://www.shamusyoung.com/): Game development, game design and programming rants.
 
 [Beej's Bit Bucket](https://beej.us/blog/): Programming notes and guides.
+
+[Rob Ruark](http://robruark.com/): Electronics, radio, calculators. 
+
+[Bartosz Ciechanowski](https://ciechanow.ski/): Physics and math. 
+
+[Andrew Holme](http://www.aholme.co.uk/Projects.htm): Electronics, radio. (unmaintained)
 
 ## Forums:
 
@@ -32,15 +36,23 @@ Infosec, mathematics, electronics, hobby machining
 
 [EEV Blog Forum](https://www.eevblog.com/forum/): Electronics
 
+[Sciencemaddness](www.sciencemadness.org): Amateur chemistry.
+
 ## Misc pages:
 
 [donjon](https://donjon.bin.sh/): Assorted RPG tools
 
 [HTML for People](https://htmlforpeople.com/): Getting started with HTML
 
+[Siliconprawn](https://siliconpr0n.org/): High resolution IC die shots.
+
+[Amateur telescope optics](https://www.telescope-optics.net/): Telescope optics.
+
+[Diceware](https://diceware.rempe.us/): Generate easy to rememeber, secure passwords.
+
 <center style="color: yellow">&lt;MARQUEE&gt;Under construction&lt;/MARQUEE&gt;</center>
 
-Ok, we shouldn't bring back scrollling, blinking or worse blinking and scrolling text
+Ok, we shouldn't bring back scrolling, blinking or scroll-blinking text.
 ... but yes, this page is very incomplete. If you have sugestions, feel free to email me:
 
 ```txt
