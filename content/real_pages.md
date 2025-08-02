@@ -4,8 +4,8 @@ hide: yes
 date: 2025-08-01
 ---
 
-With all the LLM generated content flooding the internet since around ~2022, it's become increasingly hard to find intresting and human written pages. 
-I think it's time to bring back a core part of the early web: Linking to intresting sites.
+With all the LLM generated content flooding the internet since around late 2022, it's become increasingly hard to find interesting and human written pages. 
+I think it's time to bring back a core part of the early web: Linking to cool places.
 
 ## Blogs and stuff:
 
@@ -44,7 +44,7 @@ Infosec, mathematics, electronics, hobby machining
 
 [HTML for People](https://htmlforpeople.com/): Getting started with HTML
 
-[Siliconprawn](https://siliconpr0n.org/): High resolution IC die shots.
+[Siliconp0rn](https://siliconpr0n.org/): IC die shots.
 
 [Amateur telescope optics](https://www.telescope-optics.net/): Telescope optics.
 
