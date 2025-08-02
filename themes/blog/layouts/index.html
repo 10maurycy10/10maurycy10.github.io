@@ -3,7 +3,8 @@
 {{- partial "head.html" . -}}
 <body>
 {{- partial "header.html" . -}}
-<div id=content>
+
+<main>
 <h1> {{ .Title }}</h1>
 {{ .Content }}
 <h1>Recent posts:</h1>
@@ -14,7 +15,8 @@
 {{ .Summary }}
 {{ end }}
 <h3><a href=/archive>Older posts...</a></h3>
-</div>
+</main>
+
 {{- partial "footer.html" . -}}
 </body>
 </html>

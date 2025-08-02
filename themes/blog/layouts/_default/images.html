@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang=en>
-
 {{- partial "head.html" . -}}
 <body>
 {{- partial "header.html" . -}}
 
-<div id=content>
-
+<main>
 {{ .Content }}
 
 <hr>
@@ -14,7 +12,6 @@
 What follows is a general explanation of how these are captured.
 Feel free to scroll past if you just want to see the results.
 </p>
-
 <p>
 Deep sky objects, like nebulae, are very dim and require many hours of exposure to capture properly.
 However, a multi-hour exposure would require an impossibly precise mount and could easily be ruined by passing satellites and clouds.
@@ -24,19 +21,18 @@ This allows any imperfect frames to be removed, without throwing away more then 
 <p>
 The final step is using a non-linear "stretch" function to brighten up the fainter parts of the image, bringing the dynamic range down to something that can be displayed on a monitor.
 </p>
-
 <p>
 Some of these photos are narrowband or "false color" images, for which I used filters to capture very specific parts of the spectrum, and then (rather arbitrarily) assigned them RGB colors.
 In these cases, I list the palette used as something like this:
 "Oxygen-Hydrogen-Sulfur", which would indicate that the red channel is the Oxygen-III line, green is Hydrogen-alpha and blue is Sulfur-II.
 </p>
-
 <p>
 Planets and moons are very bright, but very small, with the views easily being spoiled by atmospheric distortion.
 To deal with this, I record a high frame rate video in hopes of catching a brief moment of perfect atmospheric conditions.
 I then stack together the sharpest frames from that video and apply wavelet sharpening to bring out the details.
 </p>
 <hr>
+
 {{ range .Pages.ByPublishDate.Reverse }}
 <a href="{{ .RelPermalink }}">
 <h1>{{ .Title }}</h1> 
@@ -44,7 +40,7 @@ I then stack together the sharpest frames from that video and apply wavelet shar
 </a>
 {{ end }}
 
-</div>
+</main>
 {{- partial "footer.html" . -}}
 </body>
 </html>

@@ -25,7 +25,8 @@ legend {
 }
 
 /* Column */
-#content {
+main, footer {
+	display: block;
 	margin: auto;
 	max-width: 40em;
 }
@@ -33,11 +34,6 @@ legend {
 .wide  {
 	margin: auto;
 	max-width: 80em;
-}
-
-footer {
-	margin: auto;
-	max-width: 40em;
 }
 
 blockquote {
@@ -62,14 +58,14 @@ img {
 
 /* Narrow screen layout */
 @media (max-width: 65em) {
-	#sidebar {
+	nav {
 		max-width: --sidebar-width;
 	}
 }
 
 /* Wide screen layout with sidebar on side and content centered */
 @media (min-width: 65em) {
-	#sidebar {
+	nav {
 		position: fixed;
 		max-width: --sidebar-width;
 	}
