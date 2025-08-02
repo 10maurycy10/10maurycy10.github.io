@@ -140,5 +140,14 @@ input.wide { width: 70em; }
 
 th {
 	text-align: left;
-	padding-right: 2em;
+	padding-right: 1em;
+	background-color: #111;
+}
+
+tr:nth-child(even) {
+	background-color: #000;
+}
+
+tr:nth-child(odd) {
+	background-color: #222;
 }
