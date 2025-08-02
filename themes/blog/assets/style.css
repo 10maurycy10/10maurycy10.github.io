@@ -1,9 +1,11 @@
-/* */
+/* Layout information*/
 body {
 	--bodywidth: 40em;
 	--sidebarwidth: 40em;
 	--widewidth: (--bodywidth + --sidebarwidth * 2);
 	font-family: sans-serif;
+	background: #111;
+	color: #eee;
 }
 
 /* Sidebar formatting */
@@ -22,44 +24,38 @@ legend {
 	padding: .3em;
 }
 
-/* Dark theme and narrow column layout */
-@media screen {
-	#content {
-		margin: auto;
-		max-width: 40em;
-	}
-	.wide  {
-		margin: auto;
-		max-width: 80em;
-	}
-	footer {
-		margin: auto;
-		max-width: 40em;
-	}
-	#tile {
-		color: #eee;
-		margin:auto;
-	}
-	body,input {
-		background: #111;
-		color: #eee;
-	}
-	blockquote {color: #777;}
-	a:visited {color: #3cc}
-	a {color: #5ff}
+/* Column */
+#content {
+	margin: auto;
+	max-width: 40em;
+}
+/* Wide images */
+.wide  {
+	margin: auto;
+	max-width: 80em;
 }
 
-@media print {
-	#sidebar {
-		display: none
-	}
+footer {
+	margin: auto;
+	max-width: 40em;
 }
 
-/*keep images centered in column */
-img:not(.icon) {
+blockquote {
+	color: #888;
+}
+
+/*a:visited {
+	color: #399
+}*/
+
+a {
+	color: #4ee;
+	text-decoration: none;
+}
+
+img {
 	margin: auto;
 	width: 40em;
-	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -79,20 +75,12 @@ img:not(.icon) {
 	}
 }
 
+/* Code block formatting */
 .highlight pre {
-	/* Avoid pushing up the copy buttons */
-	margin-top: 0;
-	border-radius: 3px;
 	padding: 10px;
 	overflow: auto;
-	font-size: 0.9em;
 }
 
-.highlight pre code {
-	/* Otherwise, overflow text hits the edge of the block */
-	margin-right: 8px;
-	display: inline-block;
-}
 /* Stop footnotes from messing up line spacing */
 sup { vertical-align: top; font-size: .7em; }
 
@@ -102,6 +90,7 @@ sup a::after { content: "]" }
 
 input.wide { width: 70em; }
 
+/* missing addblocker notice */
 #ad-note-hidden {
 	display: none;
 }
@@ -138,6 +127,8 @@ input.wide { width: 70em; }
 	}
 }
 
+
+/* tables */
 th {
 	text-align: left;
 	padding-right: 1em;
