@@ -74,7 +74,7 @@ As an example, if you have a bunch of nested tags:
 ```
 
 Good luck trying to insert something inside of "article-heading" but after "article-quote" on the first try.
-This problem vanishes if yu use descriptive tag names --- no &lt;/div&gt; counting required:
+This problem vanishes if you use descriptive tag names --- no &lt;/div&gt; counting required:
 
 ```html
 <main-article>
