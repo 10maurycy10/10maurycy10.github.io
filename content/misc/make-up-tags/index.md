@@ -20,6 +20,8 @@ Hello, World!
 </cool-thing>
 ```
 
+<!--more-->
+
 ... and CSS like this:
 
 ```css
