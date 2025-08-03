@@ -3,7 +3,6 @@ title: "Your TV can see through walls:"
 date: 2025-08-02T1:00:00-00:00
 tags: ["wireless"]
 draft: false
-summary: "</br>Exploiting selective fading to detect motion though walls with the simplest possible setup."
 ---
 
 This is a spectogram of the signal from a local TV station, as seen by an an indoor dipole antenna:
