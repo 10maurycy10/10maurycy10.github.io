@@ -40,9 +40,10 @@ blockquote {
 	color: #888;
 }
 
-/*a:visited {
-	color: #399
-}*/
+a:visited {
+	color: #399;
+	text-decoration: none;
+}
 
 a {
 	color: #4ee;
