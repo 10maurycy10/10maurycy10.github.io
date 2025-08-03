@@ -53,6 +53,7 @@ a {
 img {
 	margin: auto;
 	width: 40em;
+	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
