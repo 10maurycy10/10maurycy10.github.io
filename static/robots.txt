@@ -1,4 +1,4 @@
-User-agent: Googlebot PetalBot Bingbot YandexBot
+User-agent: Googlebot PetalBot Bingbot YandexBot Kagibot
 Disallow: /bomb/*
 Disallow: /bomb
 Disallow: /babble/*
