@@ -40,7 +40,7 @@ The gap between each stripe is around 70 pixels, and the waterfall has an update
 
 <center><b>70 pixels * 1 second/150 pixels = 0.47 seconds = 2.1 Hz</b></center>
 <br>
-<center><b>speed of light / 490 MHz * 2.1 Hz = 1.27 m/s = 4.57 km/h</b></center>
+<center><b>speed of light / 490 MHz * 2.1 Hz = 1.3 m/s = 4.6 km/h</b></center>
 
 I was walking perpendicular to the direct signal path, so the speed can be used as is, without any adjustments for geometry. 
 
