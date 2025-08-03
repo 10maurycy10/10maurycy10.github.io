@@ -1,8 +1,5 @@
 /* Layout information*/
 body {
-	--bodywidth: 40em;
-	--sidebarwidth: 40em;
-	--widewidth: (--bodywidth + --sidebarwidth * 2);
 	font-family: sans-serif;
 	background: #111;
 	color: #eee;
@@ -10,23 +7,18 @@ body {
 
 /* Sidebar formatting */
 fieldset {
-	border-style: solid;
-	border-width: 1px;
-	border-color: #0d0;
+	border: #0d0 1px solid;
 	color: #eee;
 	padding: 1em;
 	margin: 1em;
 }
 legend {
-	border-style: solid;
-	border-width: 1px;
-	border-color: #0d0;
+	border: #0d0 1px solid;
 	padding: .3em;
 }
 
 /* Column */
 main, footer {
-	display: block;
 	margin: auto;
 	max-width: 40em;
 }
@@ -57,19 +49,15 @@ img {
 	margin-left: auto;
 	margin-right: auto;
 }
-
-/* Narrow screen layout */
-@media (max-width: 65em) {
-	nav {
-		max-width: --sidebar-width;
-	}
+		
+nav {
+	max-width: 15em;
 }
 
 /* Wide screen layout with sidebar on side and content centered */
-@media (min-width: 65em) {
+@media (min-width: 66em) {
 	nav {
 		position: fixed;
-		max-width: --sidebar-width;
 	}
 }
 
@@ -89,21 +77,19 @@ sup a::after { content: "]" }
 input.wide { width: 70em; }
 
 /* missing addblocker notice */
-#ad-note-hidden {
+#ad-note-hidden, #ad-note {
 	display: none;
 }
 
-@media (min-height: 30em) { @media (min-width: 65em) {
+@media (min-height: 30em) { @media (min-width: 75em) {
 	#ad-note {
+		display: block;
 		position: fixed;
 		bottom: 1em;
 		right: 1em;
-
 		z-index: 1;
-
-		width: 20em;
-		border: solid;
-		border-style: white 1px;
+		width: 14em;
+		border: white 1px solid;
 		background-color: #111111;
 		padding: 1em;
 	}
@@ -113,20 +99,6 @@ input.wide { width: 70em; }
 	}
 }}
 
-@media (max-height: 30em) {
-	#ad-note {
-		display: none;
-	}
-}
-
-@media (max-width: 65em) {
-	#ad-note {
-		display: none;
-	}
-}
-
-
-/* tables */
 th {
 	text-align: left;
 	padding-right: 1em;
