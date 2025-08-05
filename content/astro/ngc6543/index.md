@@ -12,4 +12,9 @@ params:
 - Color: 1 hour (60 * 60 seconds, none during astro-dark)
 - Equipment: C9.25, 0.63 reducer, ASI533 MC (IMX533 OSC), EQ6-R mount. 
 
+Here's the same data with a less agressive stretch so you can see the core of the nebula:
+
+![Core](/astro/ngc6543/core.png)
+<center style="color: gray">Cropped and wavelet sharpened.</center>
+
 Raw stacks: <a href="https://large.maurycyz.com/data/ngc6543.fit">32-bit compressed FITS</a>
