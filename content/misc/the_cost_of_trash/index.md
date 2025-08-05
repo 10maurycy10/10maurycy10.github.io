@@ -1,0 +1,84 @@
+---
+title: "You should feed the bots:"
+date: 2025-08-03
+tags: ["programming"]
+---
+
+A week ago, I set up an [infinite nonsense](/babble/entry-point) crawler trap -- now it makes up 99% of my server's traffic. 
+What surprised me is that feeding scrapers garbage is the cheapest and easiest thing I could do. 
+
+## Meet the bots:
+
+These aren't the indexing bots of old, but scrapers collecting data to train LLMs.
+Unlike search engines, which need the websites they crawl to stay up, AI companies provide a replacement. 
+
+It should come as no surprise that these bots are [aggressive and relentless](https://status.sr.ht/issues/2025-03-17-git.sr.ht-llms/): 
+They ignore robots.txt, and if block them by user agent they just pretend to be a browser. 
+If you ban their IP, they switch addresses.
+
+... all while sending multiple requests per second, all day, every day. 
+
+## Giving up:
+
+So what if we let them access the site?
+
+Serving static files is is relatively cheap, but not free.
+SSD access times are in the tens milliseconds, and that's before you pay the filesystem tax. 
+Bots also like to grab old and obscure pages, ones that are unlikely to be in cache. 
+As a result, it doesn't take all that many requests to bog down the server.
+
+Then there's the matter of bandwidth:
+Many blog posts also include images weighing hundreds to thousands of kB, which can add up [quite quickly](https://about.readthedocs.com/blog/2024/07/ai-crawlers-abuse/).
+With an average file size of 100 kB, 4 requests per second adds up to a terabyte each month
+-- not a huge amount of data, but more then I'm willing to throw away.
+
+## The ban hammer:
+
+Simply making a list of IPs and blocking them would for normal bots...
+
+... but these are hardly normal bots.
+Because they are backed by billion dollar companies, they don't just have a few addresses, but many thousands. 
+If you managed to ban all of their addresses, they'll just buy more.
+
+Rate limits fail for the same reason: They just switch IPs. 
+I've even seen them using new IP for each request. 
+
+## Building a wall:
+
+Ok, what about a pay-wall, login-wall, CAPTCHA-wall, or a [hash based proof-of-work](https://anubis.techaro.lol/)?
+
+All of these inconvenience users. 
+Requiring an account guaranties that no one will read what I wrote.
+Even just a simple JavaScript challenge will block anyone who's browser doesn't support JS
+... and when it works, anything that must load before the does content still [hugely slows down page loads](/misc/inline_css/).
+
+## Throw them some bombs:
+
+"Serve them few gzip bombs, that'll teach them" --- [Half the internet](https://idiallo.com/blog/zipbomb-protection).
+
+Gzip only provides a compression ratio of a little over 1000:
+If I want a file that expands to 100 GB, I've got to serve a 100 MB asset.
+Worse, when I tried it, the bots just shrugged it off, with some even coming back for more.
+
+## Jedi mind tricks:
+
+Ok, what if we just send them 404s -- try and make them think my site doesn't exist.
+
+These tricks only work if your adversary has a mind to trick.
+If a link is posted somewhere, the bots will know it exists, and if they can't access it, they'll just become more aggressive:.
+sending more requests, with more user agents and using more addresses.
+
+Keeping them happy keeps them tolerable.
+
+## Garbage:
+
+But surely sending them dynamically generated content would be expensive right? 
+
+Well... no. 
+
+CPU and RAM are the fastest parts of a modern computer.
+Dynamic content has the reputation of being slow because it often involves a database (lots of disk IO), a million lines of JavaScript, or both.
+
+My lightly optimized [Markov babbler](babble.c) consumes around ~60 CPU microseconds per request.
+There's no disk IO, and the memory cost is only around 1.2 MB.
+There's also no rules or blacklists to maintain: the bots come to it and it consumes them.
