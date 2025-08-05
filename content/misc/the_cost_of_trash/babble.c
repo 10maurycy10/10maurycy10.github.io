@@ -276,7 +276,7 @@ void send_text(struct MarkovChain* chain, int length, struct Buffer *dst, uint32
 
 	for (int i = 0; i < length; i++) {
 		// Pick a next word at random
-		float rand = (float)prng(seed) / (((uint64_t)2<<32) - 1);
+		float rand = (float)(prng(seed)%900) / 900;
 		rand = rand * rand;
 		rand = rand * chain->keys[next_index].length;
 		// Bounds check
