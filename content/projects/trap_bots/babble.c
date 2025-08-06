@@ -222,6 +222,7 @@ void buffer_flush(struct Buffer* buffer) {
 	// Avoid sending zero length chunks, which HTTP uses as an 
 	// EOF marker.
 	if (buffer->size) {
+		bytes_served += buffer->size;
 		// Send chunk header
 		char size_string[20];
 		sprintf(size_string, "%x\r\n", buffer->size);
@@ -473,7 +474,9 @@ void* thread_start(void* fd) {
 
 	uint32_t seed = hash_string(path);
 
-        if (strncmp(path, "/status/", 8) == 0) {
+	requests_served++;
+        
+	if (strcmp(path, "/status/") == 0) {
                 struct timespec now, cputime;
                 clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &cputime);
                 clock_gettime(CLOCK_MONOTONIC, &now);
@@ -620,6 +623,7 @@ int main() {
 	
 	err = listen(sockfd, 5);
 	assert(err == 0);
+        clock_gettime(CLOCK_MONOTONIC, &start);
 
 	printf("[*] Serving garbage!\n");
 	while (1) {
