@@ -30,13 +30,15 @@ Infosec, mathematics, electronics, hobby machining
 
 [Andrew Holme](http://www.aholme.co.uk/Projects.htm): Electronics, radio. (unmaintained)
 
+[Rachel By The Bay](https://rachelbythebay.com/): Software, sysadmin.
+
 ## Forums:
 
 [Cloudy Nights](https://www.cloudynights.com/): Astronomy and imaging
 
 [EEV Blog Forum](https://www.eevblog.com/forum/): Electronics
 
-[Sciencemaddness](www.sciencemadness.org): Amateur chemistry.
+[Sciencemaddness](https://www.sciencemadness.org/): Amateur chemistry.
 
 ## Misc pages:
 
