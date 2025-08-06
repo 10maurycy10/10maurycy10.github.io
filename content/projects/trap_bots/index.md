@@ -21,7 +21,7 @@ Save the text in files named "`book1.txt`", "`book2.txt`" and "`book3.txt`".
 Remove any page numbers, headings, copyright notices and similar.
 
 If your texts are somewhat short (less then 3000 words), change the "`context_length`" variable in process.py to 1. 
-This results in less repetitive text, but for longer bodies of text, setting it to "2" produces a more coherent results.
+This results in less repetitive text, but for longer bodies of text, setting it to "2" produces more coherent results.
 
 With the text prepared, run the [python script](/projects/trap_bots/process.py):
 
