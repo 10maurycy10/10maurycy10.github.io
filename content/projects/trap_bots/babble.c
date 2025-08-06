@@ -630,8 +630,7 @@ int main() {
 			// Spin up thread to handle it
 			pthread_t thread;
 			// Slight pthread abuse to send an fd instead of pointer
-			thread_start((void*)conn);
-			//pthread_create(&thread, NULL, thread_start, (void*)conn);
+			pthread_create(&thread, NULL, thread_start, (void*)conn);
 		}
 	}
 }
