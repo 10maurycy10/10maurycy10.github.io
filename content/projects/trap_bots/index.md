@@ -21,7 +21,7 @@ Save the text in files named "`book1.txt`", "`book2.txt`" and "`book3.txt`".
 Remove any page numbers, headings, copyright notices and similar.
 
 If your texts are somewhat short (less then 3000 words), change the "`context_length`" variable in process.py to 1. 
-This results in less repetitive text, but for longer bodies of text, setting it to "2" produces more coherent results.
+This results in less repetitive text, but for longer bodies of text, setting it to 2 produces more coherent results.
 
 With the text prepared, run the [python script](/projects/trap_bots/process.py):
 
@@ -166,3 +166,41 @@ Unless you are using a very slow server, CPU load will be minimal even when hit 
 Each response weighs around 1 kB gzipped, so bandwidth shoundn't be a problem.
 
 Just be careful if you're behind any cloud service that bills by request.
+
+## How it works:
+
+The python script breaks the source material into overlapping word pairs (if `context_length` is 1) or tripplets (if `context_length` is 2).
+Then, the server's able to string the chunks together to produce plausable, if nonsensical text:
+
+> A glass is not impossible to make the file and so deepen the original cut.
+> Now heat a small spot on the glass, and a candle flame to a clear singing note.<br><br>
+> --- `context_length = 2`. The source material is a book on glassblowing.
+
+Capitalization is normalized to lower case, periods are treated as a word ("END"), and commas kept as part of the word. 
+To prevent the generator from running into dead ends, the source material is padded with periods.
+
+Word chunks are chosen deterministicly based on the requested path, so they output's appear to be static files.
+
+Each line in the `chainX.txt` files stores the word pairs begining with a particular word.
+For example, "and the" "and a", "and then", "and therefore" are packed together like this:
+
+```txt
+...
+and the a then therefore ...
+...
+```
+
+Once the generators picked a word, it will look up that word's line and repear the process. 
+
+When `context_lenght` is set to two, instead of storing words, the files store hypenated word pairs, in reversed order:
+
+```txt
+...
+difficulty-the experienced-difficulty
+...
+```
+
+... is "the difficulty experienced".
+The generation process is identical except that only the charaters before the hypen are appended to the ouput. 
+
+The python script places more common groupings earlier in each line, which are picked more often by the pseudeo random number generator.
