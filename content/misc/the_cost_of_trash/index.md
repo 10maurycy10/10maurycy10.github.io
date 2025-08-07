@@ -79,6 +79,6 @@ Well... no.
 CPU and RAM are the fastest parts of a modern computer.
 Dynamic content has the reputation of being slow because it often involves a database (lots of disk IO), a million lines of JavaScript, or both.
 
-My lightly optimized [Markov babbler](babble.c) consumes around ~60 CPU microseconds per request.
+My lightly optimized [Markov babbler](/projects/trap_bots/) consumes around ~60 CPU microseconds per request.
 There's no disk IO, and the memory cost is only around 1.2 MB.
 There's also no rules or blacklists to maintain: the bots come to it and it consumes them.

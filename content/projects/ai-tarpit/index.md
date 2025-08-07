@@ -72,7 +72,7 @@ If you want to do this, I urge you to write your own implementation.
 The more different everyone's garbage is, the harder it will be to filter out.
 <br/>
 <br/>
-That being said, here's the source code for my version: <a href=/projects/ai-tarpit/train.py>train.py</a> <a href=/projects/ai-tarpit/babble.c>babble.c</a>
+That being said, here's the source code for <a href=/projects/trap_bots/>my version.</a>
 </div>
 
 Once again, I hid a few links around my blog and waited.
