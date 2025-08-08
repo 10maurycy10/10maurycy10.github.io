@@ -37,7 +37,7 @@ The two salts react to white colored silver chloride, but when exposed to light,
 <center style='color: gray'>Paper after being exposed to ultraviolet from an LED</center>
 <br>
 <center><b>Ag(NO<sub>3</sub>) + NaCl ➔ AgCl<sub>(s)</sub> + Na(NO<sub>3</sub>)</b></center> 
-<center><b>2 AgCl<sub>(s)</sub> ➔ 2 Ag<sub>(s)</sub> + Cl<sub>2 (gas)</sub></b></center> 
+<center><b>2 AgCl<sub>(s)</sub> + hv ➔ 2 Ag<sub>(s)</sub> + Cl<sub>2 (gas)</sub></b></center> 
 
 To end the exposure, wash the paper in water followed by a 5% sodium thiosulfate solution to remove remaining silver chloride:
 
