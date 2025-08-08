@@ -129,7 +129,7 @@ Once the exposure is done, cover the lens and take it somewhere dark to process 
 
 ![Small, round, low res photos of outdoor scenes](photos.jpg)
 <center style='color: gray'>
-ISO 0.00005, f/2-ish, Shutter speed: 7500 seconds<br>
+ISO 0.00002, f/2-ish, Shutter speed: 2700 seconds<br>
 <b>From top to bottom:</b><br>
 A house, parking and a car.<br>
 A rock in some grass.<br>
