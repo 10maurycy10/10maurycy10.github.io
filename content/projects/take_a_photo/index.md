@@ -61,7 +61,8 @@ For the iron based process, paint a solution containing 5 parts ferric ammonium 
 <br>
 <div style="border: 1px solid yellow; padding: 0.5em;">
 Despite having cyanide in the name, these chemicals are not very toxic, and don't stain nearly as bad as silver nitrate does.
-That being said, still use gloves unless you want to do a very good smurf impression the next time you go outside.
+That being said, still use gloves unless you want to do a smurf impression the next time you go outside.
+Also, you can add oxalic acid to improve the sensitivity, at the cost of being somewhat toxic.
 </div>
 
 When exposed to light, the citrate reduces the iron from +3 to +2 ions, which react with the ferricyanide to from Prussian blue:
