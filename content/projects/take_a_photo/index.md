@@ -69,8 +69,7 @@ When exposed to light, the citrate reduces the iron from +3 to +2 ions, which re
 ![Yellow stain with bluish dot](iron2.jpg)
 <center style='color: gray'>Exposed paper.</center>
 <br>
-<center><b>Fe<sup> 3+</sup> + citrate + hv ➔ Fe<sup> 2+</sup> + citrate radical</b></center> 
-<center><b>citrate radical ➔ acetonedicarboxylate + CO<sub>2</sub></b></center> 
+<center><b>Fe<sup> 3+</sup> + citrate<sup> 3-</sup> + hv ➔ Fe<sup> 2+</sup> + acetonedicarboxylate<sup> 2-</sup> + CO<sub>2</sub></b></center> 
 <center><b>3 Fe<sup> 2+</sup> + Fe<sup> 3+</sup> + 2 Fe(CN)<sub>6</sub><sup> 3-</sup> ➔ Fe<sub>4</sub>(Fe(CN)<sub>6</sub>)<sub>3</sub></b></center> 
 
 Because the Prussian blue is insoluble, the residual chemicals can be removed by washing the paper in water:
