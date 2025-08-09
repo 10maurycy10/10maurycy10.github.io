@@ -86,7 +86,8 @@ For better sensitivity, you do this as a two step process where the paper is coa
 </div>
 
 The ferric ammonium citrate must be protected from light, even while it's still in the bottle.
-If kept in the dark, the chemicals and the paper should last for years, but the solutions can develop mold.
+If kept in the dark, the chemicals should last for years, but the solutions can develop mold.
+The paper is highly variable, and can last anywhere from days to years depending on what's in it. 
 
 ## Contact printing:
 
