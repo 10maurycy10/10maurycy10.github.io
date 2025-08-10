@@ -62,7 +62,6 @@ For the iron based process, paint a solution containing 5 parts ferric ammonium 
 <div style="border: 1px solid yellow; padding: 0.5em;">
 Despite having cyanide in the name, these chemicals are not very toxic, and don't stain nearly as bad as silver nitrate does.
 That being said, still use gloves unless you want to do a smurf impression the next time you go outside.
-Also, you can add oxalic acid to improve the sensitivity, at the cost of being somewhat toxic.
 </div>
 
 When exposed to light, the citrate reduces the iron from +3 to +2 ions, which react with the ferricyanide to from Prussian blue:
@@ -82,7 +81,7 @@ When overexposed, some of the Prussian blue can be reduced, bleaching the color.
 In this case, the blue can be restored with dilute hydrogen peroxide or by waiting a few days for the air to do its thing. 
 
 <div style="border: 1px solid white; padding: 0.5em;">
-For better sensitivity, you do this as a two step process where the paper is coated in ferric ammonium citrate, exposed and then coated with ferricyanide.
+This is the classic version of this process and works well for printmaking, but I recommend <a href=/projects/fast_cyanotype>a 20x more sensitive version</a> for use with a camera.
 </div>
 
 The ferric ammonium citrate must be protected from light, even while it's still in the bottle.
