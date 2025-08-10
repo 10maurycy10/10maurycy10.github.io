@@ -34,6 +34,10 @@ Infosec, mathematics, electronics, hobby machining
 
 [Dennis Schubert](https://overengineer.dev/): Software
 
+[Kris Slyka](https://slyka.net/blog/): Photography, software.
+
+[Mike Ware](https://www.mikeware.co.uk/mikeware/main.html): Exotic photography
+
 ## Forums:
 
 [Cloudy Nights](https://www.cloudynights.com/): Astronomy and imaging
