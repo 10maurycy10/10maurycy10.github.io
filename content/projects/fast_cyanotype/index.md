@@ -4,7 +4,7 @@ date: 2025-08-08
 tags: ["chemistry", "photography"]
 ---
 
-As far as I'm aware, this is the most sensitive cyanotype formula on the internet, and is getting into the range of practicality for in-camera photography: <!-- more -->
+As far as I'm aware, this is the most sensitive cyanotype formula on the internet, and it is getting into the range of usability for in-camera photography (ISO 0.0001): <!-- more -->
 
 |Sensitizer:|(by mass)|
 |-|-|
@@ -22,7 +22,6 @@ As far as I'm aware, this is the most sensitive cyanotype formula on the interne
 
 The sensitizer solution must be protected from blue and UV light.
 The developer very slightly light sensitive, but realistically, it should be fine.
-
 
 ## Procedure:
 
