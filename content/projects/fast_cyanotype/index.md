@@ -47,7 +47,7 @@ The developer solution can be reused multiple times: apply it liberally and coll
 ![Exposure test strips](test_strips.jpg)
 <center style="color: gray">Left: Classic (5 seconds/tick). Right: Mine (1 second/tick)</center>
 
-My version is around 5 times as sensitive, has better preserved highlights, allowing it to achieve compatible results in 1/20th the time:
+My version is around 5 times as sensitive, and has better preserved highlights, allowing it to achieve compatible results in 1/20th the time:
 enough to turn what would be a 3 hour exposure into a 10 minute exposure.
 
 Using sunlight, a good exposure is between 100 kilolux seconds and 1000 kilolux seconds, and the effective ISO is around 0.0001. 
