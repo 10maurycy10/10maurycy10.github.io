@@ -32,6 +32,8 @@ Infosec, mathematics, electronics, hobby machining
 
 [Rachel By The Bay](https://rachelbythebay.com/): Software, sysadmin.
 
+[Dennis Schubert](https://overengineer.dev/): Software
+
 ## Forums:
 
 [Cloudy Nights](https://www.cloudynights.com/): Astronomy and imaging
