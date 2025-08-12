@@ -8,7 +8,7 @@
 <h1> {{ .Title }}</h1>
 {{ .Content }}
 <h1>Recent posts:</h1>
-{{ range first 4 (where .Site.RegularPages.ByPublishDate.Reverse "Params.hide" "ne" "1")}}
+{{ range first 10 (where .Site.RegularPages.ByPublishDate.Reverse "Params.hide" "ne" "1")}}
 <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
 {{ partial "metadata.html" . }}
 </br>
