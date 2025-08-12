@@ -1,5 +1,5 @@
 ---
-title: "One bit computer"
+title: "Homebrew CPU"
 ---
 
 I am working on building a computer with no ICs.

@@ -1,5 +1,5 @@
 ---
-title: Astrophotography
+title: Astronomical images
 layout: images
 ---
 

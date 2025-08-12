@@ -1,7 +1,7 @@
 ---
 title: "Make presentations in Markdown with pandoc"
 date: 2022-09-09T18:31:55-07:00
-tags: ['pandoc']
+tags: []
 draft: false
 ---
 

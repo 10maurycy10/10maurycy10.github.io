@@ -2,8 +2,8 @@
 title: "Analyzing Tic Tac Toe, and writing an AI."
 summary: "Using the min max algorithm to make a Tic Tac Toe AI."
 date: 2022-10-04T12:40:28-07:00
-tags: ["games", "programming", "ai"]
-draft: false
+tags: ["programming", "ai"]
+draft: true
 ---
 
 [Tic Tac Toe](https://en.wikipedia.org/wiki/Tic-tac-toe) is a fairly simple 2 player game played on a 3*3 board.

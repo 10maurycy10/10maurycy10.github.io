@@ -1,7 +1,7 @@
 ---
 title: "Messing with AI crawlers"
 date: 2025-08-01
-tags: ["programming", "bots"]
+tags: ["programming"]
 ---
 
 Large language models, the foundation of the recent wave of AI chatbots, need to be trained of vast quantities of text. 

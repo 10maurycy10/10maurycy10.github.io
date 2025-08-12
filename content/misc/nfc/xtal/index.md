@@ -1,7 +1,7 @@
 ---
 title: "Exploring NFC communications with a crystal radio."
 date: 2023-02-22T16:32:42-08:00
-tags: ["nfc", "wireless"]
+tags: ["wireless"]
 draft: false
 ---
 

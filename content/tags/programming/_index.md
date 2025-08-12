@@ -1,3 +1,3 @@
 ---
-title: "Computer programming"
+title: "Programming"
 ---

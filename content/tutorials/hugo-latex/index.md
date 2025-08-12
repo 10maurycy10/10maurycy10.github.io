@@ -2,8 +2,8 @@
 title: "Adding KaTeX (JS based LaTeX rendering to hugo)"
 summary: "Adding math rendering to the hugo static site generator."
 date: 2022-09-23T09:42:11-07:00
+tags: ["hugo"]
 math: true
-tags: ["hugo", "latex"]
 ---
 
 [KaTeX](katex.org) is a fast rendering library for LaTeX math, that runs in a web browser.
