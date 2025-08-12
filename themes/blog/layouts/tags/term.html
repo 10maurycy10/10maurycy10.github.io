@@ -7,10 +7,13 @@
 <main>
 <h1> List page: {{ .Title }}</h1>
 {{ .Content }}
+Tag specific <a href=index.xml>RSS Feed</a>
+
 {{ range .Pages.ByPublishDate.Reverse }}
 <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
 {{ partial "metadata.html" . }}
 {{ .Summary }}
+<a href="{{ .RelPermalink }}">... read more.</a>
 {{ end }}
 </main>
 {{- partial "footer.html" . -}}
