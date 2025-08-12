@@ -1,7 +1,7 @@
 ---
 title: "Modulating and amplifying signals with (electro)magnets."
 date: 2023-08-03T16:49:04-07:00
-tags: ["magnetics"]
+tags: ["electronics", "wireless"]
 draft: false
 ---
 
