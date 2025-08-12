@@ -1,7 +1,7 @@
 ---
 title: "Trap bots on your server:"
 date: 2025-08-05
-tags: ["programming"]
+tags: ["programming", "software"]
 ---
 
 Here's the code for my [infinite nonsense](https://maurycyz.com/babble/entry_point) crawler trap:<br>

@@ -1,7 +1,7 @@
 ---
 title: "Using an MDX-540 CNC mill from Linux"
 date: 2025-06-29
-tags: ["programming"]
+tags: ["programming", "software"]
 draft: false
 ---
 
