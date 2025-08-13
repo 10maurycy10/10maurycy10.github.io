@@ -38,26 +38,26 @@
 // This allows implementing higher-order markov chains using the text after 
 // the hyphen to store context.
 
-
 // Maxium number of future words associated with a word. Increasing this
 // will increase memory usage.
 #define MAX_LEAF 30
 // Uncomment to measure CPU time / request
-#define PROFILE 1
+//#define PROFILE 1
 // Network port: binds to 127.0.0.1:PORT
 #define PORT 1414
 // Maxium data sent in a single HTTP chunk 
 #define BUFFER_SIZE (1024 * 5)
 // Number of words in one paragraph of text. Periods are counted as words
-#define WORD_COUNT 100
+#define WORD_COUNT 200
+// Number of paragraphs
+#define P_COUNT 3
 // Text inserted into 1/4th of pages	
 const char* POISON = 
 ""
 ""
-""
-;
+"";
 // Directory to which the babbler will link. 
-// Must begin and end with "/"s
+// Must begin and end with /s
 const char* URL_PREFIX = "/babble/" ;
 
 #include <stdlib.h>
@@ -474,9 +474,9 @@ void* thread_start(void* fd) {
 
 	uint32_t seed = hash_string(path);
 
-	requests_served++;
-        
-	if (strcmp(path, "/status/") == 0) {
+	requests_served += 1;
+
+        if (strncmp(path, "/status/", 8) == 0) {
                 struct timespec now, cputime;
                 clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &cputime);
                 clock_gettime(CLOCK_MONOTONIC, &now);
@@ -496,14 +496,14 @@ void* thread_start(void* fd) {
                 format_time(buff, cputime.tv_sec);
                 buffer_write(buff, "</b>dealing with: <b>");
                 format_number(buff, requests_served, 0);
-                buffer_write(buff, "</b>requests and served <b>");
+                buffer_write(buff, "</b>requests and serving <b>");
                 format_number(buff, bytes_served, 1);
-                buffer_write(buff, "B</b> of garbage.<br><br>... at an average of <b>");
+                buffer_write(buff, "B</b> of garbage.<br><br>... at an average rate of <b>");
 
                 if (now.tv_sec - start.tv_sec) {
                         uint64_t per_min = requests_served * 60 / (now.tv_sec - start.tv_sec);
                         format_number(buff, per_min, 1);
-                        buffer_write(buff, "</b>Requests per minute and ");
+                        buffer_write(buff, "</b>requests per minute and ");
                         per_min = bytes_served * 60 / (now.tv_sec - start.tv_sec);
                         buffer_write(buff, "<b>");
                         format_number(buff, per_min, 1);
@@ -531,13 +531,11 @@ void* thread_start(void* fd) {
 		buffer_write_caps(buff, topic[1]);
 		buffer_write(buff, "</h1><h3>Garbage for the garbage king!</h3><div>");
 		// Write paragraph:
-		buffer_write(buff, "<p>");
-		send_text(chain, WORD_COUNT, buff, &seed);
-		buffer_write(buff, ".</p>");
-		// ... and another ...
-		buffer_write(buff, "<p>");
-		send_text(chain, WORD_COUNT, buff, &seed);
-		buffer_write(buff, ".</p>");
+		for (int i = 0; i < P_COUNT; i++) {
+			buffer_write(buff, "<p>");
+			send_text(chain, WORD_COUNT, buff, &seed);
+			buffer_write(buff, ".</p>");
+		}
 		// ... and the bonus text...
 		if (prng(&seed) % 4 == 0) {
 			buffer_write(buff, "<p>");
@@ -564,7 +562,7 @@ void* thread_start(void* fd) {
 			buffer_write(buff, ctr_string);
 			// Add link text
 			buffer_write(buff, " >");
-			send_text(chain, 5, buff, &seed);
+			send_text(chain, 10, buff, &seed);
 			buffer_write(buff, "</a><br/>");
 		}
 		// Footer
@@ -623,6 +621,7 @@ int main() {
 	
 	err = listen(sockfd, 5);
 	assert(err == 0);
+
         clock_gettime(CLOCK_MONOTONIC, &start);
 
 	printf("[*] Serving garbage!\n");
