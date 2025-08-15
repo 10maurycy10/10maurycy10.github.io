@@ -631,26 +631,17 @@ int main() {
 
         clock_gettime(CLOCK_MONOTONIC, &start);
 
-	#include <fcntl.h>	
-	int conn = open("data.txt", O_APPEND);
-	int i = 0;
+	printf("[*] Serving garbage!\n");
 	while (1) {
-		printf("%d\n", i);
-		i++;
-		thread_start((void*)conn);
+		// Accept connections
+		struct sockaddr_storage their_addr; unsigned int sin_size;
+		size_t conn = accept(sockfd, (struct sockaddr *) &their_addr, &sin_size);
+		if (conn != -1) {
+			// Spin up thread to handle it
+			pthread_t thread;
+			// Slight pthread abuse to send an fd instead of pointer
+			pthread_create(&thread, NULL, thread_start, (void*)conn);
+			
+		}
 	}
-
-//	printf("[*] Serving garbage!\n");
-//	while (1) {
-//		// Accept connections
-//		struct sockaddr_storage their_addr; unsigned int sin_size;
-//		size_t conn = accept(sockfd, (struct sockaddr *) &their_addr, &sin_size);
-//		if (conn != -1) {
-//			// Spin up thread to handle it
-//			pthread_t thread;
-//			// Slight pthread abuse to send an fd instead of pointer
-//			pthread_create(&thread, NULL, thread_start, (void*)conn);
-//			
-//		}
-//	}
 }
