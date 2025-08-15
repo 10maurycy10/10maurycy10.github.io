@@ -408,14 +408,21 @@ void* thread_start(void* fd) {
 	int request_size = 0;
 	while (1) {
 		// Read data...
-		request_size += recv(conn, request + request_size, 1024 - request_size, 0);
-		request[1024] = 0; // Null terminate
+		int got = recv(conn, request + request_size, 1024 - request_size, 0);
+		if (got > 0) request_size += got;
+		// Null terminate
+		request[request_size] = 0;
 		// Stop once we have a newline
 		if (strchr(request, '\n')) break;
 		// If the buffer fills up first, respond with an error.
 		if (request_size == 1024) {
 			char* message = "HTTP/1.1 400 Bad request\r\n\r\n... did you forget a newline!?";
 			send(conn, message, strlen(message), 0);
+			close(conn);
+			return 0;
+		}
+		// Check for closed connection or errors
+		if (got == 0 || got < 0) {
 			close(conn);
 			return 0;
 		}
@@ -624,16 +631,26 @@ int main() {
 
         clock_gettime(CLOCK_MONOTONIC, &start);
 
-	printf("[*] Serving garbage!\n");
+	#include <fcntl.h>	
+	int conn = open("data.txt", O_APPEND);
+	int i = 0;
 	while (1) {
-		// Accept connections
-		struct sockaddr_storage their_addr; unsigned int sin_size;
-		size_t conn = accept(sockfd, (struct sockaddr *) &their_addr, &sin_size);
-		if (conn != -1) {
-			// Spin up thread to handle it
-			pthread_t thread;
-			// Slight pthread abuse to send an fd instead of pointer
-			pthread_create(&thread, NULL, thread_start, (void*)conn);
-		}
+		printf("%d\n", i);
+		i++;
+		thread_start((void*)conn);
 	}
+
+//	printf("[*] Serving garbage!\n");
+//	while (1) {
+//		// Accept connections
+//		struct sockaddr_storage their_addr; unsigned int sin_size;
+//		size_t conn = accept(sockfd, (struct sockaddr *) &their_addr, &sin_size);
+//		if (conn != -1) {
+//			// Spin up thread to handle it
+//			pthread_t thread;
+//			// Slight pthread abuse to send an fd instead of pointer
+//			pthread_create(&thread, NULL, thread_start, (void*)conn);
+//			
+//		}
+//	}
 }
