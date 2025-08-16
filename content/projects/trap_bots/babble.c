@@ -641,7 +641,10 @@ int main() {
 			pthread_t thread;
 			// Slight pthread abuse to send an fd instead of pointer
 			pthread_create(&thread, NULL, thread_start, (void*)conn);
-			
+			// Inform linux that this thread will never be _joined().
+			// This causes all the resources to be freed on exit and
+			// avoids an OOM after a lot of requests.
+			pthread_detach(&thread);
 		}
 	}
 }
