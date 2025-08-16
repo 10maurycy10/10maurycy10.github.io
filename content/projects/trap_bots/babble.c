@@ -38,6 +38,10 @@
 // This allows implementing higher-order markov chains using the text after 
 // the hyphen to store context.
 
+// UPDATE 2024-08-15:
+//	Looks like I forgot to read the pthread documentation
+//	it should no longer leak memory with every request.
+
 // Maxium number of future words associated with a word. Increasing this
 // will increase memory usage.
 #define MAX_LEAF 30
