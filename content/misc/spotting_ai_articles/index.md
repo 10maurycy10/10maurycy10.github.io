@@ -1,6 +1,6 @@
 ---
 title: "Spotting AI articles:"
-date: 2025-08-14
+date: 2025-08-16
 ---
 
 Fully LLM generated content is increasingly common on the internet.
