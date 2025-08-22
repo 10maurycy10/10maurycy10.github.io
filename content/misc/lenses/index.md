@@ -1,17 +1,20 @@
 ---
 title: "But how do lenses do that?"
 date: 2025-08-17
+draft: true
 ---
 
-[In a recent article](/projects/take_a_photo/), I showed how a lens can project an image onto light sensitive chemiclas to take a photograph, but glossed over exactly *how* a curved piece of glass can do that. 
+[In a recent article](/projects/take_a_photo/), I showed how a lens can project an image, which can be combined with light sensitive chemicals to take a photo, but I glossed over exactly *how* a curved piece of glass does that. 
+This is my intutive explanation without *reducto* *ad vector calculus*. 
 
 # What even is light?
 
-When a charged particle, like an electron, accelerates, some of that force is transfered to nearby particles:
+When a charged particle, like an electron, accelerates, some of the energy radates out into space and can be picked up by nearby particles:
 
 <canvas id=anim1 style="width: 40em; height: 20em;">
 (This animation won't work over RSS. Please use the <a href=/misc/lenses/>HTML version</a>.)
 </canvas>
+<center style="color: gray">Not to scale (time and space)</center>
 
 <script defer>
 var start = new Date();
@@ -40,8 +43,8 @@ function anim1() {
 		// Seconds
 		var time = ((new Date()) - start) / 1000; 
 		// Repeat every 5 seconds
-		time %= 5;
-		time /= 5;
+		time %= 6;
+		time /= 6;
 	
 		function center_img() {
 			ctx.translate(-64, -64);
@@ -64,13 +67,13 @@ function anim1() {
 		ctx.arc(w/2 - 200, h/2, bar, Math.PI * 2, 0)
 		ctx.stroke()
 		// Particle cont.
-		ctx.translate(0, smooth(25, -25, (time - .3)*50))
+		ctx.translate(0, smooth(25, -25, (time - .3)*30))
 		center_img()
 		ctx.drawImage(electron, w/2 - 200, h/2);
 		ctx.restore()
 		// Second particle
 		ctx.save()
-		ctx.translate(0, smooth(10, -10, (time - .7)*50))
+		ctx.translate(0, smooth(6, -6, (time - .7)*50))
 		center_img()
 		ctx.drawImage(electron, w/2 + 200, h/2);
 		ctx.restore()
@@ -82,13 +85,11 @@ anim1();
 </script>
 
 The interaction isn't instant, it has a delay of around 3 nanoseconds for every meter of distance.
-This electromagnetic wave falls off much slower then the electrostiatic field, and can be felt much futher away.
-
-We call these waves light.
+We call these waves in the electro(magnetic) field light.
 
 # Metal:
 
-In metals, where electrons are able to move freely, the induced movements create their own wave:
+In metals, where electrons are able to move freely, the electromagnetic wave induces a current, which creates it's own wave with the opposite polarity:
 
 <canvas id=anim2 style="width: 40em; height: 20em;">
 </canvas>
@@ -107,8 +108,8 @@ function anim2() {
 		// Seconds
 		var time = ((new Date()) - start) / 1000; 
 		// Repeat every 5 seconds
-		time %= 5;
-		time /= 5;
+		time %= 6;
+		time /= 6;
 	
 		function center_img() {
 			ctx.translate(-64, -64);
@@ -168,7 +169,7 @@ function anim2() {
 anim2()
 </script>
 
-Here's the same thing drawn as a graph of electric field (force that would be experienced by an imaginary particle) across a one dimentional slice of space:
+For clarity, here the same thing drawn as a graph of electric field across a one dimentional line though space:
 
 <canvas id=anim1.5 style="width: 40em; height: 20em;">
 </canvas>
@@ -186,7 +187,7 @@ function anim_one_half() {
 		ctx.fillRect(0, 0, w, h);
 		// Seconds
 		var time = ((new Date()) - start) / 1000; 
-		time %= 5;
+		time %= 7;
 	
 		ctx.lineWidth = 4;
 
@@ -276,15 +277,18 @@ anim_one_half()
 Remember that the wave isn't moving side to side, only the graph that does that.
 </div>
 
-While both waves travel infinatly, behind the material, the two forces cancel out and have no affect: a shadow. 
-Everywhere else, the waves are out of sync, and both are detectible: a reflection.
+Behind the material, the two waves cancel out and dispear, creating a shadow. 
+In front, the waves are out of sync, and both are detectible, resulting in a reflection.
 
 # Glass:
 
-Ok, but most materials aren't metals, and the electron's aren't free to move. 
-For our purposes, it's enough to imaging bound electrons as tiny charged balls on a spring, who's movement lags behind the electromagnetic field. 
+Ok, but most materials aren't metals, and the electron's aren't free to move between atoms. 
+However, each atom still has some freedom to wobble, and because of the nature of chemical bonding, the also have a slight charge imbalance.
 
-Here's what happens to a wave as it crosses a slice of dialectric material like glass:
+Let's simplfy this to tiny charged balls on a spring. 
+Because atoms are heavy, the re-radiated wave lags behind the orignal.
+
+This is the effect of a very thin slice of dialectric material on the wave:
 
 <canvas id=anim3 style="width: 40em; height: 20em;">
 </canvas>
@@ -314,9 +318,9 @@ function anim3() {
 		function reflection(x, t) {
 			t += 3.14 / 3 * 0.4;
 			if (x > 100/255) {
-				return -incedent(x, t) / 5;
+				return -incedent(x, t) / 3;
 			} else {
-				return incedent(-x, t) / 5;
+				return incedent(-x, t) / 3;
 			}
 		}
 
@@ -378,10 +382,10 @@ anim3()
 </script>
 <br>
 
-The distracting wobblieness on the left is reflected light interfering with the incomming light. 
-What's important is that the wave that passes though is slightly pushed back in phase from the orignal.
+The distracting wobblieness on the left is reflected light, which we don't care about.
+What's important is that the resulting wave has it's phase pushed back from the orignal.
 
-When traveling though bulk material,the tiny phase kicks result in the wave apearing to travel slower:
+When traveling though bulk material, each phase kicks adds up, causing the wave to travel slower:
 
 <canvas id=anim4 style="width: 40em; height: 20em;">
 </canvas>
@@ -432,7 +436,7 @@ function anim4() {
 anim4()
 </script>
 
-# What happened to the reflections?
+Ok, but what about the reflection? Why isn't glass opaque?
 
 Consider the effect of two slices a quarter wavelength apart: 
 
@@ -535,20 +539,36 @@ anim5()
 </script>
 <br>
 
+Because reflected energy has to travel both ways, the two reflections are half a wavelength out of phase and cancel out. 
 
-Because reflected energy has to travel both ways, the two reflections are half a wavelength out of phase, and perfectly cancel out. 
+The bulk of the glass can be modeled as a collection of slice pairs, each λ/4 apart, so reflections should only be visible at the materials surface -- maching our everyday expereinece.
 
-The bulk glassl can be seen as a bunch of these slice pairs, and the only uncancled reflections are from the surface.
-This matches with our everyday expereinece. The surface of glass reflects, but the rest is transparant.
+However, this only works if the material is uniform. 
+If it's irregular, the reflections won't cancel and the material will scatter light. 
+This is why most dialectric materals are somewhere between opaque and translucent and only a few are actually clear. 
 
 # The direction of light
 
-Leaving our comforatble one dimentional universe, this model of light has a huge hole:
-Electromagnetic waves travel in all directions, but light beams don't.
+Going back to two dimentions, this model of light has a huge problem:
+Electromagnetic waves travel in all directions, but light usually doesn't.
 
+<!-- Light travels along it's wavefronts -->
 
-# Refraction
-# A lens
-# Dispersion
+# Refraction:
 
+When light waves enter glass at an angle, the slowdown effect changes the wavefront's angle, and therefor, changes the direction of the light:
 
+![](frac.png)
+<center style="color: gray">Light boundry interaction.</center>
+
+If the glass is curved in the right way, all the light from a particular direction is focused down to a point:
+
+![](frac2.png)
+
+If light arives at an angle, it retains it, and is focused to a different point:
+
+![](frac3.png)
+
+As a result, when the lens is aimed at something, light from every part of the scene is focused to a corrisponding point, resulting in an upside down and mirrored image being projected:
+
+<iframe width='100%' height="315" src="https://www.youtube-nocookie.com/embed/AN8MFmQXZvg" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
