@@ -130,7 +130,8 @@ For the next run I made a larger electrode, and set up a rig to hold it in place
 ![Anode take two](cell4.jpg)
 > <center>I forgot to take a picture before using it, so here's the aftermath. </center>
 
-The critical current density depends on alumina concentration, so for the second run, I bumped it up to 15% by adding some more alumina the flux recovered from the last attempt. 
+The critical current density depends on alumina concentration. 
+For the second run, I bumped it up to 15% by adding more alumina from other batches into the flux recovered from the last attempt. 
 
 ![Electrolysis cell held together by hopes and dreams.](cell5.jpg)
 > <center>Running the cell</center>
