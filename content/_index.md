@@ -1,6 +1,6 @@
 # My corner of the internet:
 
-Mostly electronics and software, but occasional chemistry and photography.
+Mostly electronics and software, but occasionally chemistry and photography.
 Feel free to check out [my photos of space](/tags/astro/), [random programs](/tags/software/), [weird electronics projects](/tags/electronics/), and [atom arranging](/tags/chemistry/).
 
 I have my very own (copyright respecting) [nonsense generator](/babble/entry-point) -- guaranteed to be cheaper then any LLM --
