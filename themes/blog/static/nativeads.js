@@ -1,3 +1,8 @@
+function hide() {
+        document.getElementById("ad-note").id = 'ad-note-hidden'
+        document.cookie = "notice-shown=true;path=/"
+}
+
 // Show message
 if (document.cookie.includes("notice-shown")) {
 	console.log("User dismissed message")
