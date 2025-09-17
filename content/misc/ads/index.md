@@ -8,8 +8,8 @@ Internet ads are horrible:
 They waste your time, and the advertising industry makes the internet a worse place.
 Payouts are so small that the only way to survive is to turn your site into an ad filled hellhole with no real substance.
 
-If you want to support your favorite authors: send then money.
-A dollar helps more then viewing ads ever would.
+If you want to support your favorite authors: send them money.
+A dollar helps more than viewing ads ever would.
 
 However, most people see advertising as a part of the internet experience, which is why I added this message to my site:
 
