@@ -38,6 +38,14 @@ Infosec, mathematics, electronics, hobby machining
 
 [Mike Ware](https://www.mikeware.co.uk/mikeware/main.html): Exotic photography
 
+[Michał "rysiek" Wożniak](https://rys.io/en/index.html): Security
+
+[PhysicsOpenLab](https://physicsopenlab.org/): Homebrew scientific equipment. Lots of optics and radiation.
+
+[GigaBecquerel](https://gigabecquerel.wordpress.com/): Radiation experiments. 
+
+[Andrey E. Stoev](http://blog.kotarak.net/): Radiation detectors and radios.
+
 ## Forums:
 
 [Cloudy Nights](https://www.cloudynights.com/): Astronomy and imaging
