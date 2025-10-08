@@ -46,6 +46,7 @@ Infosec, mathematics, electronics, hobby machining
 
 [Carl Willis](https://carlwillis.wordpress.com/): Nuclear history and tourism. 
 
+
 ## Forums:
 
 [Cloudy Nights](https://www.cloudynights.com/): Astronomy and imaging
@@ -60,11 +61,11 @@ Infosec, mathematics, electronics, hobby machining
 
 ## Misc pages:
 
-[donjon](https://donjon.bin.sh/): Assorted RPG stuff.
-
 [Siliconp0rn](https://siliconpr0n.org/): IC die shots.
 
 [Amateur telescope optics](https://www.telescope-optics.net/): Telescope optics.
+
+[Theodore Gray's periodic table](https://periodictable.com/): Extensive element collection.
 
 ## Detritus:
 
@@ -75,7 +76,7 @@ Infosec, mathematics, electronics, hobby machining
 <center style="color: yellow">&lt;MARQUEE&gt;Under construction&lt;/MARQUEE&gt;</center>
 
 Ok, we shouldn't bring back scrolling, blinking or scroll-blinking text.
-... but yes, this page is very incomplete. If you have suggestions, feel free to email me:
+... but yes, this page is incomplete. If you have suggestions, feel free to email me:
 
 ```txt
 blog@maurycyz.com
