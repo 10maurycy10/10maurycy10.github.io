@@ -5,7 +5,7 @@ date: 2025-08-01
 ---
 
 With all the LLM generated content flooding the internet since around late 2022, it's become increasingly hard to find interesting and human written pages. 
-I think it's time to bring back a core part of the early web: Linking to cool places.
+If you liked my blog, you can think of this page as a non-creepy recommendations feed:
 
 ## Blogs and stuff:
 
@@ -14,11 +14,9 @@ Infosec, mathematics, electronics, hobby machining
 
 [Ken Shirriff](https://www.righto.com/): Electronics reverse engineering and restoration
 
-[David Marodre](http://www.madore.org/~david/): Programming, math, literature. (unmaintained)
+[David Marodre](http://www.madore.org/~david/): Programming, math, literature.
 
 [XKCD](https://xkcd.com/) ([what if?](https://what-if.xkcd.com/)): Prolific nerd webcomic
-
-[Alan's Lab](http://www.vk2zay.net/): Electronics and radio. (unmaintained)
 
 [Shamus Young](https://www.shamusyoung.com/): Game development, game design and programming rants.
 
@@ -46,6 +44,8 @@ Infosec, mathematics, electronics, hobby machining
 
 [Andrey E. Stoev](http://blog.kotarak.net/): Radiation detectors and radios.
 
+[Carl Willis](https://carlwillis.wordpress.com/): Nuclear history and tourism. 
+
 ## Forums:
 
 [Cloudy Nights](https://www.cloudynights.com/): Astronomy and imaging
@@ -54,25 +54,30 @@ Infosec, mathematics, electronics, hobby machining
 
 [Sciencemaddness](https://www.sciencemadness.org/): Amateur chemistry.
 
+[Gamma Spectacular](https://www.gammaspectacular.com/phpBB3/): Gamma spectroscopy.
+
+[fusor.net](https://fusor.net/board/): DIY Fusion reactors.
+
 ## Misc pages:
 
-[donjon](https://donjon.bin.sh/): Assorted RPG tools
-
-[HTML for People](https://htmlforpeople.com/): Getting started with HTML
+[donjon](https://donjon.bin.sh/): Assorted RPG stuff.
 
 [Siliconp0rn](https://siliconpr0n.org/): IC die shots.
 
 [Amateur telescope optics](https://www.telescope-optics.net/): Telescope optics.
 
-[Diceware](https://diceware.rempe.us/): Generate easy to rememeber, secure passwords.
+## Detritus:
+
+[Alan's Lab](http://www.vk2zay.net/) [[archived](https://web.archive.org/web/20250118181615/http://www.vk2zay.net/)]: Electronics and radio.
+
+[Paul Nicholson](http://abelian.org/) [[archived](https://web.archive.org/web/20250408123131/http://abelian.org/)]: Very low frequency radio.
 
 <center style="color: yellow">&lt;MARQUEE&gt;Under construction&lt;/MARQUEE&gt;</center>
 
 Ok, we shouldn't bring back scrolling, blinking or scroll-blinking text.
-... but yes, this page is very incomplete. If you have sugestions, feel free to email me:
+... but yes, this page is very incomplete. If you have suggestions, feel free to email me:
 
 ```txt
 blog@maurycyz.com
 ```
 
-(Don't be afraid to send me your own thing.)
