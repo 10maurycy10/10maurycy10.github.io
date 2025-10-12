@@ -57,10 +57,10 @@ They will be useless at night.
 > "Assume a spherical cow in vacuum that isotropically emits..." 
 
 Ok, let's give the satellites thrusters with infinite fuel, portals so they have sunlight when behind the earth, and use thermodynamics violating million percent efficient solar panels. 
-Even if everything magically works, still wouldn't be a good idea. 
+Even if everything magically works, it still wouldn't be a good idea. 
 
 You can't turn a mirror off, and satellites travel over the surface at 8 kilometers per second.
-The inevitable result of this is random flashes of light all over the earth's surface. 
+The inevitable result of this is random flashes of light all over the earth. 
 
 These flashes would only be about as bright as the full moon, but because they come from a point source, they will be dangerous for the same reasons lasers are:
 A 5 watt light bulb is kinda dim, but a 5 watt laser is a retina destroying beast that can cause instant blindness if mishandled.
@@ -68,11 +68,13 @@ A 5 watt light bulb is kinda dim, but a 5 watt laser is a retina destroying beas
 If you happen to be looking in the same area of the sky, these satellite-flares-from-hell could damage your eyes. 
 If observed though optical aids like binoculars or telescopes, they could blind for much the same reason a looking at a solar eclipse can.
 
+... and I don't think I have to explain how big of a problem this would be for anyone (or any animal) trying to get a good night's sleep. 
+
 > "..." 
 
-Right now, they company is likely an outright scam:
-It's making impossible promises and have an impossible plan.
-It's not a "we don't have the technology yet" problem, but it's a "the earth isn't transparent" problem.
+Right now, the company is likely an outright scam:
+It's making impossible promises and has an impossible plan.
+These are not "we don't have the technology yet" problems, but it's a "the earth isn't transparent" problem.
 
 However, people throw enough money at them, they will try to do something, and it won't end well. 
 In either case: Do not give them any of your money, and don't trust it to anyone who will. 
