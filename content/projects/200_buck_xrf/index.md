@@ -8,8 +8,8 @@ draft: false
 When an atom's inner electron absorbs an X-ray ray, it gets knocked out it's atom, and then falls back into place after a few nanoseconds.
 In the process, the electron emits a new X-ray photon, with an energy dependent on the charge of the atom's nucleus, in other words, the atomic number.
 
-I have been intermittently messing around with scratch building an X-ray spectrometer for some time now, with hopes of doing element identification, but in the mean time I tried using the inexpensive "Radiacode-102" Gamma-ray spectrometer (currently goes for 260 USD).
-It has a tiny 1 cubic centimeter thallium dopped cesium iodide sintillator crystal, and a rather unimpressive 9% FWHM resolution.
+I have been intermittently messing around with scratch building an X-ray spectrometer for some time now, with hopes of doing element identification, but in the mean time I tried using the cheap-ish "Radiacode-102" Gamma-ray spectrometer.
+It has a tiny 1 cubic centimeter CsI(Tl) scintillator crystal, and a rather unimpressive resolution.
 
 I placed a 37 kBq (1 uCi) americium-241 source on top of the spectrometer, separated by a steel ruler to shield the detector from radiation directly from the source.
 I then surrounded the setup in more steel to shield it from background radiation, leaving an opening to place a sample in front of the detector, in the path of the radiation from the source.
@@ -44,10 +44,10 @@ And some silver, element 47 (22,24 keV):
 
 ![Results](au.png)
 
-And some tin, element 50 (25,28 keV):
+And some tin busmuth alloy, element 50 (25,28 keV) and element 83 (only the 10 keV line from an outer shell is visible):
 
 ![Results](sn.png)
 
-Each of these elements created peaks in slightly different positions, as expected from their atomic numbers
+Each of these elements created peaks in different positions, as expected from their atomic numbers
 
-This method isn't able to identify elements in a sample (you do get what you pay for after all), but is good enough to confirm the presence of heavier elements.
+It isn't able to identify elements in a sample, but is good enough to confirm the presence of heavier elements.
